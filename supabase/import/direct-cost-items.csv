@@ -1,0 +1,1274 @@
+source_row,code,description,unit,cost,category
+1,1.1,Load and cart away all demolishing & dismantling material to an appropriate tip. (Manually),,,Demolition & Dismantling
+2,1.1.1,Demolishing the lamera wall,m²,172.41,Demolition & Dismantling
+3,1.1.2,Demolishing the existing CIS wall,m²,32.33,Demolition & Dismantling
+4,1.1.3,Demolishing of wooden wall,m²,182.53,Demolition & Dismantling
+5,1.1.4,Demolishing of gypsum wall,m²,91.27,Demolition & Dismantling
+6,1.1.5,Demolishing the CIS roof,m²,51.72,Demolition & Dismantling
+7,1.1.6,Demolishing of 7x5 cm zigba purline,ml,25.86,Demolition & Dismantling
+8,1.1.7,Demolishing of eucalyptus upper & lower chords,ml,79.91,Demolition & Dismantling
+9,1.1.8,Dimolish RHS purline,ml,43.1,Demolition & Dismantling
+10,1.1.9,Dimolishing the RHS truss.,ml,103.01,Demolition & Dismantling
+11,1.1.10,Desmantling Gutter,ml,34.3,Demolition & Dismantling
+12,1.1.11,Desmantling down pipe,ml,69.82,Demolition & Dismantling
+13,1.1.12,Demolishing the chipwood ceiling,m²,119.56,Demolition & Dismantling
+14,1.1.13,Demolishing the timber ceiling,m²,166.06,Demolition & Dismantling
+15,1.1.14,Demolishing the abujedid ceiling,m²,41.51,Demolition & Dismantling
+16,1.1.15,Dismantle the metal doors from the wall.,m²,169.07,Demolition & Dismantling
+17,1.1.16,Dismantle the metal windows from the wall.,m²,152.16,Demolition & Dismantling
+18,1.1.17,Desmantling fascia board,ml,47.65,Demolition & Dismantling
+19,1.1.18,Desmantling ridge & copping,ml,68.6,Demolition & Dismantling
+20,1.1.19,Demolishing the PVC floor tile,m²,45.63,Demolition & Dismantling
+21,1.1.20,Demolishing kitchen sink,pcs,70.46,Demolition & Dismantling
+22,1.1.21,"Demolishing toilet WC, HW, turkish seat",pcs,211.37,Demolition & Dismantling
+23,1.1.22,Desmantling of wooden door & window,m²,135.47,Demolition & Dismantling
+24,1.2,Demolishing Work of different structures N.B. price include clearing the working area & dispose debri (at inside Construction Site) as indicated the supervisor,,,Demolition & Dismantling
+25,1.2.1,Masonary Structure (BGL),m³,580.9,Demolition & Dismantling
+26,1.2.2,Masonary Structure (AGL),m³,774.54,Demolition & Dismantling
+27,1.2.3,Demolishing of 25cm thick hardcore,m²,54.56,Demolition & Dismantling
+28,1.2.4,Concrete Structures,m³,2580.74,Demolition & Dismantling
+29,1.2.5,10cm thick HCB Structure,m²,55.46,Demolition & Dismantling
+30,1.2.6,15cm thick HCB Structure,m²,73.61,Demolition & Dismantling
+31,1.2.7,20cm thick HCB Structure,m²,103.06,Demolition & Dismantling
+32,1.2.8,Terrazzo floor,m²,114.51,Demolition & Dismantling
+33,1.2.9,Cement screed floor,m²,25.77,Demolition & Dismantling
+34,1.2.10,8cm thick Mass concrete floor,m²,34.35,Demolition & Dismantling
+35,1.2.11,30x120x3cm thick marble tread,pcs,227.83,Demolition & Dismantling
+36,1.2.12,15x120x3cm thick marble riser,pcs,170.87,Demolition & Dismantling
+37,1.2.13,Steel Structure,Kg,10.61,Demolition & Dismantling
+38,1.2.14,Demolishing the ceramic wall tile,m²,114.51,Demolition & Dismantling
+39,1.2.15,Demolishing the ceramic floor tile (6 & 8 mm thick) (From 1st -3rd floor),m²,128.83,Demolition & Dismantling
+40,1.2.16,Concrete Structures,m³,3236.74,Demolition & Dismantling
+41,1.2.17,10cm thick HCB Structure,m²,78.23,Demolition & Dismantling
+42,1.2.18,15cm thick HCB Structure,m²,100.59,Demolition & Dismantling
+43,1.2.19,20cm thick HCB Structure,m²,140.82,Demolition & Dismantling
+44,1.2.20,Terrazzo floor,m²,150.07,Demolition & Dismantling
+45,1.2.21,Cement screed floor,m²,33.77,Demolition & Dismantling
+46,1.2.22,30x120x3cm thick marble tread,m²,281.17,Demolition & Dismantling
+47,1.2.23,15x120x3cm thick marble riser,m²,210.87,Demolition & Dismantling
+48,1.2.24,Steel Structure,kg,13.11,Demolition & Dismantling
+49,1.2.25,Demolishing the ceramic wall tile,m²,150.07,Demolition & Dismantling
+50,1.2.26,Demolishing the ceramic floor tile (6 & 8 mm thick) (From 4th -7th floor),m²,168.83,Demolition & Dismantling
+51,1.2.27,Concrete Structures,m³,4036.74,Demolition & Dismantling
+52,1.2.28,10cm thick HCB Structure,m²,80.82,Demolition & Dismantling
+53,1.2.29,15cm thick HCB Structure,m²,103.91,Demolition & Dismantling
+54,1.2.30,20cm thick HCB Structure,m²,145.47,Demolition & Dismantling
+55,1.2.31,Terrazzo floor,m²,161.63,Demolition & Dismantling
+56,1.2.32,Cement screed floor,m²,36.37,Demolition & Dismantling
+57,1.2.33,30x120x3cm thick marble tread,m²,324.9,Demolition & Dismantling
+58,1.2.34,15x120x3cm thick marble riser,m²,243.67,Demolition & Dismantling
+59,1.2.35,Steel Structure,kg,19.32,Demolition & Dismantling
+60,1.2.36,Demolishing the ceramic wall tile,m²,185.62,Demolition & Dismantling
+61,1.2.37,Demolishing the ceramic floor tile (6 & 8 mm thick) (From 8th -12th floor),m²,208.83,Demolition & Dismantling
+62,1.2.38,Concrete Structures,m³,4836.74,Demolition & Dismantling
+63,1.2.39,10cm thick HCB Structure,m²,115.36,Demolition & Dismantling
+64,1.2.40,15cm thick HCB Structure,m²,126.76,Demolition & Dismantling
+65,1.2.41,20cm thick HCB Structure,m²,177.47,Demolition & Dismantling
+66,1.2.42,Terrazzo floor,m²,197.19,Demolition & Dismantling
+67,1.2.43,Cement screed floor,m²,44.37,Demolition & Dismantling
+68,1.2.44,30x120x3cm thick marble tread,m²,378.23,Demolition & Dismantling
+69,1.2.45,15x120x3cm thick marble riser,pcs,283.67,Demolition & Dismantling
+70,1.2.46,Steel Structure,kg,19.01,Demolition & Dismantling
+71,1.2.47,Demolishing the ceramic wall tile,m²,221.18,Demolition & Dismantling
+72,1.2.48,Demolishing the ceramic floor tile (6 & 8 mm thick) (From 13th -20th floor),m²,248.83,Demolition & Dismantling
+73,1.2.49,Concrete Structures,m³,5636.74,Demolition & Dismantling
+74,1.2.50,10cm thick HCB Structure,m²,116.37,Demolition & Dismantling
+75,1.2.51,15cm thick HCB Structure,m²,149.62,Demolition & Dismantling
+76,1.2.52,20cm thick HCB Structure,m²,209.47,Demolition & Dismantling
+77,1.2.53,Terrazzo floor,m²,232.74,Demolition & Dismantling
+78,1.2.54,Cement screed floor,m²,52.37,Demolition & Dismantling
+79,1.2.55,30x120x3cm thick marble tread,m²,431.57,Demolition & Dismantling
+80,1.2.56,15x120x3cm thick marble riser,pcs,323.67,Demolition & Dismantling
+81,1.2.57,Steel Structure,kg,21.51,Demolition & Dismantling
+82,1.2.58,Demolishing the ceramic wall tile,m²,256.73,Demolition & Dismantling
+83,1.2.57b,Demolishing the ceramic floor tile (6 & 8 mm thick),m²,288.83,Demolition & Dismantling
+84,2,Excavation and earth work /PAAC 4C /,,,Excavation & Earthwork
+85,2.1,Site clearance and excavation (mechanized),,,Excavation & Earthwork
+86,2.1.1,20cm. Clearing on wet & black soil.,m²,98.79,Excavation & Earthwork
+87,2.2,Bulk excavation in loose & dry soil,,,Excavation & Earthwork
+88,2.2.1,to a depth not exceeding 1.5m,m³,368.92,Excavation & Earthwork
+89,2.2.2,to a depth exceeding 1.50m but not exceeding 3.00m,m³,452.22,Excavation & Earthwork
+90,2.2.3,to a depth exceeding 3.00m but not exceeding 4.50m,m³,547.61,Excavation & Earthwork
+91,2.2.4,to a depth exceeding 4.50m but not exceeding 6.00m,m³,625.84,Excavation & Earthwork
+92,2.2.5,to a depth exceeding 6.00m but not exceeding 7.50m,m³,730.15,Excavation & Earthwork
+93,2.2.6,to a depth exceeding 7.50m but not exceeding 9.00m,m³,876.18,Excavation & Earthwork
+94,2.2.7,to a depth exceeding 9.00m but not exceeding 10.50m,m³,973.53,Excavation & Earthwork
+95,2.3,Pit excavation in loose & dry soil,,,Excavation & Earthwork
+96,2.3.1,to a depth not exceeding 1500cm loose and dry soil.,m³,417.23,Excavation & Earthwork
+97,2.3.2,to a depth exceeding 1500cm but not exceeding 3000mm,m³,476.83,Excavation & Earthwork
+98,2.3.3,to a depth exceeding 3000cm but not exceeding 4500mm,m³,556.3,Excavation & Earthwork
+99,2.3.4,to a depth exceeding 4500cm but not exceeding 6000mm,m³,667.56,Excavation & Earthwork
+100,2.3.5,to a depth exceeding 6000cm but not exceeding 7500mm,m³,834.46,Excavation & Earthwork
+101,2.3.6,to a depth exceeding 7500cm but not exceeding 9000mm,m³,1054.05,Excavation & Earthwork
+102,2.3.7,to a depth exceeding 9000cm but not exceeding 10500mm,m³,1430.5,Excavation & Earthwork
+103,2.4,Bulk excavation in soft rock,,,Excavation & Earthwork
+104,2.4.1,not exceeding 1.5m,m³,666.61,Excavation & Earthwork
+105,2.4.2,"Over 1.5.0m, not exceeding 3m",m³,760.13,Excavation & Earthwork
+106,2.4.3,"Over 3.0m, not exceeding 4.5m",m³,922.7,Excavation & Earthwork
+107,2.4.4,"Over 4.5m, not exceeding 6.0m",m³,1318.14,Excavation & Earthwork
+108,2.4.5,"Over 6.0m, not exceeding 7.5m",m³,1883.05,Excavation & Earthwork
+109,2.4.6,"Over 7.5m, not exceeding 9.0m",m³,2690.08,Excavation & Earthwork
+110,2.4.7,"Over 9.0m, not exceeding 10.5m",m³,3842.97,Excavation & Earthwork
+111,2.5,Pit excavation in soft rock,,,Excavation & Earthwork
+112,2.5.1,not exceeding 1.5m,m³,829.55,Excavation & Earthwork
+113,2.5.2,"Over 1.5.0m, not exceeding 3m",m³,911.6,Excavation & Earthwork
+114,2.5.3,"Over 3.0m, not exceeding 4.5m",m³,1128.64,Excavation & Earthwork
+115,2.5.4,"Over 4.5.0m, not exceeding 6m",m³,1612.35,Excavation & Earthwork
+116,2.5.5,"Over 6m, not exceeding 7.5m",m³,2303.36,Excavation & Earthwork
+117,2.5.6,"Over 7.5m, not exceeding 9m",m³,3290.51,Excavation & Earthwork
+118,2.5.7,"Over 9m, not exceeding 10.5m",m³,4700.72,Excavation & Earthwork
+119,2.6,Bulk excavation in hard rock,,,Excavation & Earthwork
+120,2.6.1,not exceeding 1.50m,m³,1368.24,Excavation & Earthwork
+121,2.6.2,"Over 1.5m, not exceeding 3m",m³,1706.63,Excavation & Earthwork
+122,2.6.3,"Over 3.0m, not exceeding 4.5m",m³,2051.2,Excavation & Earthwork
+123,2.6.4,"Over 4.5m, not exceeding 6.0m",m³,2792.32,Excavation & Earthwork
+124,2.6.5,"Over 6.0m, not exceeding 7.5m",m³,3490.4,Excavation & Earthwork
+125,2.6.6,"Over 7.5m, not exceeding 9.0m",m³,4363,Excavation & Earthwork
+126,2.6.7,"Over 9.0m, not exceeding 10.5m",m³,5132.95,Excavation & Earthwork
+127,2.7,Pit excavation in hard rock,,,Excavation & Earthwork
+128,2.7.1,not exceeding 1.50m,m³,1659.11,Excavation & Earthwork
+129,2.7.2,"Over 1.5m, not exceeding 3m",m³,2051.09,Excavation & Earthwork
+130,2.7.3,"Over 3.0m, not exceeding 4.5m",m³,2666.42,Excavation & Earthwork
+131,2.7.4,"Over 4.5m, not exceeding 6m",m³,3627.78,Excavation & Earthwork
+132,2.7.5,"Over 6.0m, not exceeding 7.5m",m³,5182.55,Excavation & Earthwork
+133,2.7.6,"Over 7.5m, not exceeding 9m",m³,7403.64,Excavation & Earthwork
+134,2.7.7,"Over 9m, not exceeding 10.5m",m³,10576.63,Excavation & Earthwork
+135,2.8,Back fill,,,Excavation & Earthwork
+136,2.8.1,Back fill selected excavated mats. from the site.(mechanized),m³,982.68,Excavation & Earthwork
+137,2.8.2,Back fill selected excavated mats. from out side the site. (Upto 20km from Quarry site as long as Project Site) (Mechanized),m³,3066.43,Excavation & Earthwork
+138,2.8.3,Back fill selected excavated mats. from out side the site. (Upto 15km from Quarry site as long as Project Site) (Mechanized),m³,2540.36,Excavation & Earthwork
+139,2.8.4,Back fill selected excavated mats. from out side the site. (Upto 10km from Quarry site as long as Project Site) (Mechanized),m³,2180.98,Excavation & Earthwork
+140,2.8.5,Back fill selected excavated mats. from out side the site. (Upto 5km from Quarry site as long as Project Site) (Mechanized),m³,1821.61,Excavation & Earthwork
+141,2.8.6,25cm. thick basaltic hard core. (Mechanized),m²,1099.89,Excavation & Earthwork
+142,3,EXCAVATION AND EARTH WORK. (manual) 20cm. Clearing on wet & black soil.,m²,98.79,Excavation & Earthwork
+143,3.1,Bulk excav.in loose and dry soil.,,,Excavation & Earthwork
+144,3.1.1,to a depth not exceeding 1500mm,m³,718.65,Excavation & Earthwork
+145,3.1.2,to a depth exceeding 1500mm but not exceeding 3000mm,m³,829.21,Excavation & Earthwork
+146,3.1.3,to a depth exceeding 3000mm but not exceeding 4500mm,m³,937.37,Excavation & Earthwork
+147,3.2,Bulk excav.in soft rock.,,,Excavation & Earthwork
+148,3.2.1,not exceeding 1.5m,m³,1437.86,Excavation & Earthwork
+149,3.2.2,"Over 1.5.0m, not exceeding 3m",m³,1617.59,Excavation & Earthwork
+150,3.2.3,"Over 3.0m, not exceeding 4.5m",m³,1990.89,Excavation & Earthwork
+151,3.3,Bulk excav.in hard rock.,,,Excavation & Earthwork
+152,3.3.1,not exceeding1.50m,m³,2588.15,Excavation & Earthwork
+153,3.3.2,"Over 1.5m,not exceeding 3m",m³,3041.68,Excavation & Earthwork
+154,3.3.3,"Over 3.0m,not exceeding 4.5m",m³,4679.51,Excavation & Earthwork
+155,3.4,Pit & Trench excav. in loose and dry soil.,,,Excavation & Earthwork
+156,3.4.1,not exceeding 1500cm,m³,798.5,Excavation & Earthwork
+157,3.4.2,to a depth exceeding 1500cm but not exceeding 3000mm,m³,979.98,Excavation & Earthwork
+158,3.4.3,to a depth exceeding 3000cm but not exceeding 4500mm,m³,1347.47,Excavation & Earthwork
+159,3.5,Pit & Trench excav. in soft rock,,,Excavation & Earthwork
+160,3.5.1,not exceeding 1.5m,m³,1725.43,Excavation & Earthwork
+161,3.5.2,"Over 1.5.0m,not exceeding 3m",m³,2156.79,Excavation & Earthwork
+162,3.5.3,"Over 3.0m,not exceeding 4.5m",m³,2588.15,Excavation & Earthwork
+163,3.6,Pit Excavation in hard rock,,,Excavation & Earthwork
+164,3.6.1,not exceeding 1.5m,m³,2875.72,Excavation & Earthwork
+165,3.6.2,"Over 1.5m,not exceeding 3m",m³,3311.63,Excavation & Earthwork
+166,3.6.3,"Over 3m,not exceeding 4.5m",m³,5793.68,Excavation & Earthwork
+167,3.7,Trench Excavation in hard rock,,,Excavation & Earthwork
+168,3.7.1,not exceeding 1.5m,m³,3318.14,Excavation & Earthwork
+169,3.7.2,"Over 1.5m,not exceeding 3m",m³,4462.33,Excavation & Earthwork
+170,3.7.3,"Over 3m,not exceeding 4.5m",m³,7612.21,Excavation & Earthwork
+171,3.8,Back fill,,,Excavation & Earthwork
+172,3.8.1,Back fill selected excavated mats. from the site. (Manually),m³,854.51,Excavation & Earthwork
+173,3.8.2,Back fill selected excavated mats. from out side the site. (Upto 20km from Quarry site as long as Project Site) (Manually),m³,3050.24,Excavation & Earthwork
+174,3.8.3,Back fill selected excavated mats. from out side the site. (Upto 15km from Quarry site as long as Project Site) (Manually),m³,2524.17,Excavation & Earthwork
+175,3.8.4,Back fill selected excavated mats. from out side the site. (Upto 10km from Quarry site as long as Project Site) (Manually),m³,2164.79,Excavation & Earthwork
+176,3.8.5,Back fill selected excavated mats. from out side the site. (Upto 5km from Quarry site as long as Project Site) (Manually),m³,1805.42,Excavation & Earthwork
+177,3.8.6,Load and Cart away surplus excavated materials to 5km,m³,589.84,Excavation & Earthwork
+178,3.8.7,Load and Cart away surplus excavated materials to 10km,m³,625.59,Excavation & Earthwork
+179,3.8.8,Load and Cart away surplus excavated materials to 15km,m³,730.88,Excavation & Earthwork
+180,3.8.9,Load and Cart away surplus excavated materials to 20km,m³,872.56,Excavation & Earthwork
+181,3.8.10,25cm. thick basaltic hard core.(basaltic stone) (Manually),m³,1034.09,Excavation & Earthwork
+182,3.8.11,"Supply, Spread & Compact Red Ash.",m³,3955.19,Excavation & Earthwork
+183,4,CONCRETE WORK SUB STRUCTURE,,,Concrete Work
+184,4a,C-7 Lean Concrete (Hand mix) (C-7),m²,779.95,Concrete Work
+185,4b,C-5 Lean Concrete (Hand mix) (C-5),m²,741.1,Concrete Work
+186,4c,C-15 10cm thick mass concrete pavement cost include hard core & 7cm selected material.,m²,3539.1,Concrete Work
+187,4d,Mortar production (1:3),m³,16212.93,Concrete Work
+188,4e,Light Weight Concrete 1:2:5,m³,16333.02,Concrete Work
+189,4f,10cm Thick C-15 mass Concrete,m²,1655.59,Concrete Work
+190,4g,Supply & Apply polymer modified Semi elastic cementitious coating or equivalent water proofing,m²,842.11,Concrete Work
+191,4h,Supply & Apply 4mm thick approved quality water proof membrane,m²,2173.91,Concrete Work
+192,4i,Supply & Apply ACRYLIC approved quality water proof.,m²,1391.3,Concrete Work
+193,4j,10mm thick styrofoam expansion joint between ground floor slab & beam.,ml,247.8,Concrete Work
+194,4k,20mm thick styrofoam expansion joint between ground floor slab & beam.,ml,343.36,Concrete Work
+195,4l,GRP Water Tanker with all fitting accessories,m³,70000,Concrete Work
+196,4.1,R.C. C-15 280 kg of cement per m3 with drum mixer,,,Concrete Work
+197,4.1.1,C-15 Concrete (Mechanical Mix) 1:2:4 with admixture,m³,18101.92,Concrete Work
+198,4.1.2,"C-15 Concrete (Mechanical Mix) 1:2:4 for Footing, Beam and slab",m³,17437.92,Concrete Work
+199,4.1.3,"C-15 Concrete (Mechanical Mix) 1:2:4 for Column, shear wall",m³,17168.38,Concrete Work
+200,4.2,R.C. C-20 336 kg of cement per m3 with drum mixer,,,Concrete Work
+201,4.2.1,C-20 Concrete (Mechanical Mix) 1:2:3 with admixture,m³,18102.09,Concrete Work
+202,4.2.2,"C-20 Concrete (Mechanical Mix) 1:2:3 for Footing, Beam and slab",m³,17438.09,Concrete Work
+203,4.2.3,"C-20 Concrete (Mechanical Mix) 1:2:3 for Column, shear wall",m³,18050.38,Concrete Work
+204,4.3,R.C. C-25 378 kg of cement per m3 with drum mixer,,,Concrete Work
+205,4.3.1,C-25 Concrete (Mechanical Mix) 1:2:3 with admixture,m³,19880.42,Concrete Work
+206,4.3.2,"C-25 Concrete (Mechanical Mix) 1:2:3 for Footing, Beam and slab",m³,19216.42,Concrete Work
+207,4.3.3,"C-25 Concrete (Mechanical Mix) 1:2:3 for Column, shear wall",m³,19828.7,Concrete Work
+208,4.3.4,C-25 Concrete (Mechanical Mix) 1:2:3 for 10cm thick slab,m²,1921.64,Concrete Work
+209,4.4,R.C. C-30 420 kg of cement per m3 with drum mixer,,,Concrete Work
+210,4.4.1,C-30 Concrete (Mechanical Mix) 1:2:3 with admixture,m³,20888.42,Concrete Work
+211,4.4.2,"C-30 Concrete (Mechanical Mix) 1:2:3 for Footing, Beam and slab",m³,20224.42,Concrete Work
+212,4.4.3,"C-30 Concrete (Mechanical Mix) 1:2:3 for Column, shear wall",m³,20836.7,Concrete Work
+213,4.5,R.C. C-25 378 kg of cement per m3 with drum mixer (SUPER STRUCTURE),,,Concrete Work
+214,4.5.1,C-25 Concrete (Mechanical Mix) 1:2:3 with admixture,m³,20562.87,Concrete Work
+215,4.5.2,C-25 Concrete (Mechanical Mix) 1:2:3 for Beam and slab,m³,19898.87,Concrete Work
+216,4.5.3,"C-25 Concrete (Mechanical Mix) 1:2:3 for Column, shear wall",m³,20600.21,Concrete Work
+217,4.5.4,C-25 Concrete (Mechanical Mix) 1:2:3 for Stair case,m³,21101.17,Concrete Work
+218,4.5.5,C-25 Concrete (Mechanical Mix) 1:2:3 for 15cm thick slab,m³,2882.46,Concrete Work
+219,4.5.6,C-25 Concrete (Mechanical Mix) 1:2:3 for 18cm thick slab,m³,3458.96,Concrete Work
+220,4.6,R.C. C-30 420 kg of cement per m3 with drum mixer,,,Concrete Work
+221,4.6.1,C-30 Concrete (Mechanical Mix) 1:2:3 with admixture,m³,21570.87,Concrete Work
+222,4.6.2,C-30 Concrete (Mechanical Mix) 1:2:3 for Beam and slab,m³,20906.87,Concrete Work
+223,4.6.3,"C-30 Concrete (Mechanical Mix) 1:2:3 for Column, shear wall",m³,21608.21,Concrete Work
+224,4.6.4,C-30 Concrete (Mechanical Mix) 1:2:3 for Stair case,m³,22109.17,Concrete Work
+225,4.7,READY MIX CONCRETE WITH STATIONARY PUMP,,,Concrete Work
+226,4.7.1,"Supply and cast Reinforced concrete quality C-25,378 Kg of cement/m³ with water tight chemical ... Ready-Mix To connect stationery Pump.",m³,21955.23,Concrete Work
+227,4.7.2,"Supply and cast Reinforced concrete quality C-30, 420 Kg of cement/m³ with water tight chemical ... Ready-Mix To connect stationery Pump.",m³,22690.23,Concrete Work
+228,4.7.4,"Supply and cast Reinforced concrete quality C-40, 448 Kg of cement/m³ with water tight chemical ... Ready-Mix To connect stationery Pump.",m³,23845.23,Concrete Work
+229,4.8,READY MIX CONCRETE WITHOUT STATIONARY PUMP,,,Concrete Work
+230,4.8.1,"Supply and cast Reinforced concrete quality C-25,378 Kg of cement/m³ with water tight chemical ... Ready-Mix.",m³,21405.23,Concrete Work
+231,4.8.2,"Supply and cast Reinforced concrete quality C-30,420 Kg of cement/m³ with water tight chemical ... Ready-Mix.",m³,22140.23,Concrete Work
+232,4.8.3,"Supply and cast Reinforced concrete quality C-40,504 Kg of cement/m³ with water tight chemical ... Ready-Mix.",m³,23295.23,Concrete Work
+233,4.9,Form work,,,Concrete Work
+234,4.9.1,"Wooden form work For Beam, Footing & Column.sub structure",m²,1190.21,Concrete Work
+235,4.9.2,"Wooden form work For Super structure column, Floor beam & slab.",m²,1213.23,Concrete Work
+236,4.9.3,18mm thick Fair Faced Form work (high quality playwood) with crane.,m²,1746.99,Concrete Work
+237,4.9.4,Wooden scaffolding,m²,118,Concrete Work
+238,4.10,STEEL REINFORCEMENT,,,Concrete Work
+239,4.10.1,Local Re-Bar Grade 75: Dia. 6mm (Sub structure),kg,246.97,Concrete Work
+240,4.10.2,Local Re-Bar Grade 75: Dia. 8mm (Sub structure),kg,242.06,Concrete Work
+241,4.10.3,Local Re-Bar Grade 75: Dia. 10mm (Sub structure),kg,242.06,Concrete Work
+242,4.10.4,Local Re-Bar Grade 75: Dia. 12mm (Sub structure),kg,238.74,Concrete Work
+243,4.10.5,Local Re-Bar Grade 75: Dia. 14mm (Sub structure),kg,238.74,Concrete Work
+244,4.10.6,Local Re-Bar Grade 75: Dia. 16mm (Sub structure),kg,238.74,Concrete Work
+245,4.10.7,Local Re-Bar Grade 75: Dia. 20mm (Sub structure),kg,238.74,Concrete Work
+246,4.10.8,Local Re-Bar Grade 75: Dia. 24mm (Sub structure),kg,238.74,Concrete Work
+247,4.10.9,Local Re-Bar Grade 75: Dia. 32mm (Sub structure),kg,238.74,Concrete Work
+248,4.10.10,Local Re-Bar Grade 75: Dia. 6mm (Super structure),kg,249.12,Concrete Work
+249,4.10.11,Local Re-Bar Grade 75: Dia. 8mm (Super structure),kg,249.12,Concrete Work
+250,4.10.12,Local Re-Bar Grade 75: Dia. 10mm (Super structure),kg,249.12,Concrete Work
+251,4.10.13,Local Re-Bar Grade 75: Dia. 12mm (Super structure),kg,241.72,Concrete Work
+252,4.10.14,Local Re-Bar Grade 75: Dia. 14mm (Super structure),kg,241.72,Concrete Work
+253,4.10.15,Local Re-Bar Grade 75: Dia. 16mm (Super structure),kg,241.72,Concrete Work
+254,4.10.16,Local Re-Bar Grade 75: Dia. 20mm (Super structure),kg,241.72,Concrete Work
+255,4.10.17,Local Re-Bar Grade 75: Dia. 24mm (Super structure),kg,241.72,Concrete Work
+256,4.10.18,Local Re-Bar Grade 75: Dia. 32mm (Super structure),kg,241.72,Concrete Work
+257,4.10.19,Imported Re-Bar Grade 75: Dia. 8mm (Sub structure),kg,252.12,Concrete Work
+258,4.10.20,Imported Re-Bar Grade 75: Dia. 10mm (Sub structure),kg,252.12,Concrete Work
+259,4.10.21,Imported Re-Bar Grade 75: Dia. 12mm (Sub structure),kg,243.89,Concrete Work
+260,4.10.22,Imported Re-Bar Grade 75: Dia. 14mm (Sub structure),kg,243.89,Concrete Work
+261,4.10.23,Imported Re-Bar Grade 75: Dia. 16mm (Sub structure),kg,243.89,Concrete Work
+262,4.10.24,Imported Re-Bar Grade 75: Dia. 20mm (Sub structure),kg,243.89,Concrete Work
+263,4.10.25,Imported Re-Bar Grade 75: Dia. 24mm (Sub structure),kg,243.89,Concrete Work
+264,4.10.26,Imported Re-Bar Grade 75: Dia. 30mm (Sub structure),kg,243.89,Concrete Work
+265,4.10.27,Imported Re-Bar Grade 75: Dia. 32mm (Sub structure),kg,243.89,Concrete Work
+266,4.10.28,Imported Re-Bar Grade 75: Dia. 8mm (Super structure),kg,260.35,Concrete Work
+267,4.10.29,Imported Re-Bar Grade 75: Dia. 10mm (Super structure),kg,260.35,Concrete Work
+268,4.10.30,Imported Re-Bar Grade 75: Dia. 12mm (Super structure),kg,246.87,Concrete Work
+269,4.10.31,Imported Re-Bar Grade 75: Dia. 14mm (Super structure),kg,246.87,Concrete Work
+270,4.10.32,Imported Re-Bar Grade 75: Dia. 16mm (Super structure),kg,246.87,Concrete Work
+271,4.10.33,Imported Re-Bar Grade 75: Dia. 20mm (Super structure),kg,246.87,Concrete Work
+272,4.10.34,Imported Re-Bar Grade 75: Dia. 24mm (Super structure),kg,251.95,Concrete Work
+273,4.10.35,Imported Re-Bar Grade 75: Dia. 30mm (Super structure),kg,246.87,Concrete Work
+274,4.10.36,Imported Re-Bar Grade 75: Dia. 32mm (Super structure),kg,246.87,Concrete Work
+275,5,Masonary & block work,,,Masonry & Block Work
+276,5.1.1,40cm. thick masonry foundation (A.G.L) Cement Mortar 1:3.,m3,9291.87,Masonry & Block Work
+277,5.1.2,50cm. thick masonry foundation (A.G.L) Cement Mortar 1:3.,m3,9179.03,Masonry & Block Work
+278,5.1.3,60cm. thick masonry foundation (B.G.L) Cement Mortar 1:3.,m3,9095.12,Masonry & Block Work
+279,5.1.4,40cm. thickOne Side Roughly Dressed Stone masonry (A.G.L) Cement Mortar 1:3.,m3,10086.38,Masonry & Block Work
+280,5.1.5,50cm. thickOne Side Roughly Dressed Stone masonry (A.G.L) Cement Mortar 1:3.,m3,9950.26,Masonry & Block Work
+281,5.1.6,60cm. thickOne Side Roughly Dressed Stone masonry (A.G.L) Cement Mortar 1:3.,m3,9851.75,Masonry & Block Work
+282,5.1.7,50cm. thick masonry foundation (B.G.L) Cement Mortar 1:3.,m3,8804.92,Masonry & Block Work
+283,5.1.8,40cm. thick masonry foundation (B.G.L) Cement Mortar 1:3.,m3,9222.41,Masonry & Block Work
+284,5.1.9,400mm thick Finely dressed elevation wall Cement Mortar 1:3.,m2,3955.61,Masonry & Block Work
+285,5.1.10,500mm thick Finely dressed elevation wall Cement Mortar 1:3.,m2,5549.6,Masonry & Block Work
+286,5.1.11,10 cm. thick class-c HCB Wall Both Sides Left For Plastering.,m2,1275.74,Masonry & Block Work
+287,5.1.12,10 cm. thick class-c Solid CB Wall Both Sides Left For Plastering.,m2,1436.53,Masonry & Block Work
+288,5.1.13,15 cm. thick class-c HCB Wall Both Sides Left For Plastering.,m2,1567.67,Masonry & Block Work
+289,5.1.14,15 cm. thick class-c Solid CB Wall Both Sides Left For Plastering.,m2,1687.1,Masonry & Block Work
+290,5.1.15,20 cm. thick class-c HCB Wall Both Sides Left For Pointing,m2,1808.04,Masonry & Block Work
+291,5.1.16,20 cm. thick class-c Solid CB Wall Both Sides Left For Plastering.,m2,1963.31,Masonry & Block Work
+292,5.1.17,10 cm. thick class-b HCB Wall Both Sides Left For Plastering.,m2,1486.9,Masonry & Block Work
+293,5.1.18,10 cm. thick class-b Solid CB Wall Both Sides Left For Plastering.,m2,1728.3,Masonry & Block Work
+294,5.1.19,15 cm. thick class-b HCB Wall Both Sides Left For Plastering.,m2,1782.36,Masonry & Block Work
+295,5.1.21,15 cm. thick class-b Solid CB Wall Both Sides Left For Plastering.,m2,2244.25,Masonry & Block Work
+296,5.1.22,20 cm. thick class-b HCB Wall Both Sides Left For Pointing,m2,2459.76,Masonry & Block Work
+297,5.1.23,20 cm. thick class-b Solid CB Wall Both Sides Left For Plastering.,m2,2917.44,Masonry & Block Work
+298,5.1.24,10 cm. thick class-a HCB Wall Both Sides Left For Plastering.,m2,1903.67,Masonry & Block Work
+299,5.1.25,10 cm. thick class-a Solid CB Wall Both Sides Left For Plastering.,m2,2367.29,Masonry & Block Work
+300,5.1.26,15 cm. thick class-a HCB Wall Both Sides Left For Plastering.,m2,2399.14,Masonry & Block Work
+301,5.1.27,15 cm. thick class-a Solid CB Wall Both Sides Left For Plastering.,m2,3038.49,Masonry & Block Work
+302,5.1.28,20 cm.thick class-a HCB Wall Both Sides Left For Pointing,m2,2564.88,Masonry & Block Work
+303,5.1.29,20 cm. thick class-a Solid CB Wall Both Sides Left For Plastering.,m2,3689.88,Masonry & Block Work
+304,5.1.30,40 cm.thick Dressed Stone Masonry Wall one Side well dressed & the other plastered,m2,7580.8,Masonry & Block Work
+305,5.1.31,250mm .thick Double Brick Wall,m2,5272.11,Masonry & Block Work
+306,5.1.32,120mm .thick Single Brick Wall,m2,2744.51,Masonry & Block Work
+307,5.1.33,Chika wall with all wood work,m2,1224.65,Masonry & Block Work
+308,5.1.34,Eucalyptus wood wall with all wood work,m2,756.45,Masonry & Block Work
+309,5.1.35,2.5cm thick Timber wall with 10cm & 6cm dia. Eucalyptus and all wood work,m2,1633.75,Masonry & Block Work
+310,5.1.36,G32 CIS with Eucalyptus,m2,1014.77,Masonry & Block Work
+311,5.1.37,8mm thick Chipwood wall with Eucalyptus dia.10cm and 5x7cm shashemene batten.,m2,1571.79,Masonry & Block Work
+312,5.1.38,18mm thick Laminated MDF Wall with 5x7cm Shashemene batten wood work and all necessary work.,m2,2650,Masonry & Block Work
+313,5.1.39,18mm thick Laminated MDF Wall. With out batten,m2,1756.93,Masonry & Block Work
+314,5.1.40,20x20mm and 1.5mm thick Wire mesh wall Welded on the frame,m2,1093.69,Masonry & Block Work
+315,5.1.41,Barbed wire fence with 40x40x3mm Angle Iron Frame,m2,1314.44,Masonry & Block Work
+316,5.1.42,Supply & lay class A galvanized 800*1000*2.5cm hexagonal Mesh rock size 100-250 for 1m³ as directed by the engineer.,m³,6959.18,Masonry & Block Work
+317,5.1.45,Supply & lay class A galvanized 800*1000*2.5cm hexagonal Mesh rock size 100-250 for 2m³ as directed by the engineer. Fabricated,m³,7159.18,Masonry & Block Work
+318,6.00,Shear Wall for river side R.C. C-25 378 kg of cement per m3,,,Masonry & Block Work
+319,6.1.1,"C-25 Concrete (Mechanical Mix) 1:2:3 for Column ,shear wall",m³,20000.34,Concrete Work
+320,7.00,R.C. C-30 420 kg of cement per m3,,,Concrete Work
+321,7.1.1,"C-30 Concrete (Mechanical Mix) 1:2:3 for Column ,shear wall",m³,21027.84,Concrete Work
+322,7.1.2,18mm thick Fair Faced Form work (high quality playwood ) with crane.,m²,2076.99,Concrete Work
+323,6,Roof work,,,Roof Work
+324,6.1,EGA roof cover the price includes J-bolt,,,Roof Work
+325,6.1.1,Galvanized EGA 300 roof cover 10.30 mm thick,m²,1596.25,Roof Work
+326,6.1.1-2,Galvanized EGA 300 roof cover 20.35 mm thick,m²,1785.51,Roof Work
+327,6.1.1-3,Galvanized EGA 300 roof cover 30.40 mm thick,m²,1958.45,Roof Work
+328,6.1.1-4,Galvanized EGA 300 roof cover 40.50 mm thick,m²,2135.55,Roof Work
+329,6.1.1-5,Galvanized EGA 300 roof cover 50.60 mm thick,m²,2385.35,Roof Work
+330,6.1.1-6,Galvanized EGA 300 roof cover 60.70 mm thick,m²,2632.49,Roof Work
+331,6.1.1-7,Galvanized EGA 300 roof cover 70.80 mm thick,m²,2863.96,Roof Work
+332,6.1.1-8,Galvanized EGA 300 roof cover 81.00 mm thick,m²,3107.64,Roof Work
+333,6.1.2,Galvanized EGA 400 roof cover 10.30 mm thick,m²,1780.73,Roof Work
+334,6.1.2-2,Galvanized EGA 400 roof cover 20.35 mm thick,m²,1987.74,Roof Work
+335,6.1.2-3,Galvanized EGA 400 roof cover 30.40 mm thick,m²,2217.7,Roof Work
+336,6.1.2-4,Galvanized EGA 400 roof cover 40.50 mm thick,m²,2430.31,Roof Work
+337,6.1.2-5,Galvanized EGA 400 roof cover 50.60 mm thick,m²,2623.64,Roof Work
+338,6.1.2-6,Galvanized EGA 400 roof cover 60.70 mm thick,m²,2847.72,Roof Work
+339,6.1.2-7,Galvanized EGA 400 roof cover 70.80 mm thick,m²,3071.13,Roof Work
+340,6.1.2-8,Galvanized EGA 400 roof cover 81.00 mm thick,m²,3264.5,Roof Work
+341,6.1.3,Galvanized EGA 500 roof cover 10.30 mm thick,m²,1846.07,Roof Work
+342,6.1.3-2,Galvanized EGA 500 roof cover 20.35 mm thick,m²,2116.7,Roof Work
+343,6.1.3-3,Galvanized EGA 500 roof cover 30.40 mm thick,m²,2300.15,Roof Work
+344,6.1.3-4,Galvanized EGA 500 roof cover 40.50 mm thick,m²,2523.61,Roof Work
+345,6.1.3-5,Galvanized EGA 500 roof cover 50.60 mm thick,m²,2731.78,Roof Work
+346,6.1.3-6,Galvanized EGA 500 roof cover 60.70 mm thick,m²,2935.84,Roof Work
+347,6.1.3-7,Galvanized EGA 500 roof cover 70.80 mm thick,m²,3213.53,Roof Work
+348,6.1.3-8,Galvanized EGA 500 roof cover 81.00 mm thick,m²,3488.8,Roof Work
+349,6.1.4,Galvanized EGA 600 roof cover 10.30 mm thick,m²,1915.24,Roof Work
+350,6.1.4-2,Galvanized EGA 600 roof cover 20.35 mm thick,m²,2110.72,Roof Work
+351,6.1.4-3,Galvanized EGA 600 roof cover 30.40 mm thick,m²,2313.65,Roof Work
+352,6.1.4-4,Galvanized EGA 600 roof cover 40.50 mm thick,m²,2543.02,Roof Work
+353,6.1.4-5,Galvanized EGA 600 roof cover 50.60 mm thick,m²,2756.42,Roof Work
+354,6.1.4-6,Galvanized EGA 600 roof cover 60.70 mm thick,m²,2977.88,Roof Work
+355,6.1.4-7,Galvanized EGA 600 roof cover 70.80 mm thick,m²,3263.52,Roof Work
+356,6.1.4-8,Galvanized EGA 600 roof cover 81.00 mm thick,m²,3584.72,Roof Work
+357,6.1.5,Galvanized EGA 700 roof cover 10.30 mm thick,m²,1997.42,Roof Work
+358,6.1.5-2,Galvanized EGA 700 roof cover 20.35 mm thick,m²,2153.62,Roof Work
+359,6.1.5-3,Galvanized EGA 700 roof cover 30.40 mm thick,m²,2329.62,Roof Work
+360,6.1.5-4,Galvanized EGA 700 roof cover 40.50 mm thick,m²,2631.07,Roof Work
+361,6.1.5-5,Galvanized EGA 700 roof cover 50.60 mm thick,m²,2765.22,Roof Work
+362,6.1.5-6,Galvanized EGA 700 roof cover 60.70 mm thick,m²,2988.52,Roof Work
+363,6.1.5-7,Galvanized EGA 700 roof cover 70.80 mm thick,m²,3289.92,Roof Work
+364,6.1.5-8,Galvanized EGA 700 roof cover 81.00 mm thick,m²,3601.22,Roof Work
+365,6.1.9,EGA 0.4mm thick (G-28) Coated roof cover,m²,1929.94,Roof Work
+366,6.1.10,EGA 0.4mm thick (G-28) Coated For Wall,m²,1794.9,Roof Work
+367,6.1.11,EGA 0.4mm thick (G-28) Coated For Wall with 10cm Dia. Vertical member & 6cm Dia. Horizontal members Eucalyptus,m²,2022.07,Roof Work
+368,6.2,Gutter,,,Roof Work
+369,6.2.1,Galvanized metal sheet gutter,,,Roof Work
+370,6.2.2,G-28 of devt. Length 33 cm,ml,821.83,Roof Work
+371,6.2.3,G-28 of devt. Length 40 cm,ml,750.07,Roof Work
+372,6.2.4,G-30 of devt. Length 40 cm,ml,968.35,Roof Work
+373,6.2.5,G-28 of devt. Length 50 cm,ml,864.31,Roof Work
+374,6.2.6,G-30 of devt. Length 50 cm,ml,1157.05,Roof Work
+375,6.2.7,G-28 of devt. Length 67 cm,ml,1920.41,Roof Work
+376,6.2.8,G-30 of devt. Length 67 cm,ml,1332.49,Roof Work
+377,6.2.9,G-28 of devt. Length 100 cm,ml,1051.99,Roof Work
+378,6.2.10,G-30 of devt. Length 100 cm,ml,1470.71,Roof Work
+379,6.2.10b,G-30 of devt. Length 100 cm (duplicate),ml,1299.85,Roof Work
+380,6.3,Down pipe (M'3),,,Roof Work
+381,6.3.1,G-28 of devt. Length 33 cm,ml,854.07,Roof Work
+382,6.3.2,G-30 of devt. Length 33 cm,ml,854.07,Roof Work
+383,6.3.3,G-28 of devt. Length 40 cm,ml,1012.9,Roof Work
+384,6.3.4,G-30 of devt. Length 40 cm,ml,857.7,Roof Work
+385,6.3.5,G-28 of devt. Length 50 cm,ml,1077.46,Roof Work
+386,6.3.6,G-30 of devt. Length 50 cm,ml,1044.66,Roof Work
+387,6.4,PVC down pipe PN 4,,,Roof Work
+388,6.4.1,PVC down pipe Dia.75mm,ml,469.41,Roof Work
+389,6.4.2,PVC down pipe Dia.110mm,ml,567.84,Roof Work
+390,6.4.3,PVC down pipe Dia.160mm,ml,1019.08,Roof Work
+391,6.6,Galvanized steel flashing,,,Roof Work
+392,6.6.1,G-30 deve. length 50cm,ml,1082.14,Roof Work
+393,6.6.2,G-30 deve. length 67cm,ml,1192.91,Roof Work
+394,6.6.3,G-30 deve. length 100cm,ml,1497.41,Roof Work
+395,6.6.4,G-28 deve. length 50cm,ml,1264.84,Roof Work
+396,6.6.5,G-28 deve. length 67cm,ml,1472.74,Roof Work
+397,6.6.6,G-28 deve. length 100cm,ml,1590.48,Roof Work
+398,6.7,Galvanized steel copping,,,Roof Work
+399,6.7.1,G-28 deve. length 25cm,ml,620.78,Roof Work
+400,6.7.2,G-30 deve. length 25cm,ml,615.68,Roof Work
+401,6.7.3,G-28 deve. length 33cm,ml,856.77,Roof Work
+402,6.7.4,G-30 deve. length 33cm,ml,616.7,Roof Work
+403,6.7.5,G-28 deve. length 50cm,ml,865.58,Roof Work
+404,6.7.6,G-30 deve. length 50cm,ml,824.78,Roof Work
+405,6.8,Galvanized steel roof ridge,,,Roof Work
+406,6.8.1,G-28 deve. length 33cm,ml,759.81,Roof Work
+407,6.8.2,G-30 deve. length 33cm,ml,657.81,Roof Work
+408,6.8.3,G-28 deve. length 50cm,ml,889.35,Roof Work
+409,6.8.4,G-30 deve. length 50cm,ml,792.45,Roof Work
+410,6.9,CIS Roofing,,,Roof Work
+411,6.9.1,G28 CIS Roofing (Without Truss & Purlin),m²,1370.13,Roof Work
+412,6.9.2,G30 CIS Roofing (Without Truss & Purlin),m²,1229.59,Roof Work
+413,6.9.3,G32 CIS Roofing (Without Truss & Purlin),m²,997.16,Roof Work
+414,6.9.4,G35 CIS Roofing (Without Truss & Purlin),m²,833.46,Roof Work
+415,6.9.5,Aspesto roof cover with all necessary works.,m²,847.68,Roof Work
+416,6.9.6,Euro tile roof cover with all necessary works.,m²,878.88,Roof Work
+417,6.9.7,Grass roof cover with all necessary works.,m²,825.13,Roof Work
+418,6.9.8,2mm thick Transparent fiber Roof cover (Corrugated Type),m²,1257.17,Roof Work
+419,6.9.9,G-32 CIS roof with Shashemene Zigba purline (4x5cm),m²,1412.24,Roof Work
+420,6.9.10,Tsid Timber cladding 1cm for decorating roof purlin,m²,1453.56,Roof Work
+421,6.9.11,Light Weight Concrete 1:2:5 for roof,m³,15754.08,Roof Work
+422,7,CARPENTRY AND JOINERY Ceiling,,,Carpentry & Joinery
+423,7.1,supply & fix Abujedy ceiling with 5x4cm Shashemene batten,m²,1012.99,Carpentry & Joinery
+424,7.2,supply & fix Fyzit ceiling 5x4cm Shashemene batten,m²,1957.97,Carpentry & Joinery
+425,7.3,supply & fix Parquet ceiling 5x4cm Shashemene batten,m²,3775.2,Carpentry & Joinery
+426,7.4,supply & fix 1cm thick Timber ceiling with 5x4cm Shashemene batten,m²,1896.16,Carpentry & Joinery
+427,7.5,supply & fix Purline ceiling 5x4cm Shashemene batten,m²,1386.58,Carpentry & Joinery
+428,7.6,supply & fix Playwood ceiling /Compensato/ 5x4cm Shashemene batten,m²,2278.08,Carpentry & Joinery
+429,7.7,supply & fix Rush ceiling /m0-4 hC1/ Compensato 5x4cm Shashemene batten,m²,1073.08,Carpentry & Joinery
+430,7.8,supply & fix Ceiling made with plastic sack 5x4cm Shashemene batten,m²,981.79,Carpentry & Joinery
+431,7.9,supply & fix Ceiling made with sack 5x4cm Shashemene batten,m²,739.49,Carpentry & Joinery
+432,7.10,supply & fix 8mm. thick chipwood Ceiling with 5x4cm Shashemene batten,m²,2466.87,Carpentry & Joinery
+433,7.11,supply & fix Armstrong acoustical ceiling With Suspender and all accessories,m²,3800,Carpentry & Joinery
+434,7.12,supply & fix Mineral fiber acoustical ceiling With all accessories,m²,3300,Carpentry & Joinery
+435,7.13,supply & fix local gypsum ceiling with out batten,m²,950,Carpentry & Joinery
+436,7.14,supply & fix PVC ceiling (laminated/imported) with 5x4cm Shashemene batten & corner list,m²,2693.8,Carpentry & Joinery
+437,7.17,supply & fix 25 cm. Wide Kerrero Facia Board,ml,1002.5,Carpentry & Joinery
+438,7.18,supply & fix 30 cm. Wide Kerrero Facia Board,ml,1167.5,Carpentry & Joinery
+439,7.19,10-12 cm. dia. Vertical Chords Eucalyptus Wood.,ml,206.01,Carpentry & Joinery
+440,7.20,8-10 cm. dia. Vertical & Diagonal member Eucalyptus Wood.,ml,191.85,Carpentry & Joinery
+441,7.21,Diam. 6 cm thick eucalyptus purlin,ml,130.89,Carpentry & Joinery
+442,7.22,50 X 70mm. Tid (Shashemene) Roof Purlin,ml,353.4,Carpentry & Joinery
+443,7.23,supply & fix 40mm thick Mahogany plywood smooth finish flush wooden door with all necessary accessories.,m²,16400,Carpentry & Joinery
+444,7.24,supply & fix 40mm thick Smooth MDF board made imported wooden door (best quality) with all necessary accessories.,m²,19500,Carpentry & Joinery
+445,7.25,supply & fix 40mm thick Antique MDF board wooden door with all necessary accessories.,m²,19800,Carpentry & Joinery
+446,7.26,supply & fix 40mm thick Solid wooden door (best quality standard) with all necessary accessories.,m²,23600,Carpentry & Joinery
+447,7.27,Supply and fix best quality PVC Door ...,m²,12980,Carpentry & Joinery
+448,7.28,supply and fix 12mm thickness high pressure laminated (HPL) door with stainless steel frame. ...,m²,18150,Carpentry & Joinery
+449,7.29,supply and fix 12mm thickness high pressure laminated (HPL) partition with stainless steel frame. ...,m²,16500,Carpentry & Joinery
+450,7.30,1cm thick timber door with 5cm wide fascia board,m²,2727.07,Carpentry & Joinery
+451,7.31,3cm thick timber door,m²,2692.32,Carpentry & Joinery
+452,7.32,1cm thick timber window,m²,1838.86,Carpentry & Joinery
+453,7.33,3cm thick timber window,m²,1838.86,Carpentry & Joinery
+454,7.34,3cm thick timber window with 4mm thick glass,m²,4046.11,Carpentry & Joinery
+455,7.35,G-32 CIS door with all wood work,m²,1418.9,Carpentry & Joinery
+456,7.36,G-32 CIS window with all wood work,m²,1418.9,Carpentry & Joinery
+457,7.37,1cm Timber /Tsid/ door,m²,1665.61,Carpentry & Joinery
+458,7.38,1cm Timber /Tsid/ window,m²,1701.61,Carpentry & Joinery
+459,8.00,METAL WORK,,,Metal Work
+460,8.1,Fully metal doors of 38mm LTZ without grill (1.5mm thick),m²,5621.06,Metal Work
+461,8.2,Partially glazed metal doors of 38LTZ without grill,m²,5468.78,Metal Work
+462,8.3,Partially glazed metal doors of 38mm LTZ with grill (1.5mm thick),m²,5806.19,Metal Work
+463,8.4,Metal Windows of 38LTZ without grill (1.5mm thick),m²,4829.42,Metal Work
+464,8.5,Metal Windows of 38LTZ (1.5mm thick) with grill,m²,6643.94,Metal Work
+465,8.6,Double leaf metal doors of 38mmLTZ without grill (1.5mm thick),m²,5457.94,Metal Work
+466,8.7,Double leaf metal doors of 38mmLTZ with grill (1.5mm thick),m²,6017.24,Metal Work
+467,8.8,Fully metal doors of 28mm LTZ without grill (1.2mm thick),m²,5230.06,Metal Work
+468,8.9,Partially glazed metal doors of 28mm LTZ without grill (1.2mm thick),m²,4489.73,Metal Work
+469,8.10,Partially glazed metal doors of 28mm LTZ with grill (1.2mm thick),m²,5040.31,Metal Work
+470,8.11,Metal Windows of 28LTZ without grill (1.2mm thick),m²,3787.65,Metal Work
+471,8.12,Metal Windows of 28LTZ with grill (1.2mm thick),m²,4592.82,Metal Work
+472,8.13,Double leaf metal doors of 28mmLTZ without grill (1.2mm thick),m²,4502.54,Metal Work
+473,8.14,Double leaf metal doors of 28mmLTZ with grill (1.2mm thick),m²,5168.93,Metal Work
+474,8.16,Sliding door & window. Price shall include Angle iron 40X40X3mm Bottom rail & RHS 50X50X2.5mm Top rail.,m²,4364.78,Metal Work
+475,8.17,supply & fix Sheet metal partition wall (1mm thick Lamera) with RHS 30x30x2.5,m²,4292.95,Metal Work
+476,8.18,supply & fix Only 1mm thick Sheet metal (Lamera) partition wall,m²,2154.74,Metal Work
+477,8.19,supply & fix 6mm thick metal plate with all necessary accessories.,m²,11700,Metal Work
+478,8.20,supply & fix 8mm thick metal plate with all necessary accessories.,m²,14900,Metal Work
+479,8.21,supply & fix 10mm thick metal plate with all necessary accessories.,m²,16900,Metal Work
+480,8.22,Supply & fix 1.6mm thick Aluminum frame window with 6mm thick clear glazed with all necessary accessories,m²,16834,Aluminum Work
+481,8.23,Supply & fix 1.6mm thick Aluminum frame window with 6mm thick double clear glazed ...,m²,19800,Aluminum Work
+482,8.24,supply & fix 1.6mm thick Aluminum frame window with 8mm thick clear glazed with all necessary accessories,m²,18517,Aluminum Work
+483,8.25,supply & fix 1.6mm thick Aluminum frame window with 8mm thick double clear glazed ...,m²,22425,Aluminum Work
+484,8.26,supply & fix Aluminum sun breaker (vertical sun breaker with 150*mm*150mm*1.4mm) ...,m²,10925,Aluminum Work
+485,8.27,supply & fix 1.6mm thick Aluminum Curtain wall 6mm thick clear glass ...,m²,22310,Aluminum Work
+486,8.28,supply & fix 1.6mm thick Aluminum Curtain wall 8mm thick clear glass ...,m²,24035,Aluminum Work
+487,8.29,supply & fix 1.6mm Aluminum partition wall with 6mm thick frosted clear glass ...,m²,16128,Aluminum Work
+488,8.30,supply & fix 1.4mm Aluminum partition wall with 6mm thick frosted clear glass ...,m²,14916,Aluminum Work
+489,8.31,supply & fix 2mm Aluminum partition wall with 6mm thick frosted clear glass ...,m²,16430,Aluminum Work
+490,8.32,supply & fix 1.6mm thick Aluminum frame door with 6mm thick clear glass ...,m²,18300,Aluminum Work
+491,8.33,supply & fix 1.6mm thick Aluminum frame door with 4mm thick clear glass ...,m²,15760,Aluminum Work
+492,8.34,supply & fix 1.6mm thick Aluminum frame window with 4mm thick clear glass ...,m²,15625,Aluminum Work
+493,8.35,supply & fix 1.6mm thick Aluminum frame door with 5mm thick clear glass ...,m²,16750,Aluminum Work
+494,8.36,supply & fix 1.6mm thick Aluminum frame window with 5mm thick clear glass ...,m²,16228,Aluminum Work
+495,8.37,supply & fix 2mm thick Aluminum frame door with 8mm thick clear glass ...,m²,19240,Aluminum Work
+496,8.38,supply and fix 2mm thick aluminum profile window with 6mm thick tinted glass ...,m²,18550,Aluminum Work
+497,8.39,supply and fix 2mm thick aluminum profile Door with 6mm thick tinted glass ...,m²,18850,Aluminum Work
+498,8.40,supply and fix anodized aluminum framed sky light ...,m²,26100,Aluminum Work
+499,8.41,Supply & fix 1.6mm thick Aluminum window Frames with all necessary accessories (Only Frame works).,m²,10800,Aluminum Work
+500,8.42,Supply & fix 1.6mm thick Aluminum Door Frames with all necessary accessories (Only Frame works).,m²,11050,Aluminum Work
+501,8.43,Supply & fix 2mm thick Aluminum window Frames with all necessary accessories (Only Frame works).,m²,11300,Aluminum Work
+502,8.44,Supply & fix 2mm thick Aluminum Door Frames with all necessary accessories (Only Frame works).,m²,11550,Aluminum Work
+503,8.45,Supply and fix different size and thickness Steel Roof Truss & Purlin With RHS. ...,kg,314.4,Steel Structure Work
+504,8.46,"Supply and fix different size and thickness Metal hand rail made of RHS, CHS and SHS. ...",kg,297.1,Steel Structure Work
+505,8.47,"Supply and fix different size and thickness Stainless steel hand rail made of RHS, CHS and SHS. ...",kg,1400,Steel Structure Work
+506,8.48,Supply and fix different size and thickness Aluminum works. ...,kg,680,Steel Structure Work
+507,8.49,Supply & fix metal angle iron 30*30*3mm with all necessary accessories.,ml,489.48,Steel Structure Work
+508,8.50,Supply & fix metal angle iron 40*40*3mm with all necessary accessories.,ml,551.2,Steel Structure Work
+509,8.51,dia. 16 mm. deformed bars dev. Length 400mm (J-bolt),Pcs,222.53,Steel Structure Work
+510,8.52,dia. 12 mm. deformed bars dev. Length 100mm(J-bolt),Pcs,20.6,Steel Structure Work
+511,8.53,dia. 14 mm. deformed bars dev. Length 160mm(J-bolt),Pcs,67.11,Steel Structure Work
+512,8.54,dia. 20 mm. Anchor bolt dev. Length 400mm,Pcs,417.61,Steel Structure Work
+513,8.55,supply fix Galvanized different size RHS Middle vertical post,kg,380,Steel Structure Work
+514,8.56,supply & fix Galvanized different size Connector plates to ground and top,kg,415,Steel Structure Work
+515,9,FINISHING WORKS,,,Finishing Works
+516,9.1,PLASTERING,,,Finishing Works
+517,9.1.23,3 Coats of cement plastering (1:3) (To internal wall),m²,913.61,Finishing Works
+518,9.1.33,3 Coats of cement plastering (1:3) (To external wall),m²,925.13,Finishing Works
+519,9.1.43,3 Coats of cement plastering to exposed beams and columns.,m²,978.42,Finishing Works
+520,9.1.53,3 Coats of cement plastering to Slab soffit beams soffit,m²,1103.95,Finishing Works
+521,9.1.62,2 Coats of cement plastering internal vertical surface.,m²,720,Finishing Works
+522,9.1.72,2 Coats of cement plastering External vertical surface.,m²,720,Finishing Works
+523,9.1.12,2 Coats of cement plastering Exposed column and beam,m²,309.22,Finishing Works
+524,9.1.102,2 Coats of cement plastering concrete soffit,m²,876.09,Finishing Works
+525,9.1.11,Final Coat of cement Rendering.,m²,217.5,Finishing Works
+526,9.1.12f,Final Coat of cement plastering vertical and exposed column and beam,m²,199.52,Finishing Works
+527,9.1.13,Final Coat of cement plastering concrete soffit,m²,269.14,Finishing Works
+528,9.1.14,Final Coat of Gypsum plastering Soffit,m²,352.94,Finishing Works
+529,9.1.15,Final Coat of Gypsum plastering Vertical wall and Exposed column and beam,m²,304.74,Finishing Works
+530,9.1.16,Final Coat of Gypsum plastering external Vertical wall and Exposed column and beam,m²,283.32,Finishing Works
+531,9.1.17,Supply and apply high quality primer (time gypsum) plastering ...,m²,1011.54,Finishing Works
+532,9.2,POINTING,,,Finishing Works
+533,9.2.1,Cement pointing to H.C.B.wall surface (1:3).,m²,220.97,Finishing Works
+534,9.2.2,Cement pointing to Brick.wall surface (1:3).,m²,354.02,Finishing Works
+535,9.2.3,Cement pointing to stonemasonry.wall surface (1:3).,m²,395.87,Finishing Works
+536,9.3,FLOORING,,,Finishing Works
+537,9.3.12,2mm. thick PVC flooring. with Adhesive glue,m²,1848.8,Finishing Works
+538,9.3.2,10cmx10cmx10cm Cable Stone,m²,4183.62,Finishing Works
+539,9.3.3,3cm. Thick cement screed flooring,m²,787.98,Finishing Works
+540,9.3.4,5cm. Thick cement screed flooring,m²,1162.73,Finishing Works
+541,9.3.5,10 mm thick Ceramic floor tile with Adhesive powder (Local),m²,3647.87,Finishing Works
+542,9.3.6,9 mm thick Ceramic floor tile with Adhesive powder (Local),m²,3545.87,Finishing Works
+543,9.3.7,8mm thick Ceramic floor tile with Adhesive powder (Local),m²,2982.66,Finishing Works
+544,9.3.8,8mm thick Porcelain floor tile with adhesive powder,m²,4774.07,Finishing Works
+545,9.3.10,9mm thick Porcelain floor tile with adhesive powder,m²,5217.55,Finishing Works
+546,9.3.11,10mm thick Porcelain floor tile adhesive powder,m²,5780.77,Finishing Works
+547,9.3.12e,supply and apply 2mm thick Epoxy resins floor topping with one coat primer coating.,m²,3000,Finishing Works
+548,9.3.13e,supply and apply 3mm thick Epoxy resins floor topping with one coat primer coating.,m²,4100,Finishing Works
+549,9.3.14,supply and apply 5mm thick Epoxy resins floor topping with one coat primer coating.,m²,5500,Finishing Works
+550,9.3.15,supply and apply 2mm thick Epoxy resins floor topping with one coat primer coating.(price includes UV resistance work),m²,3900,Finishing Works
+551,9.3.16,supply and apply 3mm thick Epoxy resins floor topping with one coat primer coating.(price includes UV resistance work),m²,5000,Finishing Works
+552,9.3.17,supply and apply 5mm thick Epoxy resins floor topping with one coat primer coating.(price includes UV resistance work),m²,6500,Finishing Works
+553,9.3.13t,Terrazzo tile flooring size 40cm x 40cmx40mm thick for pedestrian with cement mortar bedding (1:3),m²,2223.96,Finishing Works
+554,9.3.143,30mm thick Terrazzo tile flooring,m²,0,Finishing Works
+555,9.3.24,1cm thick Granite flooring (1:3)(Local).,m²,8229.02,Finishing Works
+556,9.3.25,2cm thick Granite flooring (1:3)(Local).,m²,8529.02,Finishing Works
+557,9.3.26,3cm thick Granite flooring (1:3)(Local).,m²,8736.09,Finishing Works
+558,9.3.27,1cm thick Marble flooring (1:3)(Local).,m²,7145.01,Finishing Works
+559,9.3.28,2cm thick Marble flooring (1:3)(Local).,m²,7961.01,Finishing Works
+560,9.3.29,3cm thick Marble flooring (1:3)(Local).,m²,7925.51,Finishing Works
+561,9.3.30,Parquet (Tid) Flooring,m²,3519.62,Finishing Works
+562,9.4,WALL TILE CLADING,,,Finishing Works
+563,9.4.1,6mm thick Ceramic wall tiles with adhesive powder (Local),m²,2921.4,Finishing Works
+564,9.4.1b,8mm thick Ceramic wall tiles with adhesive powder (Local),m²,3494.71,Finishing Works
+565,9.4.2,Supply and fix lay ceramic standard quality mosaic to external wall. ...,m²,8443.93,Finishing Works
+566,9.4.3,20mm thick Marble wall Cladding (Cement mortar ratio:1:2). (Local),m²,9949.08,Finishing Works
+567,9.4.4,20mm thick Granite wall Cladding (Cement mortar ratio:1:2). (Local),m²,10684.08,Finishing Works
+568,9.4.5,2mm PVC wall tile type cladding by Animal glue,m²,1422.02,Finishing Works
+569,9.4.6,Aluminium cladding 4mm thick (Silver) with Adhesive (without T Frame),m²,4062.78,Finishing Works
+570,9.4.7,Aluminium cladding 4mm thick (golden) with Adhesive (without T Frame),m²,4587.78,Finishing Works
+571,9.4.8,Aluminium cladding 4mm thick (Silver) with Adhesive (with T Frame),m²,8153.36,Finishing Works
+572,9.4.7b,Aluminium cladding 4mm thick (golden) with Adhesive (with T Frame),m²,8703.36,Finishing Works
+573,9.4.8b,Ambo stone cladding for wall,m²,4733.52,Finishing Works
+574,9.4.8c,Ambo stone cladding for column & right angle structure,m²,6775.19,Finishing Works
+575,9.5,WINDOW SILL (Local),,,Finishing Works
+576,9.5.1,30mm. Thick & 220mm width Marble window sill (1:3) on HCB.,ml,2191.28,Finishing Works
+577,9.5.2,30mm. Thick & 280mm width Marble window sill (1:3) on HCB.,ml,2596.28,Finishing Works
+578,9.5.3,30mm. Thick & 300mm width Marble window sill (1:3) on HCB.,ml,2798.78,Finishing Works
+579,9.5.4,30mm. Thick & 470mm width Marble window sill (1:3) on HCB.,ml,3946.28,Finishing Works
+580,9.5.5,30mm. Thick & 520mm width Marble window sill (1:3) on HCB.,ml,4081.28,Finishing Works
+581,9.6,THREAD,,,Finishing Works
+582,9.6.1.1,280mm wide & 30mm thick marble threads (1:3),ml,2711.92,Finishing Works
+583,9.6.1.2,300mm wide & 30mm thick marble threads (1:3),ml,2849.62,Finishing Works
+584,9.6.1.3,330mm wide & 30mm thick marble threads (1:3),ml,3056.17,Finishing Works
+585,9.6.1.4,280mm wide & 20mm thick marble threads (1:3),ml,2669.08,Finishing Works
+586,9.6.1.5,300mm wide & 20mm thick marble threads (1:3),ml,2803.72,Finishing Works
+587,9.6.1.6,330mm wide & 20mm thick marble threads (1:3),ml,3005.68,Finishing Works
+588,9.6.2.1,280mm wide & 30mm thick Granite Treads (1:3),ml,2816.97,Finishing Works
+589,9.6.2.2,300mm wide & 30mm thick Granite Treads (1:3),ml,2981.97,Finishing Works
+590,9.6.2.3,330mm wide & 30mm thick Granite Treads (1:3),ml,3229.47,Finishing Works
+591,9.6.2.4,280mm wide & 20mm thick Granite Treads (1:3),ml,2755.37,Finishing Works
+592,9.6.2.5,300mm wide & 20mm thick Granite Treads (1:3),ml,2915.97,Finishing Works
+593,9.6.2.6,330mm wide & 20mm thick Granite Treads (1:3),ml,3156.87,Finishing Works
+594,9.6.3.1,280mm wide & 30mm thick Terrazo threads (1:3),ml,789.77,Finishing Works
+595,9.6.3.2,300mm wide & 30mm thick Terrazo threads (1:3),ml,808.03,Finishing Works
+596,9.6.3.3,330mm wide & 30mm thick Terrazo threads (1:3),ml,835.42,Finishing Works
+597,9.6.3.4,280mm wide & 20mm thick Terrazo threads (1:3),ml,734.04,Finishing Works
+598,9.6.3.5,300mm wide & 20mm thick Terrazo threads (1:3),ml,748.32,Finishing Works
+599,9.6.3.6,330mm wide & 20mm thick Terrazo threads (1:3),ml,769.74,Finishing Works
+600,9.7,RISER,,,Finishing Works
+601,9.7.1.1,130mm wide & 20mm. thick marble riser. (1:3).,ml,1207.67,Finishing Works
+602,9.7.1.2,150mm wide & 20mm. thick marble riser. (1:3).,ml,1346.27,Finishing Works
+603,9.7.2.1,130mm wide & 20mm. thick Granite riser. (1:3),ml,1598.32,Finishing Works
+604,9.7.2.2,150mm wide & 20mm. thick Granite riser. (1:3),ml,1766.22,Finishing Works
+605,9.7.3.1,130mm wide & 30mm. Thick Terrazo riser. (1:3).,ml,422.42,Finishing Works
+606,9.7.3.2,130mm wide & 20mm. Thick Terrazo riser. (1:3).,ml,391.99,Finishing Works
+607,9.7.3.3,150mm wide & 20mm. Thick Terrazo riser. (1:3).,ml,411.77,Finishing Works
+608,9.8,Threshold (Local),,,Finishing Works
+609,9.8.1.1,20mm. Thick & 200mm wide Marble threshold. (1:3),ml,1736.72,Finishing Works
+610,9.8.1.2,20mm. thick & 250mm wide Marble threshold. (1:3),ml,2167.19,Finishing Works
+611,9.8.2.1,20mm. thick & 200mm wide Granite threshold. (1:3),ml,1979.72,Finishing Works
+612,9.8.2.2,20mm. thick & 250mm wide Granite threshold. (1:3),ml,2345.69,Finishing Works
+613,9.8.3.1,20mm. thick & 200mm w. Terrazo threshold. (1:3).,ml,478.55,Finishing Works
+614,9.8.3.2,20mm. thick & 250mm w. terrazo threshold. (1:3),ml,639.41,Finishing Works
+615,9.9,Skirting (Local),,,Finishing Works
+616,9.9.1,10cm. high PVC skirting 2mm thick,ml,213.38,Finishing Works
+617,9.9.2,20mm. thick terrazo skirting. (Local),ml,211.11,Finishing Works
+618,9.9.3,10cm high 10mm thick Porcelain skirting,ml,721.07,Finishing Works
+619,9.9.4,100mm. high wooden skirting. (Local wood),ml,1048.9,Finishing Works
+620,9.9.5,10cm high 2cm thick granite skirting (Local),ml,1006.94,Finishing Works
+621,9.9.6,"20mm Thick, 10cm high Marble skirting (Local)",ml,1014.28,Finishing Works
+622,9.10,Copping (Local) Marble copping,,,Finishing Works
+623,9.10.1,300mm wide & 30mm. thick marble copping. (1:3),ml,2599.62,Finishing Works
+624,9.10.2,450mm wide & 30mm. thick marble copping. (1:3),ml,3632.37,Finishing Works
+625,9.10.3,300mm wide & 20mm. thick marble copping. (1:3),ml,2553.72,Finishing Works
+626,9.10.4,450mm wide & 20mm. thick marble copping. (1:3),ml,3563.52,Finishing Works
+627,9.11.1,300mm wide & 30mm. thick terrazo copping. (1:3),ml,806.1,Finishing Works
+628,9.11.2,450mm wide & 30mm. thick terrazo copping. (1:3),ml,942.4,Finishing Works
+629,9.11.3,300mm wide & 20mm. thick terrazo copping. (1:3),ml,725.23,Finishing Works
+630,9.11.4,450mm wide & 20mm. thick terrazo copping. (1:3),ml,821.1,Finishing Works
+631,9.11.5,10mm thick Ceramic floor with cement sand mortar (Local),m²,3546.49,Finishing Works
+632,9.11.6,9mm thick Ceramic floor tile with cement sand mortar (Local),m²,3444.49,Finishing Works
+633,9.11.7,8mm thick Ceramic floor tile with cement sand mortar (Local),m²,2881.27,Finishing Works
+634,9.11.8,10mm thick Ceramic floor with cement sand mortar (1:3),m²,4362.49,Finishing Works
+635,9.11.9,10 mm thick Ceramic floor tile with Adhesive powder,m²,4287.25,Finishing Works
+636,9.11.10,9mm thick Ceramic floor with cement sand mortar (1:3),m²,3966.12,Finishing Works
+637,9.11.11,8mm thick Ceramic floor with cement sand mortar (1:3),m²,3660.12,Finishing Works
+638,9.11.10p,8mm thick Porcelain floor tile with cement sand mortar (1:3),m²,4459.3,Finishing Works
+639,9.11.11p,9mm thick Porcelain floor tile with cement sand mortar (1:3),m²,4911.72,Finishing Works
+640,9.11.12,10mm thick Porcelain floor tile with cement sand mortar (1:3),m²,5484.49,Finishing Works
+641,9.11.13,SPC floor with foam,m²,1983.91,Finishing Works
+642,9.11.14,SPC Skirting,ml,375,Finishing Works
+643,9.11.15,Flamed Granite floor tile with cement sand mortar (1:3) (Local),m²,10465.34,Finishing Works
+644,9.11.16,Flamed Granite floor tile with cement sand mortar (1:3) (imported),m²,11184.09,Finishing Works
+645,9.11.17,Imported 1cm thick high quality Black Galaxy Granite with (1:3)(for wall cladding),m²,14710.83,Finishing Works
+646,9.11.17b,Imported 2cm thick high quality Black Galaxy Granite with (1:3)(for flooring),m²,20745.29,Finishing Works
+647,9.11.17c,Imported 3cm thick high quality Black Galaxy Granite with (1:3)(for flooring),m²,23136.29,Finishing Works
+648,9.11.18,Imported 1cm thick high quality Granite (grey colour) with (1:3)(for wall cladding),m²,13729.08,Finishing Works
+649,9.11.18b,Imported 2cm thick high quality Granite (grey colour) with (1:3)(for flooring),m²,13078.78,Finishing Works
+650,9.11.19,Imported 3cm thick high quality Granite (grey colour) with (1:3)(for flooring),m²,15578.78,Finishing Works
+651,9.11.182,2cm thick high quality standard Black Galaxy Granite for kitchen cabernet with all necessary works,m²,19659.2,Finishing Works
+652,9.11.19p,"Porcelain floor tile with adhesive powder,( size 120cmx60cmx1cm)",m²,5803.85,Finishing Works
+653,9.11.20,Porcelain floor tile with cement sand mortar (1:3) (size 120cmx60cmx1cm),m²,5484.69,Finishing Works
+654,10.0,PAINTING (WITHOUT SCAFFOLDING),,,Painting
+655,10.1,SUPER PLASTIC PAINT,,,Painting
+656,10.1.1,Three coats of plastic paint to wall. Internal,m²,222.76,Painting
+657,10.1.2,Three coats of plastic paint to wall. External,m²,226.12,Painting
+658,10.1.3,Three coats of plastic paint to tyrolean & rendered wall. External,m²,252.45,Painting
+659,10.1.4,Three coats of plastic paint to Exposed column and beam,m²,231.66,Painting
+660,10.1.5,Three coats of plastic paint to chipwood ceiling.,m²,237.32,Painting
+661,10.1.6,Three coats of plastic paint to Plastered ceiling.,m²,261.23,Painting
+662,10.1.7,Three coats of plastic paint to fyzit ceiling.,m²,231.66,Painting
+663,10.1.8,Three coats of plastic paint to abujedid ceiling.,m²,227.66,Painting
+664,10.2,OIL (SYNTHETIC) PAINT,,,Painting
+665,10.2.1,Three coats of Oil (synthetic) paint to wall. Internal,m²,321.32,Painting
+666,10.2.2,Three coats of Oil (synthetic) paint to wall. External,m²,325.3,Painting
+667,10.2.3,Three coats of Oil (synthetic) paint to Exposed column and beam,m²,325.3,Painting
+668,10.2.4,Three coats of synthetic paint to plastered soffit surface.,m²,360.4,Painting
+669,10.2.5,One coats of antirust two coats of synthetic enamel paint to ribbed sheet soffit,m²,320.91,Painting
+670,10.2.6,One coats of antirust two coats of synthetic enamel paint to metal surface,m²,285.81,Painting
+671,10.2.7,Three coats of varnish paint to wooden vertical surface,m²,339.76,Painting
+672,10.2.8,Three coats of varnish paint to wooden soffit,m²,374.86,Painting
+673,10.2.9,Two coats of Mica paint to internal plastered surface,m²,319.36,Painting
+674,10.2.10,Two coats of Mica paint to external plastered surface,m²,333.99,Painting
+675,10.2.11,Two coats of special aluminum paint to metal vertical surface.,m²,297.66,Painting
+676,10.2.12,Two coats of special antirust paint to GCIS & EGA roof cover,m²,238,Painting
+677,10.3,QUARTZ PAINT,,,Painting
+678,10.3.1,Quartz paint to Plastered surface,m²,857.39,Painting
+679,10.3.3,Lime paint,m²,347.82,Painting
+680,10.3.4,Supply and apply GRANITE PAINTING On external plastered wall surface. ...,m²,969.19,Painting
+681,10.3.5,Prepare the surface and apply Contextra (Texura Sparol) paint to plastered HCB wall surface. ...,m²,979.11,Painting
+682,10.4,JOTUN PAINTING OR EQUIVALENT,,,Painting
+683,10.4.1,"For interior Areas( walls, exposed beams, columns, shear walls and RC ceiling) : Three coats of approved quality acrylic emulsion Matt finish. ...",m²,235,Painting
+684,10.4.2,"For External Concrete, Plastered Surfaces JOTUN textile system ...",m²,778,Painting
+685,10.5.1,Supply and fix 3mm clear glass.,m²,1927.65,Glazing
+686,10.5.2,Supply and fix 4mm clear glass.,m²,2180.65,Glazing
+687,10.5.3,Supply and fix 5mm clear glass.,m²,2992.57,Glazing
+688,10.5.4,Supply and fix 6mm clear glass.,m²,4131.07,Glazing
+689,10.5.5,Supply and fix 4mm Figured glass.,m²,3511.82,Glazing
+690,10.5.6,Supply and fix 5mm Figured glass.,m²,4207.57,Glazing
+691,10.5.7,Supply and fix6mm Figured glass.,m²,4713.57,Glazing
+692,10.5.8,Supply and fix 3mm Frosted glass.,m²,3448.57,Glazing
+693,10.5.9,Supply and fix 4mm Frosted glass.,m²,3701.57,Glazing
+694,10.5.10,Supply and fix 5mm Frosted glass.,m²,4207.57,Glazing
+695,10.5.11,Supply and fix 6mm Frosted glass.,m²,4840.07,Glazing
+696,10.5.12,Supply and fix 4mm Tinted glass.,m²,3448.57,Glazing
+697,10.5.13,Supply and fix 5mm Tinted glass.,m²,4144.32,Glazing
+698,10.5.14,Supply and fix 6mm Tinted glass.,m²,4334.07,Glazing
+699,10.5.15,Supply and fix 4mm Reflected glass.,m²,3448.57,Glazing
+700,10.5.16,Supply and fix 5mm Reflected glass.,m²,4207.57,Glazing
+701,10.5.17,Supply and fix 6mm Reflected glass.,m²,4903.32,Glazing
+702,10.5.18,Supply and fix 6mm Laminated or security glass,m²,6611.07,Glazing
+703,10.5.19,Supply and fix 5mm Wired glass,m²,4840.07,Glazing
+704,10.5.20,Supply & fix 10mm thick Tempered Frameless partition wall with all necessary accessories ...,m²,14850,Glazing
+705,10.5.21,Supply & fix 10mm thick Tempered Frameless clear Glass Door. ... Double Leaf Door type.,m²,17050,Glazing
+706,12.0,SANITARY INSTALLATION,,,Sanitary Installation
+707,12.1,Hand wash basin,,,Sanitary Installation
+708,12.1.1,HWB size 45 * 55 cm with all Accessories heavy duty flexible (RAK),PCS,20030.53,Sanitary Installation
+709,12.1.2,HWB size 45 * 55 cm with all Accessories (Golden dragon sealed),PCS,17011.78,Sanitary Installation
+710,12.1.3,HWB size 40 * 50 cm with all Accessories (AQUA),PCS,14596.78,Sanitary Installation
+711,12.2,Low flash water closet,,,Sanitary Installation
+712,12.2.1,Low flash WC with all accessories (RAK),PCS,28483.03,Sanitary Installation
+713,12.2.2,Low flash WC with all accessories (Golden dragon sealed),PCS,26671.78,Sanitary Installation
+714,12.2.3,Low flash WC with all accessories (AQUA),PCS,19185.28,Sanitary Installation
+715,12.2.4,Low flash WC with all accessories (Tabor ceramic),PCS,9404.53,Sanitary Installation
+716,12.2.5,Turkish type WC (RAK),PCS,7714.03,Sanitary Installation
+717,12.2.6,Turkish type WC (Tabor ceramic),PCS,6989.53,Sanitary Installation
+718,12.3,Urinal,,,Sanitary Installation
+719,12.3.1,White glazed urinal with all accessories,PCS,10383.12,Sanitary Installation
+720,12.3.2,Urinal with all accessories,PCS,10383.12,Sanitary Installation
+721,12.7.6,Shower box 90x90cm,PCS,40000,Sanitary Installation
+722,12.7.7,Disabled Hand wash basin,PCS,38971.15,Sanitary Installation
+723,12.7.8,Disabled Water Closet,PCS,33847.9,Sanitary Installation
+724,12.7.9,Disabled Toilet (Disable HWB & Disable WC),PCS,76460.01,Sanitary Installation
+725,12.8,Bath Tab,,,Sanitary Installation
+726,12.8.1,70x170cm Bath Tab with all accessories,PCS,51170.22,Sanitary Installation
+727,12.8.2,70x170cm Bath Tab with all accessories medium quality,PCS,43779.22,Sanitary Installation
+728,12.8.3,70x170cm Bath Tab with all accessories (fiber glass),PCS,38127.22,Sanitary Installation
+729,12.9,Kitchen sink,,,Sanitary Installation
+730,12.9.1,Kitchen sink (double bowel) Italy,PCS,9513.87,Sanitary Installation
+731,12.9.2,Kitchen sink (double bowel) AQUA,PCS,9513.87,Sanitary Installation
+732,12.9.3,Kitchen sink (double bowel) Milano,PCS,8427.12,Sanitary Installation
+733,12.9.4,Kitchen sink (Single bowel) AQUA,PCS,7581.87,Sanitary Installation
+734,12.9.5,Kitchen sink (Single bowel) Milano,PCS,6615.87,Sanitary Installation
+735,12.10,Water heater,,,Sanitary Installation
+736,12.10.1,Instant Water heater,PCS,25860.22,Sanitary Installation
+737,12.10.2,50lt Water heater ordinary,PCS,32790.22,Sanitary Installation
+738,12.10.3,80lt Water heater ordinary,PCS,43185.22,Sanitary Installation
+739,12.10.4,100lt Water heater ordinary,PCS,57622.72,Sanitary Installation
+740,12.10.5,50lt Water heater (Ariston),PCS,39469.13,Sanitary Installation
+741,12.10.6,80lt Water heater (Ariston),PCS,51220,Sanitary Installation
+742,12.10.7,100lt Water heater (Ariston),PCS,66887.83,Sanitary Installation
+743,12.11,Floor drain,,,Sanitary Installation
+744,12.11.1,Floor drain (100mm) (Chrome plated),PCS,2100.54,Sanitary Installation
+745,12.11.2,Floor drain (80mm) (Chrome plated),PCS,2033.88,Sanitary Installation
+746,12.11.3,Floor drain (50mm) (Chrome plated),PCS,1542.89,Sanitary Installation
+747,12.11.4,Dia. 110mm clean out waste water,PCS,1261.64,Sanitary Installation
+748,12.11.5,Dia. 80mm clean out,PCS,1097.51,Sanitary Installation
+749,12.11.6,Dia.50mm clean out,PCS,926.16,Sanitary Installation
+750,12.11.7,Precast cloth washing basin,PCS,5582.16,Sanitary Installation
+751,12.12,PPR PIPE,,,Sanitary Installation
+752,12.12.1,"1/2"" PPR Pipe",ml,357.1,Sanitary Installation
+753,12.12.2,"3/4"" PPR Pipe",ml,450.36,Sanitary Installation
+754,12.12.3,"1"" PPR Pipe",ml,817.8,Sanitary Installation
+755,12.12.4,"11/4"" PPR Pipe",ml,1167.53,Sanitary Installation
+756,12.12.5,"11/2"" PPR Pipe",ml,2240.03,Sanitary Installation
+757,12.12.6,"2"" PPR Pipe",ml,2939.49,Sanitary Installation
+758,12.12.7,"21/2"" PPR Pipe",ml,3405.79,Sanitary Installation
+759,12.12.8,"3"" PPR Pipe",ml,5737.31,Sanitary Installation
+760,12.13,Galvanized Steel Pipe,,,Sanitary Installation
+761,12.13.1,"1/2"" Galvanized Steel Pipe (GSP)15mm",ml,1122.31,Sanitary Installation
+762,12.13.2,"3/4"" Galvanized Steel Pipe (GSP)20mm",ml,1375.88,Sanitary Installation
+763,12.13.3,"1"" Galvanized Steel Pipe (GSP)25mm",ml,1604.78,Sanitary Installation
+764,12.13.4,"11/4"" Galvanized Steel Pipe (GSP)32mm",ml,1719.07,Sanitary Installation
+765,12.13.5,"11/2"" Galvanized Steel Pipe (GSP)40mm",ml,1943.41,Sanitary Installation
+766,12.13.6,"2"" Galvanized Steel Pipe (GSP)50mm",ml,2946.01,Sanitary Installation
+767,12.13.7,"21/2"" Galvanized Steel Pipe (GSP)63mm",ml,3616.48,Sanitary Installation
+768,12.13.8,"3"" Galvanized Steel Pipe (GSP)75mm",ml,4736.57,Sanitary Installation
+769,12.13.9,"31/2"" Galvanized Steel Pipe (GSP)",ml,6943.77,Sanitary Installation
+770,12.13.10,"4"" Galvanized Steel Pipe (GSP)",ml,8369.55,Sanitary Installation
+771,12.13.11,"5"" Galvanized Steel Pipe (GSP)",ml,8782.41,Sanitary Installation
+772,12.13.12,"6"" Galvanized Steel Pipe (GSP)",ml,10216.89,Sanitary Installation
+773,12.13.13,"8"" Galvanized Steel Pipe (GSP)",ml,12179.01,Sanitary Installation
+774,12.13.14,"10"" Galvanized Steel Pipe (GSP)",ml,14056.72,Sanitary Installation
+775,12.13.15,"12"" Galvanized Steel Pipe (GSP)",ml,16290.58,Sanitary Installation
+776,12.14,Cast iron Pipe,,,Sanitary Installation
+777,12.14.1,"31/2"" Cast iron Pipe (CIP)",ml,1115.68,Sanitary Installation
+778,12.14.2,"4"" Cast iron Pipe (CIP)",ml,1860.98,Sanitary Installation
+779,12.14.3,"5"" Cast iron Pipe (CIP)",ml,1946.51,Sanitary Installation
+780,12.14.4,"6"" Cast iron Pipe (CIP)",ml,2043.08,Sanitary Installation
+781,12.14.5,"8"" Cast iron Pipe (CIP)",ml,2619.32,Sanitary Installation
+782,12.14.6,"10"" Cast iron Pipe (CIP)",ml,3118.83,Sanitary Installation
+783,12.14.7,"12"" Cast iron Pipe (CIP)",ml,3942.12,Sanitary Installation
+784,12.15,HDPE Pipe (PN 16),,,Sanitary Installation
+785,12.15.1,"1/2"" HDPE Pipe",ml,1476.21,Sanitary Installation
+786,12.15.2,"3/4"" HDPE Pipe",ml,1566.74,Sanitary Installation
+787,12.15.3,"1"" HDPE Pipe",ml,1643.2,Sanitary Installation
+788,12.15.4,"11/4"" HDPE Pipe",ml,1740.44,Sanitary Installation
+789,12.15.5,"11/2"" HDPE Pipe",ml,1934.58,Sanitary Installation
+790,12.15.6,"2"" HDPE Pipe",ml,2063.82,Sanitary Installation
+791,12.15.7,"21/2"" HDPE Pipe",ml,2317.96,Sanitary Installation
+792,12.15.8,"3"" HDPE Pipe",ml,2750.94,Sanitary Installation
+793,12.15.9,"3.5"" HDPE Pipe",ml,3411.71,Sanitary Installation
+794,12.15.10,"4"" HDPE Pipe",ml,4123.63,Sanitary Installation
+795,12.15.11,"5"" HDPE Pipe",ml,4374.14,Sanitary Installation
+796,12.19.1,"BRONZE Gate Valve PN 16 1/2""X20",PCS,1483.19,Sanitary Installation
+797,12.19.2,"BRONZE Gate Valve PN 16 3/4""",PCS,1917.97,Sanitary Installation
+798,12.19.3,"BRONZE Gate Valve PN 16 1""(25)",PCS,2678.84,Sanitary Installation
+799,12.19.4,BRONZE Gate Valve PN 16 32MM,PCS,3983.19,Sanitary Installation
+800,12.19.5,BRONZE Gate Valve PN 16 40MM,PCS,4417.97,Sanitary Installation
+801,12.19.6,"BRONZE Gate Valve PN 16 2""",PCS,6265.8,Sanitary Installation
+802,12.19.7,"BRONZE Gate Valve PN 16 21/2""",PCS,6809.28,Sanitary Installation
+803,12.19.8,"BRONZE Gate Valve PN 16 3""",PCS,7896.24,Sanitary Installation
+804,12.19.9,"BRONZE Gate Valve PN 16 3.5""",PCS,9479.08,Sanitary Installation
+805,12.19.10,"BRONZE Gate Valve PN 16 4""",PCS,9964.72,Sanitary Installation
+806,12.19.11,"BRASS Gate Valve PN 16 3""",PCS,6027.25,Sanitary Installation
+807,12.19.12,"BRASS Gate Valve PN 16 21/2""",PCS,4592.47,Sanitary Installation
+808,12.19.13,"BRASS Gate Valve PN 16 11/2""",PCS,2159.08,Sanitary Installation
+809,12.19.14,"BRASS Gate Valve PN 16 2""",PCS,3017.08,Sanitary Installation
+810,12.19.17,"BRASS Gate Valve PN 16 4""",PCS,12595.84,Sanitary Installation
+811,12.19.18,"BRASS Gate Valve PN 16 3"" two way",PCS,8635.48,Sanitary Installation
+812,12.19.20,"BRASS Gate Valve PN 16 4"" two way",PCS,14589.29,Sanitary Installation
+813,12.19.21,"BRASS Gate Valve PN 16 5"" two way",PCS,18523.53,Sanitary Installation
+814,12.19.22,"BRASS Gate Valve PN 16 6""",PCS,11836.72,Sanitary Installation
+815,12.19.23,"BRASS Gate Valve PN 16 8""",PCS,17306.05,Sanitary Installation
+816,12.19.24,"BRASS Gate Valve PN 16 10""",PCS,22200.81,Sanitary Installation
+817,12.19.25,"BRASS Gate Valve PN 16 12""",PCS,29183.5,Sanitary Installation
+818,12.19.16,"FLOAT VALVE Valve PN 16 2""(50)",PCS,1275.95,Sanitary Installation
+819,12.20.1,Cast iron Valve PN 16 90mm,PCS,20248.44,Sanitary Installation
+820,12.20.2,Cast iron Valve PN 16 100mm,PCS,29564.87,Sanitary Installation
+821,12.20.3,Cast iron Valve PN 16 150mm,PCS,37475.66,Sanitary Installation
+822,12.20.4,Cast iron Valve PN 16 200mm,PCS,54224.58,Sanitary Installation
+823,12.20.5,Cast iron Gate Valve PN 16 300mm,PCS,69226.28,Sanitary Installation
+824,12.21.2,25mm dia. Water Meter.,PCS,1996.1,Sanitary Installation
+825,12.21.3,50mm dia. Water Meter.,PCS,4763.38,Sanitary Installation
+826,12.22,UPVC Pipe (PN6) without Civil assistance works,,,Sanitary Installation
+827,12.22.1,50 mm. dia. UPVC Pipe (without Civil works),ml,490.73,Sanitary Installation
+828,12.22.2,65 mm. dia. UPVC Pipe (without Civil works),ml,603.04,Sanitary Installation
+829,12.22.3,75 mm. dia. UPVC Pipe (without Civil works),ml,664.5,Sanitary Installation
+830,12.22.4,110 mm. dia. UPVC Pipe (without Civil works),ml,919.54,Sanitary Installation
+831,12.22.5,125 mm. dia. UPVC Pipe (without Civil works),ml,1190.92,Sanitary Installation
+832,12.22.6,160 mm. dia. UPVC Pipe (without Civil works),ml,1819.43,Sanitary Installation
+833,12.22.7,200 mm. dia. UPVC Pipe (without Civil works),ml,2215.01,Sanitary Installation
+834,12.22.8,225 mm. dia. UPVC Pipe (without Civil works),ml,2635.62,Sanitary Installation
+835,12.22.9,250 mm. dia. UPVC Pipe (without Civil works),ml,4297.16,Sanitary Installation
+836,12.22.10,315 mm. dia. UPVC Pipe (without Civil works),ml,7354.1,Sanitary Installation
+837,12.22.11,355 mm. dia. UPVC Pipe (without Civil works),ml,8579.79,Sanitary Installation
+838,12.22.12,400 mm. dia. UPVC Pipe (without Civil works),ml,12117.34,Sanitary Installation
+839,12.22.13,450 mm. dia. UPVC Pipe (without Civil works),ml,13329.08,Sanitary Installation
+840,12.22.14,500 mm. dia. UPVC Pipe (without Civil works),ml,14550.83,Sanitary Installation
+841,12.22.15,"160 mm. dia. PERFORATED PIPE. Price shall include Geosynthetic, Damp proof, Gravel 40-50mm, Select material and Accessories",ml,4978.02,Sanitary Installation
+842,12.23.1,Dia. 50mm Vent cap,PCS,309.44,Sanitary Installation
+843,12.23.2,Dia. 80mm Vent cap,PCS,331.54,Sanitary Installation
+844,12.23.3,Dia. 100mm Vent cap,PCS,376.29,Sanitary Installation
+845,12.24.1,80 mm. dia. UPVC Pipe down pipe,ml,674.06,Sanitary Installation
+846,12.24.2,110 mm. dia. UPVC Pipe down pipe,ml,921.56,Sanitary Installation
+847,12.24.3,125 mm. dia. UPVC Pipe down pipe,ml,1205.52,Sanitary Installation
+848,12.24.4,160 mm. dia. UPVC Pipe down pipe,ml,1797.87,Sanitary Installation
+849,12.26.1,4mm thick approved quality waterproofing,m²,338.34,Sanitary Installation
+850,12.26.2,Xypex,m²,399,Sanitary Installation
+851,12.26.3,PVC JOINT FILLER AND WATER STOPPER,m²,520,Sanitary Installation
+852,12.26.4,CEMENTIOUS WATER PROOF,m²,255.06,Sanitary Installation
+853,12.26.5,Soccer Field Irrigation System,PCS,769.19,Sanitary Installation
+854,12.26.7,PVC WATERSTOPS,ml,447.43,Sanitary Installation
+855,12.26.8,Polyurethane water proof coating,m²,436.59,Sanitary Installation
+856,12.32.1,Curb stone in C-25 size 150x400mm,ml,2020.2,Sanitary Installation
+857,12.34.1,Polyethylene water tank 750 lt capacity,No.,13193.8,Sanitary Installation
+858,12.34.2,Polyethylene water tank 1000 lt capacity,No.,14572.66,Sanitary Installation
+859,12.34.3,Polyethylene water tank 2000 lt capacity,No.,13270.84,Sanitary Installation
+860,12.34.4,Polyethylene water tank 5000 lt capacity,No.,26600.16,Sanitary Installation
+861,12.34.5,Fiber glass water tank 500 lt capacity,No.,30485.91,Sanitary Installation
+862,12.34.6,Fiber glass water tank 1000 lt capacity,No.,32730,Sanitary Installation
+863,12.34.7,Fiber glass water tank 3000 lt capacity,No.,58485.91,Sanitary Installation
+864,12.34.8,Fiber glass water tank 5000 lt capacity,No.,79485.91,Sanitary Installation
+865,12.34.9,Fiber glass water tank 10000 lt capacity,No.,153485.91,Sanitary Installation
+866,12.34.10,Fiber glass water tank 15000 lt capacity,No.,207485.91,Sanitary Installation
+867,12.34.11,Fiber glass water tank 20000 lt capacity,No.,262485.91,Sanitary Installation
+868,12.34.12,Fiber glass water tank 25000 lt capacity,No.,358485.91,Sanitary Installation
+869,D1,Supply and construct concrete pipe Half ditch with all civil assistance works. 1 Half Dia.30cm concrete pipe.,ml,1377.47,Drainage Work
+870,D2,Supply and construct concrete pipe Half ditch with all civil assistance works. 2 Half Dia.40cm concrete pipe.,ml,1554.86,Drainage Work
+871,D3,Supply and construct concrete pipe closed ditch with all civil assistance works. 1 Supply and lay Diameter 30 cm concrete pipe,ml,1474.07,Drainage Work
+872,D4,Supply and construct concrete pipe closed ditch with all civil assistance works. 2 Supply and lay Diameter 40 cm concrete pipe,ml,1576.07,Drainage Work
+873,D5,Supply and construct concrete pipe closed ditch with all civil assistance works. 3 Supply and lay Diameter 50 cm concrete pipe,ml,3304.19,Drainage Work
+874,D6,Supply and construct concrete pipe closed ditch with all civil assistance works. 4 Supply and lay Diameter 60 cm concrete pipe,ml,4324.19,Drainage Work
+875,D7,Supply and construct concrete pipe closed ditch with all civil assistance works. 5 Supply and lay Diameter 100 cm concrete pipe,ml,8614.59,Drainage Work
+876,D8,Supply and construct Reinforced concrete pipe closed ditch with all civil assistance works. 1 Supply and lay Diameter 50 cm concrete pipe,ml,8436.59,Drainage Work
+877,D9,Supply and construct Reinforced concrete pipe closed ditch with all civil assistance works. 2 Supply and lay Diameter 60 cm concrete pipe,ml,9456.59,Drainage Work
+878,FP1,Foot path (side walk) brick (15*30*0.5) stablished and compressed during preparation and rough surface) coloured concrete block on cement stablized sand base 50mm fine aggregate including any jointing work.,m²,1899.98,Footpath & Paving
+879,FP2,Foot path (side walk) brick (15*30*0.5) stablished and compressed during preparation and rough surface) coloured concrete block on mortar bedding including any jointing work.,m²,2617.24,Footpath & Paving
+880,FP3,Foot path (side walk) brick (I-section) stablished and compressed during preparation and rough surface) coloured concrete block on mortar bedding including any jointing work.,m²,2601.59,Footpath & Paving
+881,FP4,Foot path (side walk) brick (I-section) Width =15 and 9cm length = 30cm and thickness = 5cm ... on sand bedding including any jointing work.,m²,1885.05,Footpath & Paving
+882,FP5,Foot path (side walk) yellow tiles coloured concrete block on cement stablized sand base 50mm fine aggregate including any jointing work.,m²,2158.12,Footpath & Paving
+883,FP6,Foot path (side walk) yellow tiles coloured concrete block on mortar bedding including any jointing work.,m²,2562.91,Footpath & Paving
+884,FP7,Foot path (side walk) Zig zag compressed precoloured concrete block on cement stablized sand base 50mm fine aggregate including any jointing work.,m²,2102.36,Footpath & Paving
+885,C1,Capping layer under the sub base layer(Granular) compacted to thickness of 200mm up to average 15km distance.,m³,2563.95,Footpath & Paving
+886,C2,Gravel sub base compacted to 96% AACRA test S-11 Density (Compacted layer of maximum 150mm) up to average 15km.,m³,4401.11,Footpath & Paving
+887,C3,Base course compacted to 96% AACRA test S-11 Density (Compacted layer of maximum 150mm) up to average 15km.,m³,4544.5,Footpath & Paving
+888,Ea,16A/1ph digital kilowatt meter,No.,10080,Electrical & Data
+889,Eb,25A/3ph digital kilowatt meter,No.,15225,Electrical & Data
+890,Ec,32A/3ph digital kilowatt meter,No.,15225,Electrical & Data
+891,Ed,63A/3ph digital kilowatt meter,No.,17325,Electrical & Data
+892,1.1.1,Floor standing distribution board of metal enclosure MDB-EV ...,set,702145.6,Electrical & Data
+893,1.1.2,"Floor standing Factory made indoor distribution board IP 44 ... Central Main Distribution Board, CMDB ...",set,205182.6,Electrical & Data
+894,1.1.3,Surface mounted distribution board of metal enclosure SDB-LP/GF/A ...,set,59881.36,Electrical & Data
+895,1.1.4,Surface mounted distribution board of metal enclosure SDB-LP/GF/B ...,set,92826.68,Electrical & Data
+896,1.1.5,Flush mounted distribution board of metal enclosure SDB-SHI/GF = SDB-SH7GF ...,set,29963.68,Electrical & Data
+897,1.1.6,Surface mounted distribution board of metal enclosure SDB-LP/IBF/A ...,set,0,Electrical & Data
+898,1.1.7,Surface mounted distribution board of metal enclosure SDB-LP/1BF/B ...,set,31419.68,Electrical & Data
+899,1.1.8,Surface mounted distribution board of metal enclosure SDB-LP/2BF/A ...,set,29069.68,Electrical & Data
+900,1.1.9,Surface mounted distribution board of metal enclosure SDB-LP/3BF ...,set,31389.68,Electrical & Data
+901,1.1.10,Surface mounted distribution board of metal enclosure SDB-KCH/3BF ...,set,36895.36,Electrical & Data
+902,1.1.11,Surface mounted distribution board of metal enclosure MDB-UPS ...,set,28303.68,Electrical & Data
+903,1.1.13,Surface mounted distribution board of metal enclosure MDB-MP ...,set,142709.6,Electrical & Data
+904,1.1.14,Surface mounted distribution board of metal enclosure SDB-MP/1BF/A ...,set,60302.38,Electrical & Data
+905,1.1.15,Surface mounted distribution board of metal enclosure SDB-MP/1BF/B ...,set,57754.88,Electrical & Data
+906,1.1.16,Surface mounted distribution board of metal enclosure SDB-MP/2BF/A ...,set,63972.18,Electrical & Data
+907,1.1.17,Surface mounted distribution board of metal enclosure SDB-PUMP ...,set,114433.31,Electrical & Data
+908,1.1.18,Surface mounted distribution board of metal enclosure SDB-EV/GF ...,set,108563.36,Electrical & Data
+909,1.1.19,Surface mounted distribution board of metal enclosure SDB-EV/1BF/A ...,set,144851.36,Electrical & Data
+910,1.1.20,Surface mounted distribution board of metal enclosure SDB-EV/1BF/B ...,set,85299.36,Electrical & Data
+911,1.1.21,Surface mounted distribution board of metal enclosure SDB-EV/2BF/B ...,set,109931.36,Electrical & Data
+912,1.1.21b,"Floor standing Factory made indoor distribution board IP 44 ... Central Main Distribution Board, CMDB ...",set,291661.9,Electrical & Data
+913,1.1.22,Floor standing distribution board of metal enclosure MDB-EV/IBF ...,set,525808.4,Electrical & Data
+914,1.1.23,Semi-Flush Mounted Distribution Board (SDB-PM) ...,set,63081.85,Electrical & Data
+915,2.1.1,Conductor (2x2.5mm2) with 10 meter Average distance ...,PCS,3752.54,Electrical & Data
+916,2.1.2,Conductor (3x2.5mm2) with 10 meter Average distance ...,PCS,4882.94,Electrical & Data
+917,2.1.3,Conductor (3x4mm2) with 10 meter Average distance ...,PCS,6287.34,Electrical & Data
+918,2.1.4,Conductor (3x4mm2) with 10 meter Average distance ...,PCS,7241.64,Electrical & Data
+919,3.1.1,Power cable (3x4mm2) with 10 meter Average distance ...,PCS,6453.94,Electrical & Data
+920,3.1.2,Power cable (3x6mm2) with 10 meter Average distance ...,PCS,9852.64,Electrical & Data
+921,3.1.3,Power cable (5x4mm2) with 10 meter average point length ...,PCS,9156.94,Electrical & Data
+922,3.1.4,Power cable (2x2.5mm2) with 10 meter Average distance ...,PCS,3665.64,Electrical & Data
+923,3.1.5,Power cable (3x2.5mm2) with 10 meter Average distance ...,PCS,4852.64,Electrical & Data
+924,3.1.6,Power cable (5x2.5mm2) with 10 meter Average distance ...,PCS,6548.24,Electrical & Data
+925,4.1.1,Normal switch,pcs,317.9,Electrical & Data
+926,4.1.2,Flush mounted single switch 774001+774041,PCS,517.14,Electrical & Data
+927,4.1.3,"Flush mounted 2 gang single switch ,774005+774041",PCS,641.01,Electrical & Data
+928,4.1.4,"Flush mounted 2 gang two way switch ,774005+774041",PCS,641.01,Electrical & Data
+929,4.1.5,"Flush mounted two way switch ,774006+774041",PCS,517.14,Electrical & Data
+930,4.1.6,Triple switch,PCS,736.93,Electrical & Data
+931,4.1.7,Intermediate switch,PCS,576.14,Electrical & Data
+932,5.1.1,Power cable (3x4mm2) with 10 meter Average distance PVC conduit 25mm Junction Box,PCS,6443.94,Electrical & Data
+933,5.1.2,Power cable (3x6mm2) with 10 meter Average distance,PCS,9852.64,Electrical & Data
+934,5.1.3,Power cable (3x2.5mm2) with 10 meter Average distance,PCS,4672.64,Electrical & Data
+935,5.1.4,Power cable (3x2.5mm2) with 10 meter Average distance,PCS,4852.64,Electrical & Data
+936,5.1.5,Power cable (5x2.5mm2) with 10 meter Average distance,PCS,6641.24,Electrical & Data
+937,6.1.1,16A/1P or 25A/1P power outlet points fed through PVC sheathed Cable of 3x2.5mm2 ...,PCS,9856.27,Electrical & Data
+938,6.1.3,16A/1P or 25A/1P outlet points fed through PVC sheathed and PVC insulated cable of 3x4mm2 ...,PCS,5995.22,Electrical & Data
+939,6.1.4,16A/3P or 25A/3P power outlet points fed through PVC sheathed and PVC insulated cable of 3x6mm2 ...,PCS,9676.61,Electrical & Data
+940,6.1.5,32A/3P power outlet points for Confrence AHU Chiller fed through PVC sheathed Cable of 5x6mm2 ...,PCS,15567.97,Electrical & Data
+941,6.1.6,32A/3P power outlet points fed through PVC sheathed and PVC insulated cable of 3x10mm2 ...,PCS,15564.9,Electrical & Data
+942,6.1.7,50A/3p Power outlet point for Lift machine fed through PVC sheathed cable of 5x10 sqmm ...,PCS,24939.56,Electrical & Data
+943,7.1.1,Single socket economic,PCS,294.36,Electrical & Data
+944,7.1.2,"Flush mounting single socket of 10A/1P,",PCS,568.11,Electrical & Data
+945,7.1.3,FLUSH MOUNTED Socket outlet,PCS,568.11,Electrical & Data
+946,7.1.4,FLUSH MOUNTED Socket outlet twin,PCS,590.81,Electrical & Data
+947,7.1.5,FLUSH MOUNTED Socket outlet 20A/1P,PCS,1848.57,Electrical & Data
+948,7.1.6,FLUSH MOUNTED Socket outlet for water heater,PCS,859.62,Electrical & Data
+949,7.1.7,"Industrial type Socket outlet of 16A/1P, Legrand p 17 tempra, 55553",PCS,3159.05,Electrical & Data
+950,7.1.8,"INDUSTRIAL TYPE Socket outlet of 32A/3P, Legrand p 17 tempra, 55558",PCS,3782.05,Electrical & Data
+951,8.1.1,Panel LED 30×30 24W 2400lm 110 lm/W 3000K,PCS,1139.66,Electrical & Data
+952,8.1.2,Panel LED 30×60 36W 3600lm If 30000hr 3000-4000k,PCS,3314.2,Electrical & Data
+953,8.1.3,Panel LED 60×60 48W 4800lm If 30000hr 3500-4000k,PCS,3401.39,Electrical & Data
+954,8.1.4,Panel LED 30×120 36W 3860lm If 30000hr 4000k,PCS,3867.05,Electrical & Data
+955,8.1.5,Panel LED 60×120 60W 6000lm If 35000hr 4000-6000k,PCS,4932.73,Electrical & Data
+956,8.1.6.1,Philips Fluorescent with Luminaire / LED Light Type 1 x 18 Watt,PCS,2630.87,Electrical & Data
+957,8.1.6.2,Philips Fluorescent with Luminaire / LED Light Type 2 x 18 Watt (Lower),PCS,3955.87,Electrical & Data
+958,8.1.6.3,Philips Fluorescent with Luminaire / LED Light Type 3 x 18 Watt,PCS,5655.87,Electrical & Data
+959,8.1.6.4,Philips Fluorescent with Luminaire / LED Light Type 4 x 18 Watt (Lower),PCS,6455.87,Electrical & Data
+960,8.1.6.5,Philips Fluorescent with Luminaire / LED Light Type 1 x 36 Watt,PCS,3955.87,Electrical & Data
+961,8.1.6.6,Philips Fluorescent with Luminaire / LED Light Type 2 x 36 Watt (Lower),PCS,5155.87,Electrical & Data
+962,8.1.6.7,TMW 065/1-36 with 1 x TLD 36 Watt,PCS,5655.87,Electrical & Data
+963,8.1.6.8,emergency lamp with 3hr kit,PCS,5657.01,Electrical & Data
+964,8.1.6.9,Directional led Sign light EXIT,PCS,4162.67,Electrical & Data
+965,8.2.1,Gate column Light With lamp,PCS,2415.36,Electrical & Data
+966,8.2.2,Gate column Light With lamp,PCS,4162.67,Electrical & Data
+967,8.2.3,Gate column Light With lamp,PCS,4162.67,Electrical & Data
+968,8.2.4,Gate column Light With lamp,PCS,5936.58,Electrical & Data
+969,8.2.4b,JKF Water proof 6 way 3up and 3down white oval led light,PCS,1235.71,Electrical & Data
+970,8.2.5,JKF Water proof 8 way 4up and outdoor warm white oval led light,PCS,1617.16,Electrical & Data
+971,8.2.6,JKF Water proof 10 way 5up and white oval led5down light,PCS,2007.36,Electrical & Data
+972,8.2.7,Water proof 6 way 3up and 3down Neon strip outdoor warm white led light,PCS,2388.76,Electrical & Data
+973,8.2.8,JKF Water proof 8 way 4up and warm white oval led light,PCS,1856.58,Electrical & Data
+974,8.2.9,JKF Water proof 6 outdoor warm white way 3up and 3down led light,PCS,1856.58,Electrical & Data
+975,8.3.1,High Quality Standard LED Light Fitting and Lamps Panel LED 30×30 24W 2400lm 110 lm/W 3000K,PCS,2297.05,Electrical & Data
+976,8.3.2,Panel LED 30×60 36W 3600lm 110 3000W,PCS,3467.05,Electrical & Data
+977,8.3.3,Panel LED 60×60 48W 4800lm 110 3000W,PCS,6819.05,Electrical & Data
+978,8.3.4,Panel LED 60×120 60W 6000lm 110 3000W,PCS,7057.05,Electrical & Data
+979,8.4.1,Led Flood Light (Pawza) 50w,PCS,3250,Electrical & Data
+980,8.4.2,Led Flood Light (Pawza) 100w,PCS,4250,Electrical & Data
+981,8.4.3,Led Flood Light (Pawza)150w,PCS,6850,Electrical & Data
+982,8.4.4,Led Flood Light (Pawza) 200w,PCS,8150,Electrical & Data
+983,9.1.1,Early Streamer Emission(ESE) Protector SI 40 ...,PCS,244810.88,Electrical & Data
+984,9.1.2,Early Streamer Emission(ESE) Protector SI 60 ...,PCS,262060.88,Electrical & Data
+985,9.1.3,Early Streamer Emission(ESE) Protector SI 70 ...,PCS,262060.88,Electrical & Data
+986,9.1.4,Early Streamer Emission(ESE) Protector SI 125 ...,PCS,279310.88,Electrical & Data
+987,9.1.5,16mm Air Termination circular galvanized steel rod 1.0m length,PCS,1954.09,Electrical & Data
+988,9.1.6,25 x 3mm insulated copper tape with vertical supporting every 1m ...,ml,5482.76,Electrical & Data
+989,9.1.7,1x70mm.sq galvanized Steel earth conductor ring as indicated on the drawing,ml,531.71,Electrical & Data
+990,9.1.8,30x3.5mm galvanized steel ring earth termination net work.,ml,902.64,Electrical & Data
+991,9.1.9,1500mm long and 50x50x3mm X-head galvanized steel earth rod ...,PCS,6791.12,Electrical & Data
+992,9.1.10,Bonding materials for down conductor with air termination ...,PCS,135975.46,Electrical & Data
+993,9.1.11,Equipotential (Earthing) bonding copper bar 1500x50x10mm ...,PCS,68874.15,Electrical & Data
+994,9.2.1,1x185mm. Sq. Bare copper bonding conductor,ml,2644.09,Electrical & Data
+995,9.2.2,1x150mm. Sq. Bare copper bonding conductor,ml,2444.09,Electrical & Data
+996,9.2.3,1x120mm. Sq. Bare copper bonding conductor,ml,2114.09,Electrical & Data
+997,9.2.4,1x70mm. Sq. Bare copper bonding conductor,ml,1748.03,Electrical & Data
+998,9.2.5,1x50mm. Sq. Bare copper bonding conductor,ml,1314.7,Electrical & Data
+999,9.2.6,1x25mm. Sq. Bare copper bonding conductor,ml,975.68,Electrical & Data
+1000,9.2.7,1x16mm. Sq. Bare copper bonding conductor,ml,975.68,Electrical & Data
+1001,9.2.8,1x10mm. Sq. Bare copper bonding conductor,ml,609.8,Electrical & Data
+1002,9.2.9,1x6mm. Sq. Bare copper bonding conductor,ml,407.84,Electrical & Data
+1003,9.3.1,2400x16mm copper earth road,PCS,4841.92,Electrical & Data
+1004,9.3.2,1500x16mm copper earth road,PCS,3994.09,Electrical & Data
+1005,9.3.3,3000x20mm copper earth road,PCS,7061.2,Electrical & Data
+1006,10.1.1,Feeder Cables (POWER CABLE 0.6/1KV) 2x2.5 sq.mm Cable,ml,275.46,Electrical & Data
+1007,10.1.2,3x2.5 sq.mm Cable,ml,389.59,Electrical & Data
+1008,10.1.3,3x4 sq.mm Cable,ml,556.68,Electrical & Data
+1009,10.1.4,3x6sq.mm Cable,ml,914.59,Electrical & Data
+1010,10.1.5,3x10sq.mm Cable,ml,1489.8,Electrical & Data
+1011,10.1.6,5x4sq.mm Cable,ml,855.66,Electrical & Data
+1012,10.1.7,5x6sq.mm Cable,ml,1455.6,Electrical & Data
+1013,10.1.8,5x10sq.mm Cable,ml,2286.47,Electrical & Data
+1014,10.1.9,5x16sqmm Cable,ml,3872.5,Electrical & Data
+1015,10.1.10,2x2.5sqmm Cable with conduit 16mm,ml,387.5,Electrical & Data
+1016,10.1.11,3x4sqmm Cable with conduit 20mm,ml,668.72,Electrical & Data
+1017,10.1.12,3x6sqmm Cable with conduit 25mm,ml,1031.89,Electrical & Data
+1018,10.1.13,3x10sqmm Cable with conduit 32mm,ml,1633.35,Electrical & Data
+1019,10.1.14,5x4sqmm Cable conduit 25mm,ml,946.74,Electrical & Data
+1020,10.1.15,5x 6sqmm Cable conduit 32mm,ml,1528.35,Electrical & Data
+1021,10.1.16,5x10sqmm Cable conduit 36mm,ml,2364.47,Electrical & Data
+1022,10.1.17,5x16sqmm Cable conduit 50mm,ml,4009.45,Electrical & Data
+1023,10.1.18,3x25/16,ml,4237.72,Electrical & Data
+1024,10.1.19,3x35/16,ml,5607.29,Electrical & Data
+1025,10.1.20,3x95/50,ml,13915.98,Electrical & Data
+1026,10.1.21,3x240/120,ml,35783.38,Electrical & Data
+1027,10.1.22,3x70/35+35sq.mm,ml,12582.94,Electrical & Data
+1028,10.1.23,3x50/25+1x25sq.mm,ml,8090.76,Electrical & Data
+1029,10.1.24,3x25/16+1x16sq.mm,ml,4963.59,Electrical & Data
+1030,10.1.25,3x35/16+1x16sq.mm,ml,6333.15,Electrical & Data
+1031,10.1.26,3x120/70+1x70 sq.mm,ml,21265.98,Electrical & Data
+1032,10.1.27,3x150/70+1x70 sq.mm,ml,24918.15,Electrical & Data
+1033,10.1.28,3x185/95+1x95 sq.mm,ml,33226.85,Electrical & Data
+1034,10.1.29,3x240/120+1x120 sq.mm,ml,40764.68,Electrical & Data
+1035,10.1.30,3x300/150+1x150 sq.mm,ml,47247.29,Electrical & Data
+1036,10.1.31,1x150sq.mm,ml,6214.46,Electrical & Data
+1037,10.1.32,1x70sq.mm,ml,2873.44,Electrical & Data
+1038,10.1.33,1x25sq.mm,ml,1076.16,Electrical & Data
+1039,10.1.34,1x16sq.mm,ml,804.53,Electrical & Data
+1040,11.1.1,Flexible pvc Pipe (Corrugated conduit) dia16mm,ml,56.34,Electrical & Data
+1041,11.1.2,Flexible pvc Pipe (Corrugated conduit) dia 25mm,ml,76.31,Electrical & Data
+1042,11.1.3,Flexible pvc (Corrugated conduit) dia 32mm,ml,107.09,Electrical & Data
+1043,11.1.4,Flexible pvc (Corrugated conduit) dia 50mm,ml,145.5,Electrical & Data
+1044,11.1.5,PVC Pipe Dia(Rgid conduit) 16mm,ml,43.21,Electrical & Data
+1045,11.1.6,PVC Pipe (Rgid conduit) Dia 25mm,ml,43.21,Electrical & Data
+1046,11.1.7,PVC Pipe Dia 32mm,ml,93.09,Electrical & Data
+1047,11.1.8,PVC Pipe Dia 36mm,ml,98.34,Electrical & Data
+1048,11.1.9,PVC Pipe Dia50mm,ml,173.65,Electrical & Data
+1049,11.1.10,PVC Pipe Dia75mm,ml,204.08,Electrical & Data
+1050,11.1.11,PVC Pipe Dia80mm,ml,325.31,Electrical & Data
+1051,11.1.12,PVC Pipe Dia110mm,ml,375.02,Electrical & Data
+1052,11.1.13,PVC Pipe Dia160mm,ml,938.07,Electrical & Data
+1053,11.1.14,PVC Pipe Dia 200mm,ml,1135.89,Electrical & Data
+1054,12.1.1,High Quality Feeder Cable with outer insulation marking tag of XLPE 2x2.5 sq.mm Cable,ml,456.7,Electrical & Data
+1055,12.1.2,3x2.5 sq.mm Cable,ml,566.95,Electrical & Data
+1056,12.1.3,3x4 sq.mm Cable,ml,847.3,Electrical & Data
+1057,12.1.4,3x6sq.mm Cable,ml,1170.7,Electrical & Data
+1058,12.1.5,3x10sq.mm Cable,ml,1774.45,Electrical & Data
+1059,12.1.6,5x4sq.mm Cable,ml,841.54,Electrical & Data
+1060,12.1.7,5x6sq.mm Cable,ml,1685.2,Electrical & Data
+1061,12.1.8,5x10sq.mm Cable,ml,3026.49,Electrical & Data
+1062,12.1.9,5x16sqmm Cable,ml,4658.13,Electrical & Data
+1063,12.1.10,2x2.5sqmm Cable with conduit 16mm,ml,517.74,Electrical & Data
+1064,12.1.11,3x4sqmm Cable with conduit 20mm,ml,908.34,Electrical & Data
+1065,12.1.12,3x6sqmm Cable with conduit 25mm,ml,1236.99,Electrical & Data
+1066,12.1.13,3x10sqmm Cable with conduit 32mm,ml,1866.99,Electrical & Data
+1067,12.1.14,5x4sqmm Cable conduit 25mm,ml,913.09,Electrical & Data
+1068,12.1.15,5x 6sqmm Cable conduit 32mm,ml,1777.74,Electrical & Data
+1069,12.1.16,5x10sqmm Cable conduit 36mm,ml,3094.49,Electrical & Data
+1070,12.1.17,5x16sqmm Cable conduit 50mm,ml,4795.08,Electrical & Data
+1071,12.1.18,3x25/16,ml,5134.98,Electrical & Data
+1072,12.1.19,3x35/16,ml,6373.98,Electrical & Data
+1073,12.1.20,3x95/50,ml,15071.13,Electrical & Data
+1074,12.1.21,3x240/120,ml,40554.67,Electrical & Data
+1075,12.1.22,3x70/35+35sq.mm,ml,14432.51,Electrical & Data
+1076,12.1.23,3x50/25+1x25sq.mm,ml,9669.93,Electrical & Data
+1077,12.1.24,3x25/16+1x16sq.mm,ml,5833.72,Electrical & Data
+1078,12.1.25,3x35/16+1x16sq.mm,ml,7072.72,Electrical & Data
+1079,12.1.26,3x120/70+1x70 sq.mm,ml,25882.36,Electrical & Data
+1080,12.1.27,3x150/70+1x70 sq.mm,ml,29718.68,Electrical & Data
+1081,12.1.28,3x185/95+1x95 sq.mm,ml,33811.05,Electrical & Data
+1082,12.1.29,3x240/120+1x120 sq.mm,ml,50451.93,Electrical & Data
+1083,12.1.30,3x300/150+1x150 sq.mm,ml,63919.46,Electrical & Data
+1084,12.1.31,1x150sq.mm,ml,6308.6,Electrical & Data
+1085,12.1.32,1x70sq.mm,ml,3399.35,Electrical & Data
+1086,12.1.33,1x25sq.mm,ml,1208.87,Electrical & Data
+1087,12.1.34,1x16sq.mm,ml,1044.98,Electrical & Data
+1088,13.1.1,Double strip light,ml,246.26,Electrical & Data
+1089,13.1.2,Triple strip light,ml,309.26,Electrical & Data
+1090,13.1.3,RGB strip light,ml,297.1,Electrical & Data
+1091,13.1.4,Neon Strip light,ml,300.2,Electrical & Data
+1092,12.1.5b,Aluminium profile for strip light (in Gypsum board),ml,683.86,Electrical & Data
+1093,14.1.1,galvanized steel Cable tray 50*50mm metal,ml,2073.29,Electrical & Data
+1094,14.1.2,150*50metal cable tray,ml,2491.91,Electrical & Data
+1095,14.1.3,100*100metal cable tray,ml,2901.47,Electrical & Data
+1096,14.1.4,100*50metal cable tray,ml,2207.22,Electrical & Data
+1097,14.1.5,200*50metal cable tray,ml,2901.47,Electrical & Data
+1098,14.1.7,200*100metal cable tray,ml,3522.34,Electrical & Data
+1099,14.1.8,500*200metal cable tray,ml,7113.69,Electrical & Data
+1100,15.1.1,galvanized steel cable ladder 100*100mm,ml,2786.39,Electrical & Data
+1101,15.1.2,galvanized steel cable ladder 100*50mm,ml,2628.19,Electrical & Data
+1102,15.1.3,galvanized steel cable ladder 200*50mm,ml,2786.39,Electrical & Data
+1103,15.1.4,galvanized steel cable ladder 200*100mm,ml,3434.78,Electrical & Data
+1104,15.1.5,galvanized steel cable ladder 300*100mm,ml,3854.78,Electrical & Data
+1105,16.1.1,pvc trucking 60*40 MM,ml,701.04,Electrical & Data
+1106,16.1.2,pvc trucking 40*25 MM,ml,564.54,Electrical & Data
+1107,16.1.2b,pvc trucking 25*25 MM,ml,300.39,Electrical & Data
+1108,16.1.3,pvc trucking 16*16 MM,ml,242.74,Electrical & Data
+1109,17.1.1,"Cat6A UTP Cable 4-Pair, 23AWG, LSZH, 500MHz, 10Gbps",m,249.43,Electrical & Data
+1110,17.1.2,Single Data Outlet 1 x RJ45 Cat6A,Pcs,909.47,Electrical & Data
+1111,17.1.3,Double Data Outlet 2 x RJ45 Cat6A,Pcs,1411.67,Electrical & Data
+1112,17.1.4,Cat6A Patch Panel 24 Port,Pcs,7600.49,Electrical & Data
+1113,17.1.5,Cat6A Patch Panel 48 Port,Pcs,11135.2,Electrical & Data
+1114,17.1.6,Main Server Rack (MDF) 42U Floor Standing Rack,Pcs,148891.58,Electrical & Data
+1115,17.1.7,Network Cabinet 42U Rack Cabinet,Pcs,148891.58,Electrical & Data
+1116,17.1.8,IDF Cabinet 12U Wall Mounted Rack,Pcs,36185.49,Electrical & Data
+1117,17.1.9,Fiber Patch Panel 48 Port,Pcs,40025.72,Electrical & Data
+1118,17.1.10,Cat6A Patch Cord 1 Meter,Pcs,410.93,Electrical & Data
+1119,17.1.11,Cat6A Patch Cord 3 Meter,Pcs,926.02,Electrical & Data
+1120,17.1.12,Fiber Patch Panel (LIU) 24 Port LC Duplex,Pcs,33576.79,Electrical & Data
+1121,17.1.13,SFP Module 10G Single Mode SFP+,Pcs,15294.67,Electrical & Data
+1122,17.1.14,Media Converter Fiber to Copper,Pcs,8277.12,Electrical & Data
+1123,17.2.0,Active Device,Pcs,325162.67,Electrical & Data
+1124,17.2.1,"Core Switch Layer-3 Managed, 10G/24port",Pcs,98454.43,Electrical & Data
+1125,17.2.2,Access Switch 24 Port Managed PoE+,Pcs,142424.44,Electrical & Data
+1126,17.2.3,Access Switch 48 Port Managed PoE+,Pcs,18916.21,Electrical & Data
+1127,17.2.4,Telephone Distribution Frame 100 Pair Krone Type,Pcs,331901.75,Electrical & Data
+1128,17.2.5,Network Video Recorder 64 Channel NVR,Pcs,195784.5,Electrical & Data
+1129,17.2.6,Wireless Access Point Wi-Fi 6 Dual Band,Pcs,26365.34,Electrical & Data
+1130,17.2.7,Dome Camera 4MP/12MP IP Camera,Pcs,26626.21,Electrical & Data
+1131,17.2.8,Bullet Camera 4MP/12MP IP Camera,Pcs,156565.92,Electrical & Data
+1132,17.2.9,"PTZ Camera 4MP, 25X Zoom",Pcs,322459.76,Electrical & Data
+1133,17.2.10,Addressable Fire Alarm Panel FACP one loop,Pcs,11894.94,Electrical & Data
+1134,17.2.11,Smoke Detector Addressable Tenda,Pcs,11894.94,Electrical & Data
+1135,17.2.12,Heat Detector Addressable Tenda,Pcs,11894.94,Electrical & Data
+1136,M1,Sand (Local material),m³,6250,Materials
+1137,M2,Gravel 02 (Local material),m³,5625,Materials
+1138,M3,FINO (01),m³,5727,Materials
+1139,M4,FINO (00),m³,6562,Materials
+1140,M5,Red Ash,m³,2717,Materials
+1141,M6,Stone,m³,2850,Materials
+1142,M7,Brick,No,30,Materials
+1143,M8,Stone for Hardcore,m³,2196,Materials
+1144,M9,Selected material Upto 5km from Quarry site as long as Project Site,m³,729.5,Materials
+1145,M10,Selected material Upto 10km from Quarry site as long as Project Site,m³,1042,Materials
+1146,M11,Selected material Upto 15km from Quarry site as long as Project Site,m³,1354.5,Materials
+1147,M12,Selected material Upto 20km from Quarry site as long as Project Site,m³,1667,Materials
+1148,M13,Cement (PPC),Qt,2100,Materials
+1149,M14,Cement (OPC),Qt,2400,Materials
+1150,M15,2cm thick Granite flooring (1:3).Local,m²,7300,Materials
+1151,M16,3cm thick Granite flooring (1:3).Local,m²,7500,Materials
+1152,M17,2cm thick Marble flooring (1:3).Local,m²,6600,Materials
+1153,M18,3cm thick Marble flooring (1:3).Local,m²,6750,Materials
+1154,M19,Local Re-Bar Grade 75 (Ethiopia),kg,200,Materials
+1155,M20,Imported Re-Bar Grade 75,kg,205,Materials
+1156,L1,Bar bender Ass. (Labour hourly cost),hr,90,Labour
+1157,L2,Bar bender,hr,134.93,Labour
+1158,L3,Carpenter Ass.,hr,97.61,Labour
+1159,L4,Carpenter,hr,180,Labour
+1160,L5,Chisler,hr,93.56,Labour
+1161,L6,DL,hr,80,Labour
+1162,L7,Electrician helper,hr,117.9,Labour
+1163,L8,Electrician,hr,180,Labour
+1164,L9,Forman,hr,161.91,Labour
+1165,L10,Gang chief,hr,129.01,Labour
+1166,L11,Glazer,hr,180,Labour
+1167,L12,Mason Ass.,hr,90,Labour
+1168,L13,Mason,hr,180,Labour
+1169,L14,Mixer opertaor,hr,63.1,Labour
+1170,L15,Painter Assistance,hr,82.51,Labour
+1171,L16,Painter,hr,120,Labour
+1172,L17,Plasterer Ass.,hr,84.26,Labour
+1173,L18,Plasterer,hr,126.19,Labour
+1174,L19,Plumber helper,hr,92.41,Labour
+1175,L20,Plumber,hr,180,Labour
+1176,L21,Tiller Ass.,hr,107.46,Labour
+1177,L22,Tiller,hr,180,Labour
+1178,L23,Time Keeper,hr,93.07,Labour
+1179,L24,Truck Driver,hr,119.9,Labour
+1180,L25,Equipment operator I,hr,89.05,Labour
+1181,L26,Equipment operator II,hr,83.25,Labour
+1182,L27,Equipment operatorlll,hr,78.82,Labour
+1183,L28,vibrator operator,hr,124.87,Labour
+1184,L29,L. Vehicle Driver I,hr,97.56,Labour
+1185,L30,Surveyor,hr,125,Labour
+1186,L31,Welder,hr,180,Labour
+1187,L32,Welder Ass.,hr,80.65,Labour
+1188,L33,Aluminium worker,hr,180,Labour
+1189,L34,Aluminium worker Ass.,hr,81.89,Labour
+1190,L35,Mud worker,hr,81.29,Labour
+1191,EQ1,Truck 16m3,hr,7009.2,Equipment
+1192,EQ2,Truck 9m3,hr,2560.36,Equipment
+1193,EQ3,Truck 13m3,hr,3251.2,Equipment
+1194,EQ4,compactor,hr,678.05,Equipment
+1195,EQ5,Wheel Loader 200HP (1.5-2.5m3),hr,6297.13,Equipment
+1196,EQ6,Dozer 300 Hp (D7R),hr,9610.35,Equipment
+1197,EQ7,Dozer D7R W. Ripper,hr,10060.35,Equipment
+1198,EQ8,Dozer(200-250HP),hr,8867.34,Equipment
+1199,EQ9,Excavater(200HP),hr,8560.35,Equipment
+1200,EQ10,Excavater(200HP) WITH RIPPER,hr,9131.04,Equipment
+1201,EQ11,BACKHOE Excavater (120HP),hr,6560.35,Equipment
+1202,EQ12,Grader(120-150hp),hr,7560.35,Equipment
+1203,EQ13,Roller(8-10ton),hr,4304.6,Equipment
+1204,EQ14,"Water Truck 13,000lt",hr,4195.2,Equipment
+1205,EQ15,Air Compressor,hr,3657.34,Equipment
+1206,EQ16,Hand Jack Hammer (electrical),hr,264,Equipment
+1207,EQ17,Wagon Driller,hr,9465.22,Equipment
+1208,EQ18,Small Vehicle (pick up 4WD),hr,1251.54,Equipment
+1209,EQ19,Asphalt Distributor,hr,5166.5,Equipment
+1210,EQ20,Stationary Heater,hr,3451.86,Equipment
+1211,EQ21,Power Broom,hr,2380.24,Equipment
+1212,EQ22,Asphalt Plant,hr,51858.19,Equipment
+1213,EQ23,Asphalt Paver,hr,11433.22,Equipment
+1214,EQ24,Pneumatic Roller,hr,4133.65,Equipment
+1215,EQ25,Water Tanker,hr,38.05,Equipment
+1216,EQ26,Dump Truck 16m3,hr,2784.53,Equipment
+1217,EQ27,Crushing plant 75ton,hr,19952.8,Equipment
+1218,EQ28,Centrifugal W/Pump,hr,499.85,Equipment
+1219,EQ29,Genrator (45kw),hr,935.89,Equipment
+1220,EQ30,Mobile crane,hr,7609.2,Equipment
+1221,EQ31,Concrete mixer (300lt),hr,519.22,Equipment
+1222,EQ32,Concrete Mixer Truck,hr,3098.82,Equipment
+1223,EQ33,Concrete Vibrator,hr,266.09,Equipment
+1224,EQ34,Hand tamper,hr,110.47,Equipment
+1225,EQ35,Pipe moule,hr,24.85,Equipment
+1226,EQ36,Painting machine,hr,1253.57,Equipment
+1227,EQ37,Hand Drill,hr,20.71,Equipment
+1228,EQ38,Gear machine,hr,34.52,Equipment
+1229,EQ39,Grinder,hr,34.52,Equipment
+1230,EQ40,Cutting disc (dia. 180),hr,162,Equipment
+1231,EQ41,scafolding,hr,117.6,Equipment
+1232,EQ42,sledge hammer,hr,6.28,Equipment
+1233,EQ43,Tools,hr,14.4,Equipment
+1234,EQ44,Set of tools,hr,22.8,Equipment
+1235,EQ45,Surveying instrument,hr,129.24,Equipment
+1236,EQ46,Welding. Machine,hr,101.2,Equipment
+1237,EQ47,"Truck Crane Hydraulic, 20-25ton",hr,5383.58,Equipment
+1238,EQ48,winch 3-phase,hr,251.04,Equipment
+1239,EQ49,winch single phase,hr,188.28,Equipment
+1240,EQ50,Genrator 3-phase,hr,502.08,Equipment
+1241,EQ51,Genrator single phase,hr,313.8,Equipment
+1242,EQ52,Genrator for winch 3-phase,hr,403.92,Equipment
+1243,X1,Load and cart away all demolishing & dismantling material to an appropriate tip. (Manually) (header),,,Demolition & Dismantling
+1244,X2,Demolishing Work of different structures (header),,,Demolition & Dismantling
+1245,X3,Excavation and earth work /PAAC 4C /,,,Excavation & Earthwork
+1246,X4,CONCRETE WORK SUB STRUCTURE (header),,,Concrete Work
+1247,X5,SUPER STRUCTURE (header),,,Concrete Work
+1248,X6,READY MIX CONCRETE WITH STATIONARY PUMP (header),,,Concrete Work
+1249,X7,READY MIX CONCRETE WITHOUT STATIONARY PUMP (header),,,Concrete Work
+1250,X8,STEEL REINFORCEMENT (header),,,Concrete Work
+1251,X9,Masonary & block work (header),,,Masonry & Block Work
+1252,X10,Shear Wall for river side (header),,,Masonry & Block Work
+1253,X11,Roof work (header),,,Roof Work
+1254,X12,CARPENTRY AND JOINERY Ceiling (header),,,Carpentry & Joinery
+1255,X13,METAL WORK (header),,,Metal Work
+1256,X14,FINISHING WORKS (header),,,Finishing Works
+1257,X15,PLASTERING (header),,,Finishing Works
+1258,X16,POINTING (header),,,Finishing Works
+1259,X17,FLOORING (header),,,Finishing Works
+1260,X18,WALL TILE CLADING (header),,,Finishing Works
+1261,X19,WINDOW SILL (Local) (header),,,Finishing Works
+1262,X20,THREAD (header),,,Finishing Works
+1263,X21,RISER (header),,,Finishing Works
+1264,X22,Threshold (Local) (header),,,Finishing Works
+1265,X23,Skirting (Local) (header),,,Finishing Works
+1266,X24,Copping (Local) (header),,,Finishing Works
+1267,X25,PAINTING (WITHOUT SCAFFOLDING) (header),,,Painting
+1268,X26,SUPER PLASTIC PAINT (header),,,Painting
+1269,X27,OIL (SYNTHETIC) PAINT (header),,,Painting
+1270,X28,QUARTZ PAINT (header),,,Painting
+1271,X29,JOTUN PAINTING OR EQUIVALENT (header),,,Painting
+1272,X30,GLAZING (header),,,Glazing
+1273,X31,SANITARY INSTALLATION (header),,,Sanitary Installation

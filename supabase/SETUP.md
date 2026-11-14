@@ -2,7 +2,8 @@
 
 1. Create a Supabase project and open its SQL Editor.
 2. Run [`schema.sql`](./schema.sql) to create the rate table and allow authenticated users to read it.
-3. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
+3. For the one-time rate import, open **Table Editor → direct_cost_items → Insert → Import data from CSV** and upload [`import/direct-cost-items.csv`](./import/direct-cost-items.csv). It contains all 1,273 rows and the matching `source_row` primary keys. [`import/direct-cost-items.xlsx`](./import/direct-cost-items.xlsx) is the same data in an Excel workbook; use the CSV for Supabase's importer.
+4. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
 
    ```text
    Copy-Item .env.example .env
@@ -15,7 +16,7 @@
    VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
    ```
 
-4. Import the rate schedule from PowerShell. Use the project's **secret** key (or legacy `service_role` key) only in this local terminal; never put it in a `VITE_` variable or browser code:
+5. Alternatively, import or refresh the rate schedule from PowerShell. Use the project's **secret** key (or legacy `service_role` key) only in this local terminal; never put it in a `VITE_` variable or browser code:
 
    ```powershell
    $env:SUPABASE_URL = "https://your-project-id.supabase.co"
@@ -31,7 +32,7 @@
    }
    ```
 
-5. Install dependencies and start the app with `npm install` and `npm run dev`. Users can create accounts and sign in with email and password. If email confirmation is enabled in Supabase Auth, they must confirm their address before signing in.
+6. Install dependencies and start the app with `npm install` and `npm run dev`. Users can create accounts and sign in with email and password. If email confirmation is enabled in Supabase Auth, they must confirm their address before signing in.
 ## Firebase Hosting
 
 The Firebase configuration serves the Vite build from `dist` and rewrites app routes to `index.html`. The app uses Supabase for authentication and data; Firebase only hosts the frontend.

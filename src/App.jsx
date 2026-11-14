@@ -313,7 +313,7 @@ export default function App() {
       } catch (error) {
         if (active) {
           if (error?.code === "PGRST205") {
-            setItemsError("The public.direct_cost_items table is missing. Run supabase/schema.sql in your Supabase SQL Editor, then import the rate data.");
+            setItemsError("The public.direct_cost_items table is missing. Run supabase/schema.sql in the SQL Editor, then import supabase/import/direct-cost-items.csv into this table from the Table Editor.");
           } else {
             setItemsError(
               error instanceof Error
