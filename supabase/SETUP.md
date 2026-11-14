@@ -1,7 +1,7 @@
 # Supabase setup
 
 1. Create a Supabase project and open its SQL Editor.
-2. Run [`schema.sql`](./schema.sql) to create the rate table and allow authenticated users to read it.
+2. Run [`schema.sql`](./schema.sql) to create the rate table and its authenticated add/replace functions. Every signed-in user can edit the shared rate library.
 3. For the one-time rate import, open **Table Editor → direct_cost_items → Insert → Import data from CSV** and upload [`import/direct-cost-items.csv`](./import/direct-cost-items.csv). It contains all 1,273 rows and the matching `source_row` primary keys. [`import/direct-cost-items.xlsx`](./import/direct-cost-items.xlsx) is the same data in an Excel workbook; use the CSV for Supabase's importer.
 4. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
 
@@ -63,4 +63,4 @@ The Firebase CLI has also created GitHub Actions workflows in `.github/workflows
 
 Vite embeds `VITE_` variables in the built frontend. Only use the publishable key there; never add the Supabase secret key to `.env` with a `VITE_` prefix or to Firebase Hosting.
 
-The browser uses only the publishable key. Row-level security restricts rate reads to signed-in users; the secret key is only needed by the local import script.
+The browser uses only the publishable key. Row-level security restricts access to signed-in users; the secret key is only needed by the local import script.

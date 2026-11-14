@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Auth from "./Auth.jsx";
+import { parseRateImport } from "./rate-import.js";
 import { supabase, supabaseConfigured } from "./supabase.js";
 
 const navigation = [
@@ -140,10 +141,17 @@ function Dashboard({ categories, pricedItems, totalItems, greeting, dataError, o
   );
 }
 
-function DirectCosts({ items, dataError }) {
+function DirectCosts({ items, dataError, onReload, onRateAdded, onRatesReplaced }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
   const [unit, setUnit] = useState("all");
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [pendingImport, setPendingImport] = useState(null);
+  const [operationBusy, setOperationBusy] = useState(false);
+  const [operationError, setOperationError] = useState("");
+  const [operationMessage, setOperationMessage] = useState("");
+  const [newItem, setNewItem] = useState({ code: "", description: "", unit: "", cost: "", category: "" });
+  const importInputRef = useRef(null);
 
   const categories = useMemo(() => [...new Set(items.map((item) => item.category))].sort(), [items]);
   const units = useMemo(() => [...new Set(items.map((item) => item.unit).filter(Boolean))].sort(), [items]);
@@ -162,6 +170,84 @@ function DirectCosts({ items, dataError }) {
     setUnit("all");
   };
   const formattedCost = (cost) => cost === null ? "—" : cost.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const operationErrorText = (error) => typeof error?.message === "string" ? error.message : "The operation failed. Please try again.";
+
+  async function handleAddItem(event) {
+    event.preventDefault();
+    setOperationError("");
+    setOperationMessage("");
+    const cost = newItem.cost.trim() ? Number(newItem.cost) : null;
+    if (cost !== null && (!Number.isFinite(cost) || cost < 0)) {
+      setOperationError("Enter a valid non-negative cost, or leave it blank.");
+      return;
+    }
+
+    setOperationBusy(true);
+    try {
+      const { data, error } = await supabase.rpc("add_direct_cost_item", {
+        p_code: newItem.code.trim(),
+        p_description: newItem.description.trim(),
+        p_unit: newItem.unit.trim(),
+        p_cost: cost,
+        p_category: newItem.category.trim(),
+      });
+      if (error) throw error;
+
+      onRateAdded({
+        source_row: data,
+        code: newItem.code.trim(),
+        description: newItem.description.trim(),
+        unit: newItem.unit.trim(),
+        cost,
+        category: newItem.category.trim(),
+      });
+      setShowAddForm(false);
+      setNewItem({ code: "", description: "", unit: "", cost: "", category: "" });
+      setOperationMessage("Rate item added.");
+    } catch (error) {
+      setOperationError(operationErrorText(error));
+    } finally {
+      setOperationBusy(false);
+    }
+  }
+
+  async function handleImportSelection(event) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    setOperationError("");
+    setOperationMessage("");
+    setOperationBusy(true);
+    try {
+      const rows = await parseRateImport(file);
+      setPendingImport({ fileName: file.name, rows });
+    } catch (error) {
+      setOperationError(operationErrorText(error));
+    } finally {
+      setOperationBusy(false);
+    }
+  }
+
+  async function handleReplaceImport() {
+    if (!pendingImport) return;
+    setOperationError("");
+    setOperationBusy(true);
+    try {
+      const { error } = await supabase.rpc("replace_direct_cost_items", {
+        p_items: pendingImport.rows,
+      });
+      if (error) throw error;
+
+      onRatesReplaced(pendingImport.rows);
+      setOperationMessage(`Replaced the rate library with ${pendingImport.rows.length.toLocaleString()} items.`);
+      setPendingImport(null);
+    } catch (error) {
+      setOperationError(operationErrorText(error));
+    } finally {
+      setOperationBusy(false);
+    }
+  }
 
   return (
     <main className="page-content direct-cost-page">
@@ -171,8 +257,31 @@ function DirectCosts({ items, dataError }) {
           <h1>Direct costs</h1>
           <p className="welcome-copy">Browse the standard direct cost rates used as the basis for your estimates.</p>
         </div>
-        <div className="reference-chip"><span className="status-dot" /> 2018 Q4 <span className="chip-divider" /> ETB</div>
+        <div className="direct-cost-tools">
+          <input
+            ref={importInputRef}
+            className="file-input-hidden"
+            type="file"
+            accept=".csv,.xlsx"
+            onChange={handleImportSelection}
+            aria-label="Choose a CSV or Excel rate list"
+          />
+          <button className="secondary-button" onClick={() => importInputRef.current?.click()} disabled={operationBusy}>Import list</button>
+          <button className="primary-button" onClick={() => { setOperationError(""); setShowAddForm(true); }} disabled={operationBusy}>
+            <Icon name="plus" size={16} /> Add item
+          </button>
+        </div>
       </div>
+
+      {dataError && (
+        <div className="rate-page-alert" role="status">
+          Rates are unavailable until the Supabase table is set up. You can still add or import rates after running the setup SQL.
+          <button onClick={onReload}>Retry loading</button>
+        </div>
+      )}
+      {operationError && <p className="rate-operation-message error" role="alert">{operationError}</p>}
+      {operationMessage && <p className="rate-operation-message success" role="status">{operationMessage}</p>}
+      {operationBusy && !showAddForm && !pendingImport && <p className="rate-operation-message">Reading import file...</p>}
 
       <section className="filter-card" aria-label="Filter direct cost items">
         <label className="search-field">
@@ -212,7 +321,7 @@ function DirectCosts({ items, dataError }) {
             </thead>
             <tbody>
               {filteredItems.length > 0 ? filteredItems.map((item) => (
-                <tr key={`${item.code}-${item.description}`}>
+                <tr key={item.source_row}>
                   <td><span className="item-code">{item.code}</span></td>
                   <td className="description-cell">{item.description}</td>
                   <td><span className="unit-badge">{item.unit || "—"}</span></td>
@@ -227,6 +336,47 @@ function DirectCosts({ items, dataError }) {
         </div>
         <div className="table-footer"><span><span className={`status-dot ${dataError ? "error" : ""}`} /> {dataError ? "Rate data unavailable" : "Rate data loaded"}</span><span>Prices shown in Ethiopian Birr (ETB)</span></div>
       </section>
+
+      {showAddForm && (
+        <div className="rate-modal-backdrop">
+          <section className="rate-modal" role="dialog" aria-modal="true" aria-labelledby="add-rate-title">
+            <div className="rate-modal-heading">
+              <div><p className="eyebrow">DIRECT COSTS</p><h2 id="add-rate-title">Add rate item</h2></div>
+              <button className="modal-close" type="button" aria-label="Close" onClick={() => setShowAddForm(false)} disabled={operationBusy}>×</button>
+            </div>
+            <form className="rate-item-form" onSubmit={handleAddItem}>
+              <label><span>Item code</span><input value={newItem.code} onChange={(event) => setNewItem({ ...newItem, code: event.target.value })} required /></label>
+              <label className="wide-field"><span>Description</span><input value={newItem.description} onChange={(event) => setNewItem({ ...newItem, description: event.target.value })} required /></label>
+              <label><span>Unit</span><input value={newItem.unit} onChange={(event) => setNewItem({ ...newItem, unit: event.target.value })} /></label>
+              <label><span>Direct cost (ETB)</span><input type="number" min="0" step="0.01" value={newItem.cost} onChange={(event) => setNewItem({ ...newItem, cost: event.target.value })} /></label>
+              <label className="wide-field"><span>Category</span><input value={newItem.category} onChange={(event) => setNewItem({ ...newItem, category: event.target.value })} required /></label>
+              {operationError && <p className="rate-operation-message error wide-field" role="alert">{operationError}</p>}
+              <div className="rate-modal-actions wide-field">
+                <button className="reset-button" type="button" onClick={() => setShowAddForm(false)} disabled={operationBusy}>Cancel</button>
+                <button className="primary-button" type="submit" disabled={operationBusy}>{operationBusy ? "Saving..." : "Save item"}</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      )}
+
+      {pendingImport && (
+        <div className="rate-modal-backdrop">
+          <section className="rate-modal" role="dialog" aria-modal="true" aria-labelledby="replace-rates-title">
+            <div className="rate-modal-heading">
+              <div><p className="eyebrow">REPLACE RATE LIBRARY</p><h2 id="replace-rates-title">Confirm import</h2></div>
+              <button className="modal-close" type="button" aria-label="Close" onClick={() => { if (!operationBusy) setPendingImport(null); }} disabled={operationBusy}>×</button>
+            </div>
+            <p className="import-file-name">{pendingImport.fileName}</p>
+            <p className="import-warning">This file contains {pendingImport.rows.length.toLocaleString()} rows and will replace all {items.length.toLocaleString()} current rate items. This cannot be undone.</p>
+            {operationError && <p className="rate-operation-message error" role="alert">{operationError}</p>}
+            <div className="rate-modal-actions">
+              <button className="reset-button" onClick={() => { if (!operationBusy) { setPendingImport(null); setOperationError(""); } }} disabled={operationBusy}>Cancel</button>
+              <button className="primary-button" onClick={handleReplaceImport} disabled={operationBusy}>{operationBusy ? "Importing..." : `Replace with ${pendingImport.rows.length.toLocaleString()} items`}</button>
+            </div>
+          </section>
+        </div>
+      )}
     </main>
   );
 }
@@ -292,7 +442,6 @@ export default function App() {
 
     async function loadItems() {
       setItemsLoading(true);
-      setItemsLoaded(false);
       setItemsError("");
       try {
         const allItems = [];
@@ -345,7 +494,7 @@ export default function App() {
           </a>
           <p className="eyebrow">SUPABASE CONFIGURATION</p>
           <h1>Connect your project</h1>
-          <p className="auth-description">Add your Supabase project URL and anon key to a local <code>.env</code> file using the values in <code>.env.example</code>, then restart the development server.</p>
+          <p className="auth-description">Set <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_PUBLISHABLE_KEY</code> from <code>.env.example</code> in your local <code>.env</code> and restart the dev server. For Firebase, set both as GitHub Actions secrets and redeploy.</p>
         </section>
       </main>
     );
@@ -385,6 +534,18 @@ export default function App() {
     } catch (error) {
       setAccountError(error instanceof Error ? error.message : "Unable to sign out.");
     }
+  }
+
+  function handleRateAdded(item) {
+    setItems((currentItems) => [...currentItems, item].sort((left, right) => left.source_row - right.source_row));
+    setItemsLoaded(true);
+    setItemsError("");
+  }
+
+  function handleRatesReplaced(rows) {
+    setItems(rows.map((item, index) => ({ ...item, source_row: index + 1 })));
+    setItemsLoaded(true);
+    setItemsError("");
   }
 
   const activeTitle = page === "dashboard" ? "Dashboard" : "Direct costs";
@@ -451,7 +612,13 @@ export default function App() {
         )}
         {page === "dashboard"
           ? <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} greeting={greeting} dataError={itemsError} onOpenCosts={() => setPage("direct-cost")} />
-          : <DirectCosts items={items} dataError={itemsError} />}
+          : <DirectCosts
+            items={items}
+            dataError={itemsError}
+            onReload={() => setReloadItems((count) => count + 1)}
+            onRateAdded={handleRateAdded}
+            onRatesReplaced={handleRatesReplaced}
+          />}
         <footer className="app-footer"><span>Buildwise <span>·</span> Construction estimating workspace</span><span>Rate reference: 2018 Q4 · ETB</span></footer>
       </div>
     </div>
