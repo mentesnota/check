@@ -97,7 +97,8 @@ begin
   end if;
 
   perform pg_advisory_xact_lock(hashtext('public.direct_cost_items'));
-  delete from public.direct_cost_items;
+  delete from public.direct_cost_items
+  where source_row is not null;
   insert into public.direct_cost_items (source_row, code, description, unit, cost, category)
   select
     records.ordinality::integer,
