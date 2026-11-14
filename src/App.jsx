@@ -1,5 +1,6 @@
-import React, { useMemo, useState } from "react";
-import directCostItems from "./direct-cost-data.json";
+import React, { useEffect, useMemo, useState } from "react";
+import Auth from "./Auth.jsx";
+import { supabase, supabaseConfigured } from "./supabase.js";
 
 const navigation = [
   {
@@ -63,7 +64,7 @@ function MetricCard({ label, value, note, icon, tone }) {
   );
 }
 
-function Dashboard({ categories, pricedItems, totalItems, onOpenCosts }) {
+function Dashboard({ categories, pricedItems, totalItems, greeting, onOpenCosts }) {
   const largestCategories = categories.slice(0, 5);
   const maxCount = largestCategories[0]?.count || 1;
 
@@ -72,7 +73,7 @@ function Dashboard({ categories, pricedItems, totalItems, onOpenCosts }) {
       <div className="welcome-row">
         <div>
           <p className="eyebrow">SATURDAY, NOVEMBER 14, 2026</p>
-          <h1>Good morning, Alex <span className="wave">✦</span></h1>
+          <h1>Good morning, {greeting} <span className="wave">✦</span></h1>
           <p className="welcome-copy">Here’s your construction cost library at a glance.</p>
         </div>
         <button className="primary-button" onClick={onOpenCosts}>
@@ -232,7 +233,15 @@ function DirectCosts({ items }) {
 
 export default function App() {
   const [page, setPage] = useState("dashboard");
-  const items = directCostItems;
+  const [session, setSession] = useState(null);
+  const [sessionLoading, setSessionLoading] = useState(true);
+  const [sessionError, setSessionError] = useState("");
+  const [accountError, setAccountError] = useState("");
+  const [items, setItems] = useState([]);
+  const [itemsLoading, setItemsLoading] = useState(false);
+  const [itemsLoaded, setItemsLoaded] = useState(false);
+  const [itemsError, setItemsError] = useState("");
+  const [reloadItems, setReloadItems] = useState(0);
   const pricedItems = items.filter((item) => item.cost !== null).length;
   const categories = useMemo(() => {
     const counts = new Map();
@@ -241,6 +250,144 @@ export default function App() {
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
   }, [items]);
+
+  useEffect(() => {
+    if (!supabaseConfigured) return undefined;
+
+    let active = true;
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, nextSession) => {
+      setSession(nextSession);
+      setSessionError("");
+      setSessionLoading(false);
+    });
+
+    async function restoreSession() {
+      try {
+        const { data, error } = await supabase.auth.getSession();
+        if (error) throw error;
+        if (active) setSession(data.session);
+      } catch (error) {
+        if (active) setSessionError(error instanceof Error ? error.message : "Unable to restore your session.");
+      } finally {
+        if (active) setSessionLoading(false);
+      }
+    }
+
+    restoreSession();
+    return () => {
+      active = false;
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!session?.user) {
+      setItems([]);
+      setItemsLoaded(false);
+      return undefined;
+    }
+
+    let active = true;
+    const pageSize = 1000;
+
+    async function loadItems() {
+      setItemsLoading(true);
+      setItemsLoaded(false);
+      setItemsError("");
+      try {
+        const allItems = [];
+        for (let offset = 0; ; offset += pageSize) {
+          const { data, error } = await supabase
+            .from("direct_cost_items")
+            .select("source_row, code, description, unit, cost, category")
+            .order("source_row", { ascending: true })
+            .range(offset, offset + pageSize - 1);
+          if (error) throw error;
+          allItems.push(...data);
+          if (data.length < pageSize) break;
+        }
+        if (active) {
+          setItems(allItems);
+          setItemsLoaded(true);
+        }
+      } catch (error) {
+        if (active) setItemsError(error instanceof Error ? error.message : "Unable to load the rate library.");
+      } finally {
+        if (active) setItemsLoading(false);
+      }
+    }
+
+    loadItems();
+    return () => {
+      active = false;
+    };
+  }, [session?.user?.id, reloadItems]);
+
+  if (!supabaseConfigured) {
+    return (
+      <main className="auth-shell">
+        <section className="auth-card setup-card">
+          <a className="brand auth-brand" href="/" aria-label="Buildwise home">
+            <span className="brand-icon"><span /><span /><span /><span /></span>
+            <span className="brand-name">buildwise<span>.</span></span>
+          </a>
+          <p className="eyebrow">SUPABASE CONFIGURATION</p>
+          <h1>Connect your project</h1>
+          <p className="auth-description">Add your Supabase project URL and anon key to a local <code>.env</code> file using the values in <code>.env.example</code>, then restart the development server.</p>
+        </section>
+      </main>
+    );
+  }
+
+  if (sessionLoading) {
+    return <main className="auth-shell"><p className="auth-loading">Checking your session...</p></main>;
+  }
+
+  if (sessionError) {
+    return (
+      <main className="auth-shell">
+        <section className="auth-card">
+          <p className="eyebrow">SESSION ERROR</p>
+          <h1>Unable to connect</h1>
+          <p className="auth-message error" role="alert">{sessionError}</p>
+          <button className="primary-button auth-submit" onClick={() => window.location.reload()}>Try again</button>
+        </section>
+      </main>
+    );
+  }
+
+  if (!session) return <Auth />;
+
+  if (itemsError) {
+    return (
+      <main className="auth-shell">
+        <section className="auth-card">
+          <p className="eyebrow">RATE LIBRARY ERROR</p>
+          <h1>Unable to load rates</h1>
+          <p className="auth-message error" role="alert">{itemsError}</p>
+          <button className="primary-button auth-submit" onClick={() => setReloadItems((count) => count + 1)}>Try again</button>
+        </section>
+      </main>
+    );
+  }
+
+  if (itemsLoading || !itemsLoaded) {
+    return <main className="auth-shell"><p className="auth-loading">Loading your rate library...</p></main>;
+  }
+
+  const user = session.user;
+  const greeting = user.email?.split("@")[0] || "there";
+  const initials = (user.email || "U").slice(0, 2).toUpperCase();
+  async function handleSignOut() {
+    setAccountError("");
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) setAccountError(error.message);
+    } catch (error) {
+      setAccountError(error instanceof Error ? error.message : "Unable to sign out.");
+    }
+  }
+
   const activeTitle = page === "dashboard" ? "Dashboard" : "Direct costs";
 
   return (
@@ -277,9 +424,8 @@ export default function App() {
         <div className="sidebar-bottom">
           <div className="help-card"><span className="help-icon">?</span><div><strong>Need a hand?</strong><span>Visit the help center</span></div><Icon name="chevron" size={15} /></div>
           <div className="user-profile">
-            <div className="user-avatar">AM</div>
-            <div className="user-copy"><strong>Alex Morgan</strong><span>Quantity surveyor</span></div>
-            <span className="profile-menu">···</span>
+            <div className="user-avatar">{initials}</div>
+            <div className="user-copy"><strong>{user.email}</strong><span>Signed in</span></div>
           </div>
         </div>
       </aside>
@@ -290,11 +436,13 @@ export default function App() {
           <div className="topbar-actions">
             <span className="environment-tag"><span /> All changes saved</span>
             <button className="icon-button notification-button" aria-label="Notifications"><Icon name="bell" size={18} /><i /></button>
-            <div className="topbar-avatar">AM</div>
+            <div className="topbar-avatar" title={user.email}>{initials}</div>
+            <button className="signout-button" onClick={handleSignOut}>Sign out</button>
           </div>
         </header>
+        {accountError && <p className="account-error" role="alert">{accountError}</p>}
         {page === "dashboard"
-          ? <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} onOpenCosts={() => setPage("direct-cost")} />
+          ? <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} greeting={greeting} onOpenCosts={() => setPage("direct-cost")} />
           : <DirectCosts items={items} />}
         <footer className="app-footer"><span>Buildwise <span>·</span> Construction estimating workspace</span><span>Rate reference: 2018 Q4 · ETB</span></footer>
       </div>
