@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Auth from "./Auth.jsx";
-import { parseRateImport } from "./rate-import.js";
+import { parseRateImport, parseResourceImport } from "./rate-import.js";
 import { supabase, supabaseConfigured } from "./supabase.js";
 
 const navigation = [
@@ -19,6 +19,14 @@ const navigation = [
   {
     title: "CONFIGURATION",
     items: [{ id: "direct-cost", label: "Direct costs", icon: "coins" }],
+  },
+  {
+    title: "RESOURCE LISTS",
+    items: [
+      { id: "equipment", label: "Equipment", icon: "ruler" },
+      { id: "labour", label: "Labour", icon: "grid" },
+      { id: "material", label: "Materials", icon: "list" },
+    ],
   },
 ];
 
@@ -381,6 +389,246 @@ function DirectCosts({ items, dataError, onReload, onRateAdded, onRatesReplaced 
   );
 }
 
+const resourceListConfig = {
+  equipment: { title: "Equipment list", itemName: "Equipment name" },
+  labour: { title: "Labour list", itemName: "Labour title" },
+  material: { title: "Materials list", itemName: "Material name" },
+};
+
+function ResourceList({ resourceType, items, loading, dataError, onReload, onItemAdded, onItemsReplaced }) {
+  const config = resourceListConfig[resourceType];
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("all");
+  const [unit, setUnit] = useState("all");
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [pendingImport, setPendingImport] = useState(null);
+  const [operationBusy, setOperationBusy] = useState(false);
+  const [operationError, setOperationError] = useState("");
+  const [operationMessage, setOperationMessage] = useState("");
+  const [newItem, setNewItem] = useState({ name: "", unit: "", price: "", category: "" });
+  const importInputRef = useRef(null);
+
+  const categories = useMemo(() => [...new Set(items.map((item) => item.category))].sort(), [items]);
+  const units = useMemo(() => [...new Set(items.map((item) => item.unit))].sort(), [items]);
+  const filteredItems = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    return items.filter((item) => {
+      const matchesSearch = !query || `${item.name} ${item.unit} ${item.category}`.toLowerCase().includes(query);
+      return matchesSearch &&
+        (category === "all" || item.category === category) &&
+        (unit === "all" || item.unit === unit);
+    });
+  }, [items, search, category, unit]);
+  const operationErrorText = (error) => typeof error?.message === "string" ? error.message : "The operation failed. Please try again.";
+  const formattedPrice = (price) => Number(price).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  async function handleAddItem(event) {
+    event.preventDefault();
+    setOperationError("");
+    setOperationMessage("");
+    const price = Number(newItem.price);
+    if (!Number.isFinite(price) || price < 0) {
+      setOperationError("Enter a valid non-negative price.");
+      return;
+    }
+
+    setOperationBusy(true);
+    try {
+      const { data, error } = await supabase.rpc("add_resource_item", {
+        p_resource_type: resourceType,
+        p_name: newItem.name.trim(),
+        p_unit: newItem.unit.trim(),
+        p_price: price,
+        p_category: newItem.category.trim(),
+      });
+      if (error) throw error;
+
+      onItemAdded(resourceType, {
+        source_row: data,
+        name: newItem.name.trim(),
+        unit: newItem.unit.trim(),
+        price,
+        category: newItem.category.trim(),
+      });
+      setShowAddForm(false);
+      setNewItem({ name: "", unit: "", price: "", category: "" });
+      setOperationMessage(`${config.itemName} added.`);
+    } catch (error) {
+      setOperationError(operationErrorText(error));
+    } finally {
+      setOperationBusy(false);
+    }
+  }
+
+  async function handleImportSelection(event) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    setOperationError("");
+    setOperationMessage("");
+    setOperationBusy(true);
+    try {
+      const rows = await parseResourceImport(file);
+      setPendingImport({ fileName: file.name, rows });
+    } catch (error) {
+      setOperationError(operationErrorText(error));
+    } finally {
+      setOperationBusy(false);
+    }
+  }
+
+  async function handleReplaceImport() {
+    if (!pendingImport) return;
+    setOperationError("");
+    setOperationBusy(true);
+    try {
+      const { error } = await supabase.rpc("replace_resource_items", {
+        p_resource_type: resourceType,
+        p_items: pendingImport.rows,
+      });
+      if (error) throw error;
+
+      onItemsReplaced(resourceType, pendingImport.rows);
+      setOperationMessage(`Replaced the ${config.title.toLowerCase()} with ${pendingImport.rows.length.toLocaleString()} items.`);
+      setPendingImport(null);
+    } catch (error) {
+      setOperationError(operationErrorText(error));
+    } finally {
+      setOperationBusy(false);
+    }
+  }
+
+  return (
+    <main className="page-content direct-cost-page">
+      <div className="page-title-row">
+        <div>
+          <p className="eyebrow">RESOURCE LISTS / {resourceType.toUpperCase()}</p>
+          <h1>{config.title}</h1>
+          <p className="welcome-copy">Manage the {config.title.toLowerCase()} used in your estimates.</p>
+        </div>
+        <div className="direct-cost-tools">
+          <input
+            ref={importInputRef}
+            className="file-input-hidden"
+            type="file"
+            accept=".xlsx,.csv"
+            onChange={handleImportSelection}
+            aria-label={`Choose an Excel or CSV ${config.title.toLowerCase()}`}
+          />
+          <button className="secondary-button" onClick={() => importInputRef.current?.click()} disabled={operationBusy}>Import Excel / CSV</button>
+          <button className="primary-button" onClick={() => { setOperationError(""); setShowAddForm(true); }} disabled={operationBusy}>
+            <Icon name="plus" size={16} /> Add item
+          </button>
+        </div>
+      </div>
+
+      {dataError && (
+        <div className="rate-page-alert" role="status">
+          This list is unavailable until the resource table is set up in Supabase. Run the latest supabase/schema.sql, then retry.
+          <button onClick={onReload}>Retry loading</button>
+        </div>
+      )}
+      {operationError && <p className="rate-operation-message error" role="alert">{operationError}</p>}
+      {operationMessage && <p className="rate-operation-message success" role="status">{operationMessage}</p>}
+      {operationBusy && !showAddForm && !pendingImport && <p className="rate-operation-message">Reading import file...</p>}
+
+      <section className="filter-card" aria-label={`Filter ${config.title.toLowerCase()}`}>
+        <label className="search-field">
+          <Icon name="search" size={18} />
+          <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder={`Search ${config.title.toLowerCase()}`} />
+          {search && <button className="clear-search" onClick={() => setSearch("")} aria-label="Clear search">×</button>}
+        </label>
+        <label className="select-field">
+          <span>Category</span>
+          <select value={category} onChange={(event) => setCategory(event.target.value)}>
+            <option value="all">All categories</option>
+            {categories.map((value) => <option key={value} value={value}>{value}</option>)}
+          </select>
+        </label>
+        <label className="select-field unit-select">
+          <span>Unit</span>
+          <select value={unit} onChange={(event) => setUnit(event.target.value)}>
+            <option value="all">All units</option>
+            {units.map((value) => <option key={value} value={value}>{value}</option>)}
+          </select>
+        </label>
+        <button className="reset-button" onClick={() => { setSearch(""); setCategory("all"); setUnit("all"); }}><Icon name="sliders" size={16} /> Reset</button>
+      </section>
+
+      <section className="table-card">
+        <div className="table-heading">
+          <div>
+            <h2>{config.title}</h2>
+            <p>Shared resource prices in Ethiopian Birr</p>
+          </div>
+          <div className="result-count"><strong>{filteredItems.length.toLocaleString()}</strong> of {items.length.toLocaleString()} items</div>
+        </div>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr><th>NAME</th><th className="unit-column">UNIT</th><th className="cost-column">PRICE <span>(ETB)</span></th><th className="category-column">CATEGORY</th></tr>
+            </thead>
+            <tbody>
+              {filteredItems.length > 0 ? filteredItems.map((item) => (
+                <tr key={item.source_row}>
+                  <td className="description-cell">{item.name}</td>
+                  <td><span className="unit-badge">{item.unit}</span></td>
+                  <td className="cost-cell">{formattedPrice(item.price)}</td>
+                  <td><span className="category-label">{item.category}</span></td>
+                </tr>
+              )) : (
+                <tr><td className="empty-state" colSpan="4"><span>⌕</span><strong>{dataError ? "List data unavailable" : loading ? "Loading list..." : "No items yet"}</strong><small>{dataError ? "Run the Supabase setup SQL to create the resource lists." : "Add an item or import an Excel/CSV list to get started."}</small></td></tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+        <div className="table-footer"><span><span className={`status-dot ${dataError ? "error" : ""}`} /> {dataError ? "List data unavailable" : loading ? "Loading list" : "List data loaded"}</span><span>Prices shown in Ethiopian Birr (ETB)</span></div>
+      </section>
+
+      {showAddForm && (
+        <div className="rate-modal-backdrop">
+          <section className="rate-modal" role="dialog" aria-modal="true" aria-labelledby="add-resource-title">
+            <div className="rate-modal-heading">
+              <div><p className="eyebrow">{resourceType.toUpperCase()}</p><h2 id="add-resource-title">Add {config.itemName.toLowerCase()}</h2></div>
+              <button className="modal-close" type="button" aria-label="Close" onClick={() => setShowAddForm(false)} disabled={operationBusy}>×</button>
+            </div>
+            <form className="rate-item-form" onSubmit={handleAddItem}>
+              <label className="wide-field"><span>{config.itemName}</span><input value={newItem.name} onChange={(event) => setNewItem({ ...newItem, name: event.target.value })} required /></label>
+              <label><span>Unit</span><input value={newItem.unit} onChange={(event) => setNewItem({ ...newItem, unit: event.target.value })} required /></label>
+              <label><span>Price (ETB)</span><input type="number" min="0" step="0.01" value={newItem.price} onChange={(event) => setNewItem({ ...newItem, price: event.target.value })} required /></label>
+              <label className="wide-field"><span>Category</span><input value={newItem.category} onChange={(event) => setNewItem({ ...newItem, category: event.target.value })} required /></label>
+              {operationError && <p className="rate-operation-message error wide-field" role="alert">{operationError}</p>}
+              <div className="rate-modal-actions wide-field">
+                <button className="reset-button" type="button" onClick={() => setShowAddForm(false)} disabled={operationBusy}>Cancel</button>
+                <button className="primary-button" type="submit" disabled={operationBusy}>{operationBusy ? "Saving..." : "Save item"}</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      )}
+
+      {pendingImport && (
+        <div className="rate-modal-backdrop">
+          <section className="rate-modal" role="dialog" aria-modal="true" aria-labelledby="replace-resource-title">
+            <div className="rate-modal-heading">
+              <div><p className="eyebrow">REPLACE {resourceType.toUpperCase()} LIST</p><h2 id="replace-resource-title">Confirm import</h2></div>
+              <button className="modal-close" type="button" aria-label="Close" onClick={() => { if (!operationBusy) setPendingImport(null); }} disabled={operationBusy}>×</button>
+            </div>
+            <p className="import-file-name">{pendingImport.fileName}</p>
+            <p className="import-warning">This file contains {pendingImport.rows.length.toLocaleString()} items and will replace all {items.length.toLocaleString()} items in the {config.title.toLowerCase()}. This cannot be undone.</p>
+            {operationError && <p className="rate-operation-message error" role="alert">{operationError}</p>}
+            <div className="rate-modal-actions">
+              <button className="reset-button" onClick={() => { if (!operationBusy) { setPendingImport(null); setOperationError(""); } }} disabled={operationBusy}>Cancel</button>
+              <button className="primary-button" onClick={handleReplaceImport} disabled={operationBusy}>{operationBusy ? "Importing..." : `Replace with ${pendingImport.rows.length.toLocaleString()} items`}</button>
+            </div>
+          </section>
+        </div>
+      )}
+    </main>
+  );
+}
+
 export default function App() {
   const [page, setPage] = useState("dashboard");
   const [session, setSession] = useState(null);
@@ -392,6 +640,11 @@ export default function App() {
   const [itemsLoaded, setItemsLoaded] = useState(false);
   const [itemsError, setItemsError] = useState("");
   const [reloadItems, setReloadItems] = useState(0);
+  const [resourceItems, setResourceItems] = useState({ equipment: [], labour: [], material: [] });
+  const [resourceItemsLoading, setResourceItemsLoading] = useState(false);
+  const [resourceItemsLoaded, setResourceItemsLoaded] = useState(false);
+  const [resourceItemsError, setResourceItemsError] = useState("");
+  const [reloadResourceItems, setReloadResourceItems] = useState(0);
   const pricedItems = items.filter((item) => item.cost !== null).length;
   const categories = useMemo(() => {
     const counts = new Map();
@@ -462,7 +715,7 @@ export default function App() {
       } catch (error) {
         if (active) {
           if (error?.code === "PGRST205") {
-            setItemsError("The public.direct_cost_items table is missing. Run supabase/schema.sql in the SQL Editor, then import supabase/import/direct-cost-items.csv into this table from the Table Editor.");
+            setItemsError("The public.direct_cost_items table is missing. Run the latest supabase/schema.sql in the SQL Editor, then use Direct Costs → Import list.");
           } else {
             setItemsError(
               error instanceof Error
@@ -483,6 +736,64 @@ export default function App() {
       active = false;
     };
   }, [session?.user?.id, reloadItems]);
+
+  useEffect(() => {
+    if (!session?.user) {
+      setResourceItems({ equipment: [], labour: [], material: [] });
+      setResourceItemsLoaded(false);
+      return undefined;
+    }
+
+    let active = true;
+    const pageSize = 1000;
+
+    async function loadResourceItems() {
+      setResourceItemsLoading(true);
+      setResourceItemsLoaded(false);
+      setResourceItemsError("");
+      try {
+        const allItems = [];
+        for (let offset = 0; ; offset += pageSize) {
+          const { data, error } = await supabase
+            .from("resource_items")
+            .select("resource_type, source_row, name, unit, price, category")
+            .order("resource_type", { ascending: true })
+            .order("source_row", { ascending: true })
+            .range(offset, offset + pageSize - 1);
+          if (error) throw error;
+          allItems.push(...data);
+          if (data.length < pageSize) break;
+        }
+
+        if (active) {
+          const grouped = { equipment: [], labour: [], material: [] };
+          for (const item of allItems) {
+            if (Object.hasOwn(grouped, item.resource_type)) grouped[item.resource_type].push(item);
+          }
+          setResourceItems(grouped);
+          setResourceItemsLoaded(true);
+        }
+      } catch (error) {
+        if (active) {
+          setResourceItemsError(
+            error?.code === "PGRST205"
+              ? "The public.resource_items table is missing. Run the latest supabase/schema.sql in the SQL Editor."
+              : error instanceof Error
+                ? error.message
+                : "Unable to load the resource lists.",
+          );
+          setResourceItemsLoaded(true);
+        }
+      } finally {
+        if (active) setResourceItemsLoading(false);
+      }
+    }
+
+    loadResourceItems();
+    return () => {
+      active = false;
+    };
+  }, [session?.user?.id, reloadResourceItems]);
 
   if (!supabaseConfigured) {
     return (
@@ -548,7 +859,31 @@ export default function App() {
     setItemsError("");
   }
 
-  const activeTitle = page === "dashboard" ? "Dashboard" : "Direct costs";
+  function handleResourceItemAdded(resourceType, item) {
+    setResourceItems((current) => ({
+      ...current,
+      [resourceType]: [...current[resourceType], item].sort((left, right) => left.source_row - right.source_row),
+    }));
+    setResourceItemsLoaded(true);
+    setResourceItemsError("");
+  }
+
+  function handleResourceItemsReplaced(resourceType, rows) {
+    setResourceItems((current) => ({
+      ...current,
+      [resourceType]: rows.map((item, index) => ({ ...item, resource_type: resourceType, source_row: index + 1 })),
+    }));
+    setResourceItemsLoaded(true);
+    setResourceItemsError("");
+  }
+
+  const activeTitle = {
+    dashboard: "Dashboard",
+    "direct-cost": "Direct costs",
+    equipment: "Equipment",
+    labour: "Labour",
+    material: "Materials",
+  }[page];
 
   return (
     <div className="app-shell">
@@ -610,15 +945,27 @@ export default function App() {
             </div>
           </div>
         )}
-        {page === "dashboard"
-          ? <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} greeting={greeting} dataError={itemsError} onOpenCosts={() => setPage("direct-cost")} />
-          : <DirectCosts
+        {page === "dashboard" ? (
+          <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} greeting={greeting} dataError={itemsError} onOpenCosts={() => setPage("direct-cost")} />
+        ) : page === "direct-cost" ? (
+          <DirectCosts
             items={items}
             dataError={itemsError}
             onReload={() => setReloadItems((count) => count + 1)}
             onRateAdded={handleRateAdded}
             onRatesReplaced={handleRatesReplaced}
-          />}
+          />
+        ) : (
+          <ResourceList
+            resourceType={page}
+            items={resourceItems[page]}
+            loading={resourceItemsLoading || !resourceItemsLoaded}
+            dataError={resourceItemsError}
+            onReload={() => setReloadResourceItems((count) => count + 1)}
+            onItemAdded={handleResourceItemAdded}
+            onItemsReplaced={handleResourceItemsReplaced}
+          />
+        )}
         <footer className="app-footer"><span>Buildwise <span>·</span> Construction estimating workspace</span><span>Rate reference: 2018 Q4 · ETB</span></footer>
       </div>
     </div>
