@@ -2,7 +2,7 @@
 
 1. Create a Supabase project and open its SQL Editor.
 2. Run [`schema.sql`](./schema.sql) to create the rate table and its authenticated add/replace functions. Every signed-in user can edit the shared rate library.
-3. For the one-time rate import, open **Table Editor → direct_cost_items → Insert → Import data from CSV** and upload [`import/direct-cost-items.csv`](./import/direct-cost-items.csv). It contains all 1,273 rows and the matching `source_row` primary keys. [`import/direct-cost-items.xlsx`](./import/direct-cost-items.xlsx) is the same data in an Excel workbook; use the CSV for Supabase's importer.
+3. After signing in to the app, use **Direct Costs → Import list** to load rates. [`import/direct-cost-items.xlsx`](./import/direct-cost-items.xlsx) and [`import/direct-cost-items.csv`](./import/direct-cost-items.csv) contain the full 1,273-row rate schedule. Use [`import/direct-cost-items-sample.xlsx`](./import/direct-cost-items-sample.xlsx) as an example of the required columns and format; replace its sample rows before importing your own data. App imports replace the shared rate library.
 4. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
 
    ```text
