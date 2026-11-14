@@ -64,7 +64,7 @@ function MetricCard({ label, value, note, icon, tone }) {
   );
 }
 
-function Dashboard({ categories, pricedItems, totalItems, greeting, onOpenCosts }) {
+function Dashboard({ categories, pricedItems, totalItems, greeting, dataError, onOpenCosts }) {
   const largestCategories = categories.slice(0, 5);
   const maxCount = largestCategories[0]?.count || 1;
 
@@ -129,18 +129,18 @@ function Dashboard({ categories, pricedItems, totalItems, greeting, onOpenCosts 
       </section>
 
       <section className="setup-notice">
-        <div className="notice-check">✓</div>
+        <div className={`notice-check ${dataError ? "notice-warning" : ""}`}>{dataError ? "!" : "✓"}</div>
         <div>
-          <strong>Your rate library is ready</strong>
-          <p>BOQ preparation, take-off sheets, and payment certificates can be added as the next modules.</p>
+          <strong>{dataError ? "Rate library setup required" : "Your rate library is ready"}</strong>
+          <p>{dataError ? "Dashboard counts and direct cost rates will appear after the Supabase table is created and seeded." : "BOQ preparation, take-off sheets, and payment certificates can be added as the next modules."}</p>
         </div>
-        <span className="notice-badge">NEXT UP</span>
+        {!dataError && <span className="notice-badge">NEXT UP</span>}
       </section>
     </main>
   );
 }
 
-function DirectCosts({ items }) {
+function DirectCosts({ items, dataError }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
   const [unit, setUnit] = useState("all");
@@ -220,12 +220,12 @@ function DirectCosts({ items }) {
                   <td><span className="category-label">{item.category}</span></td>
                 </tr>
               )) : (
-                <tr><td className="empty-state" colSpan="5"><span>⌕</span><strong>No matching rates</strong><small>Try another search or reset your filters.</small><button onClick={resetFilters}>Reset filters</button></td></tr>
+                <tr><td className="empty-state" colSpan="5"><span>⌕</span><strong>{dataError ? "Rate data unavailable" : "No matching rates"}</strong><small>{dataError ? "Use the setup steps in the warning above to connect your rate library." : "Try another search or reset your filters."}</small>{!dataError && <button onClick={resetFilters}>Reset filters</button>}</td></tr>
               )}
             </tbody>
           </table>
         </div>
-        <div className="table-footer"><span><span className="status-dot" /> Rate data loaded</span><span>Prices shown in Ethiopian Birr (ETB)</span></div>
+        <div className="table-footer"><span><span className={`status-dot ${dataError ? "error" : ""}`} /> {dataError ? "Rate data unavailable" : "Rate data loaded"}</span><span>Prices shown in Ethiopian Birr (ETB)</span></div>
       </section>
     </main>
   );
@@ -311,7 +311,19 @@ export default function App() {
           setItemsLoaded(true);
         }
       } catch (error) {
-        if (active) setItemsError(error instanceof Error ? error.message : "Unable to load the rate library.");
+        if (active) {
+          if (error?.code === "PGRST205") {
+            setItemsError("The public.direct_cost_items table is missing. Run supabase/schema.sql in your Supabase SQL Editor, then import the rate data.");
+          } else {
+            setItemsError(
+              error instanceof Error
+                ? error.message
+                : typeof error?.message === "string"
+                  ? error.message
+                  : "Unable to load the rate library.",
+            );
+          }
+        }
       } finally {
         if (active) setItemsLoading(false);
       }
@@ -358,20 +370,7 @@ export default function App() {
 
   if (!session) return <Auth />;
 
-  if (itemsError) {
-    return (
-      <main className="auth-shell">
-        <section className="auth-card">
-          <p className="eyebrow">RATE LIBRARY ERROR</p>
-          <h1>Unable to load rates</h1>
-          <p className="auth-message error" role="alert">{itemsError}</p>
-          <button className="primary-button auth-submit" onClick={() => setReloadItems((count) => count + 1)}>Try again</button>
-        </section>
-      </main>
-    );
-  }
-
-  if (itemsLoading || !itemsLoaded) {
+  if (itemsLoading || (!itemsLoaded && !itemsError)) {
     return <main className="auth-shell"><p className="auth-loading">Loading your rate library...</p></main>;
   }
 
@@ -441,9 +440,18 @@ export default function App() {
           </div>
         </header>
         {accountError && <p className="account-error" role="alert">{accountError}</p>}
+        {itemsError && (
+          <div className="rate-load-alert" role="alert">
+            <p>{itemsError}</p>
+            <div className="rate-load-actions">
+              <a href="https://supabase.com/dashboard/project/igfhfdlzldmpknhsagka/sql/new" target="_blank" rel="noreferrer">Open Supabase SQL Editor</a>
+              <button onClick={() => setReloadItems((count) => count + 1)}>Retry</button>
+            </div>
+          </div>
+        )}
         {page === "dashboard"
-          ? <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} greeting={greeting} onOpenCosts={() => setPage("direct-cost")} />
-          : <DirectCosts items={items} />}
+          ? <Dashboard categories={categories} pricedItems={pricedItems} totalItems={items.length} greeting={greeting} dataError={itemsError} onOpenCosts={() => setPage("direct-cost")} />
+          : <DirectCosts items={items} dataError={itemsError} />}
         <footer className="app-footer"><span>Buildwise <span>·</span> Construction estimating workspace</span><span>Rate reference: 2018 Q4 · ETB</span></footer>
       </div>
     </div>
