@@ -32,6 +32,32 @@
    ```
 
 5. Install dependencies and start the app with `npm install` and `npm run dev`. Users can create accounts and sign in with email and password. If email confirmation is enabled in Supabase Auth, they must confirm their address before signing in.
-6. When deploying to Vercel or Netlify, set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` as the site's environment variables, then redeploy.
+## Firebase Hosting
+
+The Firebase configuration serves the Vite build from `dist` and rewrites app routes to `index.html`. The app uses Supabase for authentication and data; Firebase only hosts the frontend.
+
+1. Install the Firebase CLI and sign in:
+
+   ```powershell
+   npm install -g firebase-tools
+   firebase login
+   ```
+
+2. From the project root, select your Firebase project:
+
+   ```powershell
+   firebase use --add
+   ```
+
+3. Ensure `.env` contains `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`, then build and deploy:
+
+   ```powershell
+   npm run build
+   firebase deploy --only hosting
+   ```
+
+4. Firebase will provide a free address such as `https://your-project-id.web.app`. In Supabase **Authentication → URL Configuration**, set that as the Site URL and add it to the allowed redirect URLs. Keep `localhost:5173` in the redirect list for local development.
+
+Vite embeds `VITE_` variables in the built frontend. Only use the publishable key there; never add the Supabase secret key to `.env` with a `VITE_` prefix or to Firebase Hosting.
 
 The browser uses only the publishable key. Row-level security restricts rate reads to signed-in users; the secret key is only needed by the local import script.
