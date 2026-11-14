@@ -2,10 +2,10 @@ import { readFile } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.SUPABASE_URL;
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const serviceRoleKey = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceRoleKey) {
-  throw new Error("Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY before importing the rate data.");
+  throw new Error("Set SUPABASE_URL and SUPABASE_SECRET_KEY (or SUPABASE_SERVICE_ROLE_KEY) before importing the rate data.");
 }
 
 const sourceUrl = new URL("../src/direct-cost-data.json", import.meta.url);

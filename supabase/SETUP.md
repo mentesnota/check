@@ -15,17 +15,17 @@
    VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
    ```
 
-4. Import the rate schedule from PowerShell. Use the project's **service_role** key only in this local terminal; never put it in a `VITE_` variable or browser code:
+4. Import the rate schedule from PowerShell. Use the project's **secret** key (or legacy `service_role` key) only in this local terminal; never put it in a `VITE_` variable or browser code:
 
    ```powershell
    $env:SUPABASE_URL = "https://your-project-id.supabase.co"
-   $secureKey = Read-Host "Enter the Supabase service role key" -AsSecureString
+   $secureKey = Read-Host "Enter the Supabase secret/service-role key" -AsSecureString
    $keyPointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($secureKey)
    try {
-     $env:SUPABASE_SERVICE_ROLE_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($keyPointer)
+     $env:SUPABASE_SECRET_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($keyPointer)
      npm run seed:direct-costs
    } finally {
-     Remove-Item Env:SUPABASE_SERVICE_ROLE_KEY -ErrorAction SilentlyContinue
+     Remove-Item Env:SUPABASE_SECRET_KEY -ErrorAction SilentlyContinue
      [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($keyPointer)
      $secureKey.Dispose()
    }
