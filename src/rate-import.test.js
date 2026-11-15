@@ -22,6 +22,19 @@ test("parses resource lists using list-specific name headers", async () => {
   }]);
 });
 
+test("parses indirect costs with name, unit, price, and category columns", async () => {
+  const rows = await parseResourceImport(csvFile(
+    "Indirect Cost Name,Unit,Price,Category\nSite supervision,month,18000,Project overhead",
+  ));
+
+  assert.deepEqual(rows, [{
+    name: "Site supervision",
+    unit: "month",
+    price: 18000,
+    category: "Project overhead",
+  }]);
+});
+
 test("rejects resource rows with negative prices", async () => {
   await assert.rejects(
     parseResourceImport(csvFile("Name,Unit,Price,Category\nCement,bag,-10,Materials")),

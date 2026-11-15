@@ -1,9 +1,9 @@
 # Supabase setup
 
 1. Create a Supabase project and open its SQL Editor.
-2. Run [`schema.sql`](./schema.sql) to create the direct cost and resource tables and their authenticated add/replace functions. Every signed-in user can edit these shared lists.
+2. Run [`schema.sql`](./schema.sql) to create the direct cost and resource tables and their authenticated add/replace functions. Run it again to apply updates, including the Indirect Costs list. Every signed-in user can edit these shared lists.
 3. After signing in to the app, use **Direct Costs → Import list** to load rates. [`import/direct-cost-items.xlsx`](./import/direct-cost-items.xlsx) and [`import/direct-cost-items.csv`](./import/direct-cost-items.csv) contain the full 1,273-row rate schedule. Use [`import/direct-cost-items-sample.xlsx`](./import/direct-cost-items-sample.xlsx) as an example of the required columns and format; replace its sample rows before importing your own data. App imports replace the shared rate library.
-4. For **Equipment**, **Labour**, or **Materials**, use that section's **Import Excel / CSV** button with columns `Name`, `Unit`, `Price`, and `Category`. You can use `Equipment Name`, `Labour Title`, or `Material Name` instead of `Name`. [`import/resource-list-sample.xlsx`](./import/resource-list-sample.xlsx) is a reusable template; replace the example row before importing. Imports replace only the list open in that section.
+4. For **Equipment**, **Labour**, **Materials**, or **Indirect Costs**, use that section's **Import Excel / CSV** button with columns `Name`, `Unit`, `Price`, and `Category`. You can use `Equipment Name`, `Labour Title`, `Material Name`, or `Indirect Cost Name` instead of `Name`. [`import/resource-list-sample.xlsx`](./import/resource-list-sample.xlsx) is a reusable template; replace the example row before importing. Imports replace only the list open in that section.
 5. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
 
    ```text

@@ -120,7 +120,7 @@ grant execute on function public.add_direct_cost_item(text, text, text, numeric,
 grant execute on function public.replace_direct_cost_items(jsonb) to authenticated;
 
 create table if not exists public.resource_items (
-  resource_type text not null check (resource_type in ('equipment', 'labour', 'material')),
+  resource_type text not null check (resource_type in ('equipment', 'labour', 'material', 'indirect_cost')),
   source_row integer not null check (source_row > 0),
   name text not null check (btrim(name) <> ''),
   unit text not null check (btrim(unit) <> ''),
@@ -128,6 +128,12 @@ create table if not exists public.resource_items (
   category text not null check (btrim(category) <> ''),
   primary key (resource_type, source_row)
 );
+
+alter table public.resource_items
+  drop constraint if exists resource_items_resource_type_check;
+alter table public.resource_items
+  add constraint resource_items_resource_type_check
+  check (resource_type in ('equipment', 'labour', 'material', 'indirect_cost'));
 
 alter table public.resource_items enable row level security;
 
@@ -162,7 +168,7 @@ begin
     raise exception 'Authentication required';
   end if;
   if p_resource_type is null
-    or p_resource_type not in ('equipment', 'labour', 'material') then
+    or p_resource_type not in ('equipment', 'labour', 'material', 'indirect_cost') then
     raise exception 'Invalid resource list';
   end if;
   if nullif(btrim(p_name), '') is null
@@ -204,7 +210,7 @@ begin
     raise exception 'Authentication required';
   end if;
   if p_resource_type is null
-    or p_resource_type not in ('equipment', 'labour', 'material') then
+    or p_resource_type not in ('equipment', 'labour', 'material', 'indirect_cost') then
     raise exception 'Invalid resource list';
   end if;
   if jsonb_typeof(p_items) is distinct from 'array' then

@@ -19,6 +19,7 @@ const resourceColumnAliases = {
   labourname: "name",
   laborname: "name",
   materialname: "name",
+  indirectcostname: "name",
   unit: "unit",
   price: "price",
   priceetb: "price",

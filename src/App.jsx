@@ -18,7 +18,10 @@ const navigation = [
   },
   {
     title: "CONFIGURATION",
-    items: [{ id: "direct-cost", label: "Direct costs", icon: "coins" }],
+    items: [
+      { id: "direct-cost", label: "Direct costs", icon: "coins" },
+      { id: "indirect_cost", label: "Indirect costs", icon: "coins" },
+    ],
   },
   {
     title: "RESOURCE LISTS",
@@ -393,6 +396,7 @@ const resourceListConfig = {
   equipment: { title: "Equipment list", itemName: "Equipment name" },
   labour: { title: "Labour list", itemName: "Labour title" },
   material: { title: "Materials list", itemName: "Material name" },
+  indirect_cost: { title: "Indirect costs", itemName: "Indirect cost name" },
 };
 
 function ResourceList({ resourceType, items, loading, dataError, onReload, onItemAdded, onItemsReplaced }) {
@@ -640,7 +644,7 @@ export default function App() {
   const [itemsLoaded, setItemsLoaded] = useState(false);
   const [itemsError, setItemsError] = useState("");
   const [reloadItems, setReloadItems] = useState(0);
-  const [resourceItems, setResourceItems] = useState({ equipment: [], labour: [], material: [] });
+  const [resourceItems, setResourceItems] = useState({ equipment: [], labour: [], material: [], indirect_cost: [] });
   const [resourceItemsLoading, setResourceItemsLoading] = useState(false);
   const [resourceItemsLoaded, setResourceItemsLoaded] = useState(false);
   const [resourceItemsError, setResourceItemsError] = useState("");
@@ -739,7 +743,7 @@ export default function App() {
 
   useEffect(() => {
     if (!session?.user) {
-      setResourceItems({ equipment: [], labour: [], material: [] });
+      setResourceItems({ equipment: [], labour: [], material: [], indirect_cost: [] });
       setResourceItemsLoaded(false);
       return undefined;
     }
@@ -766,7 +770,7 @@ export default function App() {
         }
 
         if (active) {
-          const grouped = { equipment: [], labour: [], material: [] };
+          const grouped = { equipment: [], labour: [], material: [], indirect_cost: [] };
           for (const item of allItems) {
             if (Object.hasOwn(grouped, item.resource_type)) grouped[item.resource_type].push(item);
           }
@@ -883,6 +887,7 @@ export default function App() {
     equipment: "Equipment",
     labour: "Labour",
     material: "Materials",
+    indirect_cost: "Indirect costs",
   }[page];
 
   return (
