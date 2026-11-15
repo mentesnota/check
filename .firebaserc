@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "buildwise-con-estimator"
-  }
+  },
+  "targets": {
+    "buildwise-con-estimator": {
+      "hosting": {
+        "ethio-con-tech": [
+          "ethio-con-tech"
+        ],
+        "buildwise-con-estimator": [
+          "buildwise-con-estimator"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

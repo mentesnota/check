@@ -58,7 +58,7 @@ The Firebase configuration serves the Vite build from `dist` and rewrites app ro
    firebase deploy --only hosting
    ```
 
-4. Firebase will provide a free address such as `https://your-project-id.web.app`. In Supabase **Authentication → URL Configuration**, set that as the Site URL and add it to the allowed redirect URLs. Keep `localhost:5173` in the redirect list for local development.
+4. The app is hosted at `https://ethio-con-tech.web.app`; the previous `buildwise-con-estimator.web.app` address redirects to it. In Supabase **Authentication → URL Configuration**, set the new address as the Site URL and add it to the allowed redirect URLs. Keep `localhost:5173` in the redirect list for local development.
 
 The Firebase CLI has also created GitHub Actions workflows in `.github/workflows`. For automatic deploys, add `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` under the GitHub repository's **Settings → Secrets and variables → Actions**. Confirm that the Firebase CLI-created `FIREBASE_SERVICE_ACCOUNT_BUILDWISE_CON_ESTIMATOR` secret exists. Push to `main` to deploy to production; pull requests get a preview deployment.
 

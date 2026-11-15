@@ -25,4 +25,11 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUILDWISE_CON_ESTIMATOR }}
           channelId: live
+          target: ethio-con-tech
+          projectId: buildwise-con-estimator
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUILDWISE_CON_ESTIMATOR }}
+          channelId: live
+          target: buildwise-con-estimator
           projectId: buildwise-con-estimator
