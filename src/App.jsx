@@ -896,11 +896,6 @@ export default function App() {
         <a className="brand" href="#" onClick={(event) => { event.preventDefault(); setPage("dashboard"); }} aria-label="Ethio-Con Tech home">
           <Brand />
         </a>
-        <div className="workspace-switcher">
-          <div className="workspace-avatar">NC</div>
-          <div className="workspace-copy"><strong>Northstar Construction</strong><span>Estimator workspace</span></div>
-          <span className="workspace-chevron">⌄</span>
-        </div>
         <nav className="side-nav" aria-label="Main navigation">
           {navigation.map((group) => (
             <div className="nav-group" key={group.title}>
@@ -911,7 +906,8 @@ export default function App() {
                   key={item.id}
                   onClick={() => !item.disabled && setPage(item.id)}
                   disabled={item.disabled}
-                  title={item.disabled ? "Coming soon" : undefined}
+                  aria-label={item.label}
+                  title={item.disabled ? "Coming soon" : item.label}
                 >
                   <Icon name={item.icon} size={18} /><span>{item.label}</span>
                   {item.disabled && <span className="soon-dot" />}
