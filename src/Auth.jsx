@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Brand from "./Brand.jsx";
 import { supabase } from "./supabase.js";
 
 export default function Auth() {
@@ -45,9 +46,8 @@ export default function Auth() {
   return (
     <main className="auth-shell">
       <section className="auth-card">
-        <a className="brand auth-brand" href="/" aria-label="Buildwise home">
-          <span className="brand-icon"><span /><span /><span /><span /></span>
-          <span className="brand-name">buildwise<span>.</span></span>
+        <a className="brand auth-brand" href="/" aria-label="Ethio-Con Tech home">
+          <Brand />
         </a>
         <p className="eyebrow">CONSTRUCTION ESTIMATING WORKSPACE</p>
         <h1>{isSignUp ? "Create your account" : "Welcome back"}</h1>
@@ -85,7 +85,7 @@ export default function Auth() {
         </form>
 
         <p className="auth-switch">
-          {isSignUp ? "Already have an account?" : "New to Buildwise?"}{" "}
+          {isSignUp ? "Already have an account?" : "New to Ethio-Con Tech?"}{" "}
           <button type="button" onClick={() => changeMode(isSignUp ? "sign-in" : "sign-up")}>
             {isSignUp ? "Sign in" : "Create an account"}
           </button>

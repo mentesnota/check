@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Auth from "./Auth.jsx";
+import Brand from "./Brand.jsx";
 import { parseRateImport, parseResourceImport } from "./rate-import.js";
 import { supabase, supabaseConfigured } from "./supabase.js";
 
@@ -803,9 +804,8 @@ export default function App() {
     return (
       <main className="auth-shell">
         <section className="auth-card setup-card">
-          <a className="brand auth-brand" href="/" aria-label="Buildwise home">
-            <span className="brand-icon"><span /><span /><span /><span /></span>
-            <span className="brand-name">buildwise<span>.</span></span>
+          <a className="brand auth-brand" href="/" aria-label="Ethio-Con Tech home">
+            <Brand />
           </a>
           <p className="eyebrow">SUPABASE CONFIGURATION</p>
           <h1>Connect your project</h1>
@@ -893,9 +893,8 @@ export default function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <a className="brand" href="#" onClick={(event) => { event.preventDefault(); setPage("dashboard"); }}>
-          <span className="brand-icon"><span /><span /><span /><span /></span>
-          <span className="brand-name">buildwise<span>.</span></span>
+        <a className="brand" href="#" onClick={(event) => { event.preventDefault(); setPage("dashboard"); }} aria-label="Ethio-Con Tech home">
+          <Brand />
         </a>
         <div className="workspace-switcher">
           <div className="workspace-avatar">NC</div>
@@ -971,7 +970,7 @@ export default function App() {
             onItemsReplaced={handleResourceItemsReplaced}
           />
         )}
-        <footer className="app-footer"><span>Buildwise <span>·</span> Construction estimating workspace</span><span>Rate reference: 2018 Q4 · ETB</span></footer>
+        <footer className="app-footer"><span>Ethio-Con Tech <span>·</span> Construction estimating workspace</span><span>Rate reference: 2018 Q4 · ETB</span></footer>
       </div>
     </div>
   );
