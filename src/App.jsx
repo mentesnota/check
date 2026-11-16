@@ -917,7 +917,6 @@ export default function App() {
           ))}
         </nav>
         <div className="sidebar-bottom">
-          <div className="help-card"><span className="help-icon">?</span><div><strong>Need a hand?</strong><span>Visit the help center</span></div><Icon name="chevron" size={15} /></div>
           <div className="user-profile">
             <div className="user-avatar">{initials}</div>
             <div className="user-copy"><strong>{user.email}</strong><span>Signed in</span></div>
