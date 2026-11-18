@@ -29,6 +29,20 @@ const resourceColumnAliases = {
   category: "category",
 };
 
+const manpowerProductivityColumnAliases = {
+  title: "title",
+  name: "title",
+  activity: "activity_type",
+  activitytype: "activity_type",
+  typeofactivity: "activity_type",
+  unit: "unit",
+  normal: "normal",
+  normalproductivity: "normal",
+  renovation: "renovation",
+  renovationproductivity: "renovation",
+  category: "category",
+};
+
 function parseCsv(text) {
   const rows = [];
   let row = [];
@@ -164,6 +178,50 @@ function normalizeResourceRows(matrix) {
   return rows;
 }
 
+function normalizeManpowerProductivityRows(matrix) {
+  if (!matrix.length) throw new Error("The import file is empty.");
+  const columns = new Map();
+  matrix[0].forEach((header, index) => {
+    const normalized = cellText(header).toLowerCase().replace(/[^a-z0-9]/g, "");
+    const column = manpowerProductivityColumnAliases[normalized];
+    if (column && !columns.has(column)) columns.set(column, index);
+  });
+
+  for (const required of ["title", "activity_type", "unit", "normal", "renovation", "category"]) {
+    if (!columns.has(required)) {
+      throw new Error(`The import file needs a "${required.replace("_", " ")}" column.`);
+    }
+  }
+
+  const rows = [];
+  for (let index = 1; index < matrix.length; index += 1) {
+    const cells = matrix[index];
+    if (!cells || cells.every((cell) => !cellText(cell))) continue;
+
+    const get = (column) => cellText(cells[columns.get(column)]);
+    const title = get("title");
+    const activity_type = get("activity_type");
+    const unit = get("unit");
+    const normalText = get("normal").replace(/,/g, "");
+    const renovationText = get("renovation").replace(/,/g, "");
+    const category = get("category");
+    if (!title || !activity_type || !unit || !normalText || !renovationText || !category) {
+      throw new Error(`Row ${index + 1} needs a title, activity type, unit, normal, renovation, and category.`);
+    }
+    const normal = Number(normalText);
+    const renovation = Number(renovationText);
+    if (!Number.isFinite(normal) || normal < 0 || !Number.isFinite(renovation) || renovation < 0) {
+      throw new Error(`Row ${index + 1} has an invalid normal or renovation value.`);
+    }
+
+    rows.push({ title, activity_type, unit, normal, renovation, category });
+  }
+
+  if (!rows.length) throw new Error("The import file contains no manpower productivity rows.");
+  if (rows.length > 10000) throw new Error("Imports are limited to 10,000 rows.");
+  return rows;
+}
+
 async function readImportMatrix(file) {
   const extension = file.name.split(".").pop().toLowerCase();
   if (extension === "csv") {
@@ -182,4 +240,8 @@ export async function parseRateImport(file) {
 
 export async function parseResourceImport(file) {
   return normalizeResourceRows(await readImportMatrix(file));
+}
+
+export async function parseManpowerProductivityImport(file) {
+  return normalizeManpowerProductivityRows(await readImportMatrix(file));
 }

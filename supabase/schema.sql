@@ -262,4 +262,137 @@ revoke all on function public.replace_resource_items(text, jsonb) from public, a
 grant execute on function public.add_resource_item(text, text, text, numeric, text) to authenticated;
 grant execute on function public.replace_resource_items(text, jsonb) to authenticated;
 
+create table if not exists public.manpower_productivity_items (
+  source_row integer primary key check (source_row > 0),
+  title text not null check (btrim(title) <> ''),
+  activity_type text not null check (btrim(activity_type) <> ''),
+  unit text not null check (btrim(unit) <> ''),
+  normal numeric(14, 4) not null check (normal >= 0),
+  renovation numeric(14, 4) not null check (renovation >= 0),
+  category text not null check (btrim(category) <> '')
+);
+
+alter table public.manpower_productivity_items enable row level security;
+
+drop policy if exists "Authenticated users can manage manpower productivity"
+  on public.manpower_productivity_items;
+create policy "Authenticated users can manage manpower productivity"
+  on public.manpower_productivity_items
+  for all
+  to authenticated
+  using (true)
+  with check (true);
+
+revoke all on table public.manpower_productivity_items from anon, authenticated;
+grant select, insert, update, delete on table public.manpower_productivity_items to authenticated;
+
+create or replace function public.add_manpower_productivity_item(
+  p_title text,
+  p_activity_type text,
+  p_unit text,
+  p_normal numeric,
+  p_renovation numeric,
+  p_category text
+)
+returns integer
+language plpgsql
+security invoker
+set search_path = public, pg_temp
+as $$
+declare
+  next_source_row integer;
+begin
+  if auth.uid() is null then
+    raise exception 'Authentication required';
+  end if;
+  if nullif(btrim(p_title), '') is null
+    or nullif(btrim(p_activity_type), '') is null
+    or nullif(btrim(p_unit), '') is null
+    or nullif(btrim(p_category), '') is null
+    or p_normal is null
+    or p_renovation is null then
+    raise exception 'Title, activity type, unit, normal, renovation, and category are required';
+  end if;
+  if p_normal < 0 or p_renovation < 0 then
+    raise exception 'Normal and renovation values cannot be negative';
+  end if;
+
+  perform pg_advisory_xact_lock(hashtext('public.manpower_productivity_items'));
+  select coalesce(max(source_row), 0) + 1
+    into next_source_row
+    from public.manpower_productivity_items;
+
+  insert into public.manpower_productivity_items (
+    source_row, title, activity_type, unit, normal, renovation, category
+  )
+  values (
+    next_source_row, btrim(p_title), btrim(p_activity_type), btrim(p_unit),
+    p_normal, p_renovation, btrim(p_category)
+  );
+
+  return next_source_row;
+end;
+$$;
+
+create or replace function public.replace_manpower_productivity_items(p_items jsonb)
+returns integer
+language plpgsql
+security invoker
+set search_path = public, pg_temp
+as $$
+declare
+  imported_count integer;
+begin
+  if auth.uid() is null then
+    raise exception 'Authentication required';
+  end if;
+  if jsonb_typeof(p_items) is distinct from 'array' then
+    raise exception 'Import data must be a JSON array';
+  end if;
+  imported_count := jsonb_array_length(p_items);
+  if imported_count = 0 then
+    raise exception 'Import must contain at least one item';
+  end if;
+  if imported_count > 10000 then
+    raise exception 'Import is limited to 10000 rows';
+  end if;
+  if exists (
+    select 1
+    from jsonb_array_elements(p_items) as records(item)
+    where jsonb_typeof(records.item) <> 'object'
+      or nullif(btrim(records.item ->> 'title'), '') is null
+      or nullif(btrim(records.item ->> 'activity_type'), '') is null
+      or nullif(btrim(records.item ->> 'unit'), '') is null
+      or nullif(btrim(records.item ->> 'category'), '') is null
+      or coalesce(btrim(records.item ->> 'normal'), '') !~ '^[0-9]+([.][0-9]+)?$'
+      or coalesce(btrim(records.item ->> 'renovation'), '') !~ '^[0-9]+([.][0-9]+)?$'
+  ) then
+    raise exception 'Every row needs text fields and valid non-negative normal and renovation values';
+  end if;
+
+  perform pg_advisory_xact_lock(hashtext('public.manpower_productivity_items'));
+  delete from public.manpower_productivity_items;
+  insert into public.manpower_productivity_items (
+    source_row, title, activity_type, unit, normal, renovation, category
+  )
+  select
+    records.ordinality::integer,
+    btrim(records.item ->> 'title'),
+    btrim(records.item ->> 'activity_type'),
+    btrim(records.item ->> 'unit'),
+    (records.item ->> 'normal')::numeric,
+    (records.item ->> 'renovation')::numeric,
+    btrim(records.item ->> 'category')
+  from jsonb_array_elements(p_items) with ordinality as records(item, ordinality)
+  order by records.ordinality;
+
+  return imported_count;
+end;
+$$;
+
+revoke all on function public.add_manpower_productivity_item(text, text, text, numeric, numeric, text) from public, anon;
+revoke all on function public.replace_manpower_productivity_items(jsonb) from public, anon;
+grant execute on function public.add_manpower_productivity_item(text, text, text, numeric, numeric, text) to authenticated;
+grant execute on function public.replace_manpower_productivity_items(jsonb) to authenticated;
+
 notify pgrst, 'reload schema';

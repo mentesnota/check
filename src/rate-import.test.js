@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { parseResourceImport } from "./rate-import.js";
+import { parseManpowerProductivityImport, parseResourceImport } from "./rate-import.js";
 
 function csvFile(text) {
   return {
@@ -39,5 +39,29 @@ test("rejects resource rows with negative prices", async () => {
   await assert.rejects(
     parseResourceImport(csvFile("Name,Unit,Price,Category\nCement,bag,-10,Materials")),
     /invalid price/i,
+  );
+});
+
+test("parses manpower productivity columns", async () => {
+  const rows = await parseManpowerProductivityImport(csvFile(
+    "Title,Type of Activity,Unit,Normal,Renovation,Category\nMasonry wall,Block work,m2,8.5,6,Finishing",
+  ));
+
+  assert.deepEqual(rows, [{
+    title: "Masonry wall",
+    activity_type: "Block work",
+    unit: "m2",
+    normal: 8.5,
+    renovation: 6,
+    category: "Finishing",
+  }]);
+});
+
+test("rejects manpower productivity rows with negative productivity", async () => {
+  await assert.rejects(
+    parseManpowerProductivityImport(csvFile(
+      "Title,Type of Activity,Unit,Normal,Renovation,Category\nMasonry wall,Block work,m2,-1,6,Finishing",
+    )),
+    /invalid normal or renovation value/i,
   );
 });

@@ -1,10 +1,11 @@
 # Supabase setup
 
 1. Create a Supabase project and open its SQL Editor.
-2. Run [`schema.sql`](./schema.sql) to create the direct cost and resource tables and their authenticated add/replace functions. Run it again to apply updates, including the Indirect Costs list. Every signed-in user can edit these shared lists.
+2. Run [`schema.sql`](./schema.sql) to create the direct cost, resource, and manpower productivity tables and their authenticated add/replace functions. Run it again to apply updates. Every signed-in user can edit these shared lists.
 3. After signing in to the app, use **Direct Costs → Import list** to load rates. [`import/direct-cost-items.xlsx`](./import/direct-cost-items.xlsx) and [`import/direct-cost-items.csv`](./import/direct-cost-items.csv) contain the full 1,273-row rate schedule. Use [`import/direct-cost-items-sample.xlsx`](./import/direct-cost-items-sample.xlsx) as an example of the required columns and format; replace its sample rows before importing your own data. App imports replace the shared rate library.
 4. For **Equipment**, **Labour**, **Materials**, or **Indirect Costs**, use that section's **Import Excel / CSV** button with columns `Name`, `Unit`, `Price`, and `Category`. You can use `Equipment Name`, `Labour Title`, `Material Name`, or `Indirect Cost Name` instead of `Name`. [`import/resource-list-sample.xlsx`](./import/resource-list-sample.xlsx) is a reusable template; replace the example row before importing. Imports replace only the list open in that section.
-5. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
+5. For **Manpower Productivity**, use its **Import Excel / CSV** button with columns `Title`, `Type of Activity`, `Unit`, `Normal`, `Renovation`, and `Category`. Normal and renovation values must be non-negative numbers. This import replaces only the manpower productivity list.
+6. Copy the example file, then put the Project URL and publishable key from the project settings into `.env`:
 
    ```text
    Copy-Item .env.example .env
@@ -17,7 +18,7 @@
    VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
    ```
 
-6. Alternatively, import or refresh the rate schedule from PowerShell. Use the project's **secret** key (or legacy `service_role` key) only in this local terminal; never put it in a `VITE_` variable or browser code:
+7. Alternatively, import or refresh the rate schedule from PowerShell. Use the project's **secret** key (or legacy `service_role` key) only in this local terminal; never put it in a `VITE_` variable or browser code:
 
    ```powershell
    $env:SUPABASE_URL = "https://your-project-id.supabase.co"
@@ -33,7 +34,7 @@
    }
    ```
 
-7. Install dependencies and start the app with `npm install` and `npm run dev`. Users can create accounts and sign in with email and password. If email confirmation is enabled in Supabase Auth, they must confirm their address before signing in.
+8. Install dependencies and start the app with `npm install` and `npm run dev`. Users can create accounts and sign in with email and password. If email confirmation is enabled in Supabase Auth, they must confirm their address before signing in.
 ## Firebase Hosting
 
 The Firebase configuration serves the Vite build from `dist` and rewrites app routes to `index.html`. The app uses Supabase for authentication and data; Firebase only hosts the frontend.

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import Auth from "./Auth.jsx";
 import Brand from "./Brand.jsx";
+import ManpowerProductivityList from "./ManpowerProductivityList.jsx";
 import { parseRateImport, parseResourceImport } from "./rate-import.js";
 import { supabase, supabaseConfigured } from "./supabase.js";
 
@@ -30,6 +31,7 @@ const navigation = [
       { id: "equipment", label: "Equipment", icon: "ruler" },
       { id: "labour", label: "Labour", icon: "grid" },
       { id: "material", label: "Materials", icon: "list" },
+      { id: "manpower-productivity", label: "Manpower productivity", icon: "grid" },
     ],
   },
 ];
@@ -650,6 +652,11 @@ export default function App() {
   const [resourceItemsLoaded, setResourceItemsLoaded] = useState(false);
   const [resourceItemsError, setResourceItemsError] = useState("");
   const [reloadResourceItems, setReloadResourceItems] = useState(0);
+  const [manpowerItems, setManpowerItems] = useState([]);
+  const [manpowerItemsLoading, setManpowerItemsLoading] = useState(false);
+  const [manpowerItemsLoaded, setManpowerItemsLoaded] = useState(false);
+  const [manpowerItemsError, setManpowerItemsError] = useState("");
+  const [reloadManpowerItems, setReloadManpowerItems] = useState(0);
   const pricedItems = items.filter((item) => item.cost !== null).length;
   const categories = useMemo(() => {
     const counts = new Map();
@@ -800,6 +807,59 @@ export default function App() {
     };
   }, [session?.user?.id, reloadResourceItems]);
 
+  useEffect(() => {
+    if (!session?.user) {
+      setManpowerItems([]);
+      setManpowerItemsLoaded(false);
+      return undefined;
+    }
+
+    let active = true;
+    const pageSize = 1000;
+
+    async function loadManpowerItems() {
+      setManpowerItemsLoading(true);
+      setManpowerItemsLoaded(false);
+      setManpowerItemsError("");
+      try {
+        const allItems = [];
+        for (let offset = 0; ; offset += pageSize) {
+          const { data, error } = await supabase
+            .from("manpower_productivity_items")
+            .select("source_row, title, activity_type, unit, normal, renovation, category")
+            .order("source_row", { ascending: true })
+            .range(offset, offset + pageSize - 1);
+          if (error) throw error;
+          allItems.push(...data);
+          if (data.length < pageSize) break;
+        }
+
+        if (active) {
+          setManpowerItems(allItems);
+          setManpowerItemsLoaded(true);
+        }
+      } catch (error) {
+        if (active) {
+          setManpowerItemsError(
+            error?.code === "PGRST205"
+              ? "The public.manpower_productivity_items table is missing. Run the latest supabase/schema.sql in the SQL Editor."
+              : error instanceof Error
+                ? error.message
+                : "Unable to load the manpower productivity list.",
+          );
+          setManpowerItemsLoaded(true);
+        }
+      } finally {
+        if (active) setManpowerItemsLoading(false);
+      }
+    }
+
+    loadManpowerItems();
+    return () => {
+      active = false;
+    };
+  }, [session?.user?.id, reloadManpowerItems]);
+
   if (!supabaseConfigured) {
     return (
       <main className="auth-shell">
@@ -881,12 +941,25 @@ export default function App() {
     setResourceItemsError("");
   }
 
+  function handleManpowerItemAdded(item) {
+    setManpowerItems((current) => [...current, item].sort((left, right) => left.source_row - right.source_row));
+    setManpowerItemsLoaded(true);
+    setManpowerItemsError("");
+  }
+
+  function handleManpowerItemsReplaced(rows) {
+    setManpowerItems(rows.map((item, index) => ({ ...item, source_row: index + 1 })));
+    setManpowerItemsLoaded(true);
+    setManpowerItemsError("");
+  }
+
   const activeTitle = {
     dashboard: "Dashboard",
     "direct-cost": "Direct costs",
     equipment: "Equipment",
     labour: "Labour",
     material: "Materials",
+    "manpower-productivity": "Manpower productivity",
     indirect_cost: "Indirect costs",
   }[page];
 
@@ -953,6 +1026,15 @@ export default function App() {
             onReload={() => setReloadItems((count) => count + 1)}
             onRateAdded={handleRateAdded}
             onRatesReplaced={handleRatesReplaced}
+          />
+        ) : page === "manpower-productivity" ? (
+          <ManpowerProductivityList
+            items={manpowerItems}
+            loading={manpowerItemsLoading || !manpowerItemsLoaded}
+            dataError={manpowerItemsError}
+            onReload={() => setReloadManpowerItems((count) => count + 1)}
+            onItemAdded={handleManpowerItemAdded}
+            onItemsReplaced={handleManpowerItemsReplaced}
           />
         ) : (
           <ResourceList
