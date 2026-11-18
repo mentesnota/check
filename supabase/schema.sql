@@ -371,7 +371,8 @@ begin
   end if;
 
   perform pg_advisory_xact_lock(hashtext('public.manpower_productivity_items'));
-  delete from public.manpower_productivity_items;
+  delete from public.manpower_productivity_items
+  where source_row is not null;
   insert into public.manpower_productivity_items (
     source_row, title, activity_type, unit, normal, renovation, category
   )
